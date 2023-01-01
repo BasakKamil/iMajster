@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: -webkit-gradient(linear, left bottom, left top, from(#fff1eb), to(#ace0f9));
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+
+body button {
+  margin-top: 5%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.ThreeBack {
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  top: 0;
+  height: 100%;
+}
+
+.ThreeBack canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.NavbarBasi {
+  z-index: 99999;
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 100px;
+}
+
+ul li {
+  width: 20%;
+  height: auto;
+  float: left;
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+.project-details {
+  position: relative;
+  display: block;
+  z-index: 9999;
+  margin-top: 7%;
+  background: white;
+  width: 76%;
+  border-radius: 10px;
+  margin-left: 10%;
+  padding: 2%;
+}
+
+.FormKamil {
+  display: block;
+  position: relative;
+  width: 70%;
+  z-index: 999999;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#fddb92), to(#d1fdff));
+  background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+  margin-top: 8%;
+  opacity: 0.7;
+  margin-bottom: 5%;
+}
+
+.ContactPage {
+  margin-top: 6%;
+  background: white;
+  z-index: 9999999;
+  position: relative;
+  width: 76%;
+  left: 10%;
+  border-radius: 10px;
+  padding: 2%;
+}
+
+.whiteForemka {
+  padding: 2%;
+}
+
+.input-field {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.input-field label {
+  width: 48%;
+  float: left;
+  margin: 1%;
+}
+
+.input-field input {
+  width: 48%;
+  float: left;
+  margin: 1%;
+}
+
+.input-field textarea {
+  width: 48%;
+  float: left;
+  margin: 1%;
+  max-height: 250px;
+}
+
+.input-field select {
+  width: 48%;
+  float: left;
+  margin: 1%;
+}
+
+.ErrorInfo {
+  margin-top: 2%;
+}
+
+.NewM {
+  width: 100%;
+  float: left;
+  height: auto;
+  min-height: 50px;
+  text-align: center;
+  background: white;
+  opacity: 0.5;
+}
+
+.NewM ul li {
+  width: 33%;
+}
+
+@media screen and (max-width: 800px) {
+  .input-field label {
+    width: 100%;
+  }
+  .input-field input {
+    width: 100%;
+  }
+  .input-field textarea {
+    width: 100%;
+  }
+  .NewM ul li {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=index.css.map */
