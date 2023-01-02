@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import ThreeBack from './Components/Animate/ThreeBack';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
@@ -11,7 +11,6 @@ import Contact from './Components/NavInside/Contact';
 import About from './Components/NavInside/About';
 import UserForm from './Components/Auth/UserForm/UserForm';
 import Ordersum from './store/shop/Ordersum';
-import Loader from '../src/Components/Animate/Loader';
 import Navbar from './Components/Layaut/Navbar';
 
 const routes = [
@@ -23,16 +22,7 @@ const routes = [
 
 const App = () => {
 
-  const [load,setload] = useState(false);
 
-    useEffect(() => {
-        window.onload = () => {
-            setload(true);    
-        } 
-    }, [])
-  if(load) {
-    return <Loader/>
-  }
   return (
     <React.Fragment>
     <Router>

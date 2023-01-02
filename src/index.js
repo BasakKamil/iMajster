@@ -20,6 +20,17 @@ const store = createStore(rootReducer,
     )
 );
 
+// const [load,setload] = useState(false);
+
+// useEffect(() => {
+//     window.onload = () => {
+//         setload(true);    
+//     } 
+// }, []);
+
+
+
+
 // dzięki temu po przeładowaniu strony zalogowany uzytkownik nie zostanie wylogowany 
 store.firebaseAuthIsReady.then(()=>{
     ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));

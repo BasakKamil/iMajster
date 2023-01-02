@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { IconContext } from "react-icons/lib";
+import Basket from './Basket';
 
 export class NewMenu extends Component {
     constructor(props){
@@ -14,7 +15,8 @@ export class NewMenu extends Component {
     render() {
        
         return (
-
+        
+        <div className='BasiCentral'>
         <IconContext.Provider value={{color: 'lightgrey'}}>
             <div className="NewM">
                 <ul className="InUl">
@@ -25,6 +27,9 @@ export class NewMenu extends Component {
                 </ul>
             </div>
         </IconContext.Provider>
+        <Basket/>
+        </div>
+
         )
     }
 }

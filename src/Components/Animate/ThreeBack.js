@@ -67,7 +67,7 @@ export class ThreeBack extends Component {
         }
         
         this.starMaterial = new THREE.MeshLambertMaterial({
-            color: 0xaaaaaa,
+            color: 0x4B4E55,
             size: 0.7,
             map: texture
         });
@@ -126,10 +126,10 @@ export class ThreeBack extends Component {
         this.camera.rotation.y = -0.12;
        
         // DODAJE ŚWIATŁA
-        this.ambient = new THREE.AmbientLight(0x555555);
-        this.directionalLight = new THREE.DirectionalLight(0xffeedd);
+        this.ambient = new THREE.AmbientLight(0xEBEBEB);
+        this.directionalLight = new THREE.DirectionalLight(0x394CC9);
         this.directionalLight.position.set(0,0,1);
-        this.flash = new THREE.PointLight(0x062d89, 30, 500 , 1.7);
+        this.flash = new THREE.PointLight(0x07416E, 30, 500 , 1.7);
         this.flash.position.set(200.300,100);
         this.scene.add(this.flash);
         this.scene.add(this.directionalLight);
@@ -137,7 +137,7 @@ export class ThreeBack extends Component {
     
         this.renderer = new WebGLRenderer();
         this.renderer.setSize(this.width,this.height);
-        this.scene.fog = new THREE.FogExp2(0x63c7f5,0.001);
+        this.scene.fog = new THREE.FogExp2(0x2DACEC,0.001);
         this.renderer.setClearColor(this.scene.fog.color);
         this.mount.appendChild(this.renderer.domElement);
     
