@@ -3,8 +3,7 @@ import { connect } from 'react-redux';
 import { signOut } from '../../store/actions/authActions';
 import NewMenu from '../Layaut/NewMenu';
 import Burger from '../../images/burger.png';
-
-
+import Basket from '../Layaut/Basket';
 
 class LinksLoginIn extends Component {
 
@@ -25,9 +24,10 @@ class LinksLoginIn extends Component {
    
         return (
             <div className="LinksIn">
-                <ul>
+                <ul className='Reducto'>
                  <li><img className="Burgerek" onClick={this.toogle} src={Burger} alt="Burger"/></li>
-                 <li><button className="btn btn-primary" onClick={this.props.signOut}>Wyloguj się!</button></li>              
+                 <li><button className="btn btn-primary" onClick={this.props.signOut}>Wyloguj się!</button></li>    
+                 <li><Basket/></li>        
                </ul> 
                
                {this.state.isToggleOn ? <NewMenu toogle={this.toogle}/> : null}

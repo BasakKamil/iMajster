@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Kanit&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
 
 $background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 $famillyLog: 'Kanit', sans-serif;
@@ -24,13 +25,17 @@ body {
 .Sum{
     width: 100%;
 }
-.Nowe{
-	margin: 10%;
-	width: 80%;
-}
 
+.NiceBasket{
+    position: absolute;
+    left: 1px;
+	z-index: 120;
+    width: 100%;
+    background: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb);
+    padding: 2%;
+}
 .Miniaturka{
-	width: 15% !important;
+	width: 8% !important;
 }
 .OrderSum{
     width: 50%;
@@ -91,7 +96,7 @@ body {
 	.row{
 		display: block;
 		position: relative;
-		z-index: 99999;
+		z-index: 9;
 		width: 80%;
 		margin-left: 10%;
 		margin-top: 2%;
@@ -156,7 +161,7 @@ code {
 }
 .page{
   position: relative;
-  z-index: 999999;
+  z-index: 99;
   display: block;
   margin-top: 0%;
   width: 100%;
@@ -185,6 +190,15 @@ code {
     width: 100%;
     height: auto;
     min-height: 100px;
+	.nav-wrapper{
+		position: fixed;
+		width: 100%;
+		z-index: 999999999999999999999999999;
+		height: max-content;
+		min-height: max-content;
+		background: linear-gradient(to right, rgb(31, 162, 255), rgb(18, 216, 250), rgb(166, 255, 203));
+		opacity: 0.9;
+	}
 }
 
 ul{
@@ -234,10 +248,10 @@ ul{
 		z-index: 99999;
 }
 .Burgerek{
-	width: 20%;
+	width: 35%;
 }
 .InUl{
-    display: block;
+    display: grid !important;
     height: auto;
     min-height: 50px;
     width: 100%;
@@ -252,7 +266,6 @@ ul{
 			color: red;
 		}
 		li{
-		
 			width: 50%;
 		}
 	}
@@ -264,6 +277,7 @@ ul{
 	border-radius: 10px;
 	display: table;
     padding: 2%;
+	width: 100%;
     color: white;
 }
 .Null{
@@ -275,7 +289,7 @@ ul{
     position: relative;
 }
 .IteamDetails{
-	width: 75%;
+	width: 100%;
 	float: left;
     background: none;
     border-radius: 10px;
@@ -330,7 +344,7 @@ ul{
     position: relative;
     padding: 1%;
     width: 70%;
-    z-index: 999999;
+    z-index: 999;
     background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
     margin-top: 3%;
     opacity: 0.92;
@@ -401,7 +415,7 @@ ul{
     display: block;
     width: 100%;
     float: left;
-    z-index: 999999999;
+    z-index: 99;
     text-align: center;
     margin: 0 auto;
     padding: 2%;
@@ -471,12 +485,90 @@ ul{
   min-height: 50px;
   text-align: center;
   background: white;
-  opacity: 0.5;
+  opacity: 0.9;
   ul{
     li{
-      width: 25%;
+      width: 90%;
+	    a{
+	      svg{
+			width: 9%;
+			color: black;
+			float: left;
+	 	   }
+	  	p{
+			width: 90%;
+       		padding: 1%;
+        	float: left;
+			font-size: 25px;
+			text-transform: uppercase;
+			background: -webkit-linear-gradient(rgb(113, 229, 125), rgb(98, 232, 218));
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+			font-family: 'Nabla', cursive;
+			text-shadow: 2px 2px #00040a;
+			letter-spacing: 2px;
+	  	}
+		p:hover{
+			font-size: 28px;	
+		}
+		}
+		svg{
+			width: 9%;
+			color: black;
+			float: left;
+	 	   }
     }
   }
+}
+
+.LinksIn{
+	ul{
+		display: flex;
+	}
+}
+
+.CloseBasket{
+	display: block;
+    width: 100%;
+	button{
+		width: 20%;
+		margin-top: 2% !important;
+	}
+	img{
+		width: 30%;
+	}
+	.Nowe{
+		width: 50%;
+		text-align: center;
+		float: left;
+		margin-top: 3%;
+		font-family: 'Nabla', cursive;
+		background: -webkit-linear-gradient(#71e57d, #62e8da);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-family: 'Nabla', cursive;
+		text-shadow: 2px 2px #00040a;
+		letter-spacing: 2px;
+	}
+
+}
+.Reducto{
+
+	padding: 0;
+    margin: 0;
+
+	li:nth-child(1){
+		width: 15%;
+	}
+
+	li:nth-child(2){
+		width: 15%;
+	}
+
+	li:nth-child(3){
+		width: 45%;
+	}
+
 }
 .WeatherApp{
   position: relative;
@@ -517,12 +609,13 @@ ul{
 
 .Logos{
     position: absolute;
-	right: 2%;
-    z-index: 100;
+    z-index: 900;
     display: block;
     background: none;
-	color: white;
-	width: 25%;
+    top: 5px;
+    right: 1px;
+    color: white;
+    width: 25%;
 	
 }
 .ButtonLogin{
@@ -540,7 +633,7 @@ ul{
 .LinksOut{
     display: block;
 	width: 100%;
-	position: relative;
+	position: absolute;
 	z-index: 999;
     height: auto;
     min-height: 50px;
@@ -558,6 +651,13 @@ ul{
   input{
     margin-bottom: 5%;
   }
+}
+.LogoKamila{
+	svg{
+		position: absolute;
+    	top: 2px;
+    	width: 100% !important;
+	}
 }
 svg{
 	    overflow: visible !important;
@@ -904,7 +1004,7 @@ svg:hover{
   .NewM{
     ul{
       li{
-        width: 100%;
+        width: 100% !important;
       }
     }
   }

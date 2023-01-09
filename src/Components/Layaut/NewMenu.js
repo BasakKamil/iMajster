@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { IconContext } from "react-icons/lib";
-import Basket from './Basket';
+import { FaBeer } from 'react-icons/fa';
+import { IoIosCloud } from 'react-icons/io';
+import { AiFillFolderOpen } from "react-icons/ai";
+import { HiBriefcase } from 'react-icons/hi';
+import { GiFamilyHouse } from 'react-icons/gi';
+
 
 export class NewMenu extends Component {
     constructor(props){
@@ -17,17 +22,18 @@ export class NewMenu extends Component {
         return (
         
         <div className='BasiCentral'>
-        <IconContext.Provider value={{color: 'lightgrey'}}>
+        <IconContext.Provider value={{color: 'black'}}>
             <div className="NewM">
                 <ul className="InUl">
-                    <li><NavLink exact to="/shop">Sklep</NavLink></li>
-                    <li><NavLink exact to="/about">O Mnie</NavLink></li>
-                    <li><NavLink to="/createproject">Zlecenie Naprawy!</NavLink></li> 
-                    <li><NavLink exact to="/contact">Kontakt</NavLink></li>
+                    <li><NavLink exact to="/"><GiFamilyHouse /><p>STRONA GLOWNA</p></NavLink></li>
+                    <li><NavLink exact to="/shop"><IoIosCloud /><p>Sklep</p></NavLink></li>
+                    <li><NavLink exact to="/about"><FaBeer /><p>O Mnie</p></NavLink></li>
+                    <li><NavLink to="/createproject"><AiFillFolderOpen /><p>Zlecenie Naprawy!</p></NavLink></li> 
+                    <li><NavLink exact to="/contact"><HiBriefcase/><p>Kontakt</p></NavLink></li>
                 </ul>
             </div>
         </IconContext.Provider>
-        <Basket/>
+       
         </div>
 
         )

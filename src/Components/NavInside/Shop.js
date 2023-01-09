@@ -6,7 +6,6 @@ import { Redirect } from 'react-router-dom';
 import ProductAll from '../Products/ProductAll';
 import History from '../../store/shop/history';
 // import Filter from '../../store/shop/filter';
-import Basket from '../../Components/Layaut/Basket';
 // import firebase from '../../config/fbconfig';
 
 
@@ -101,9 +100,7 @@ class Shop extends Component{
                     <History/>
                     <hr/>
                     <ProductAll />
-                    <div className='BasketFull'>
-                       <Basket/>
-                    </div>
+
    
                 </div>
                 
