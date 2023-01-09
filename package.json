@@ -93,7 +93,8 @@
     "webpack": "4.29.6",
     "webpack-manifest-plugin": "2.0.4",
     "workbox-webpack-plugin": "4.2.0",
-    "yarn": "^1.22.0"
+    "yarn": "^1.22.19",
+    "packageManager": "yarn@3.2.4"
   },
   "scripts": {
     "start": "node scripts/start.js",
