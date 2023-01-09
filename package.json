@@ -49,7 +49,8 @@
     "material-ui": "^0.20.2",
     "mini-css-extract-plugin": "0.5.0",
     "moment": "^2.24.0",
-    "next": "^10.0.6",
+    "next": "^13.0.0",
+    "netlify-cli": "12.0.11",
     "node": "^13.8.0",
     "node-sass": "^4.12.1",
     "optimize-css-assets-webpack-plugin": "5.0.1",
@@ -96,7 +97,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build": "next build && next export",
     "test": "node scripts/test.js"
   },
   "eslintConfig": {
