@@ -62,7 +62,8 @@ class Cart extends Component{
                   
                     <table>
                         <tbody>
-                            <tr>
+                            <tr className='een'>
+                                <th></th>
                                 <th>Nazwa:</th>
                                 <th>Cena:</th>
                             </tr>

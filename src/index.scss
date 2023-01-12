@@ -29,10 +29,21 @@ body {
 .NiceBasket{
     position: absolute;
     left: 1px;
+	top:100%;
 	z-index: 120;
     width: 100%;
     background: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb);
     padding: 2%;
+	table{
+		width: 80%;
+		margin: 0 auto;
+		tbody{
+			.een{
+				background: linear-gradient(to right, rgb(131, 58, 180), rgb(253, 29, 29), rgb(252, 176, 69));
+				border-radius: 10px;
+			}
+		}
+	}
 }
 .Miniaturka{
 	width: 8% !important;
