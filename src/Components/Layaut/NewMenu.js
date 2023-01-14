@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { IconContext } from "react-icons/lib";
 import { FaBeer } from 'react-icons/fa';
@@ -8,16 +8,8 @@ import { HiBriefcase } from 'react-icons/hi';
 import { GiFamilyHouse } from 'react-icons/gi';
 
 
-export class NewMenu extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            isToggleOn: false
-        }
-    }
- 
-   
-    render() {
+const NewMenu = () =>  {
+    
        
         return (
         
@@ -38,6 +30,6 @@ export class NewMenu extends Component {
 
         )
     }
-}
+
 
 export default NewMenu

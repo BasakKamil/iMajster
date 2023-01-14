@@ -253,6 +253,9 @@ ul{
 	border-radius: 5px;
 	.LogUno{
 		width: 100% !important;
+		input{
+			background: none;
+		}
 	}
 	input{
 		font-family: $famillyLog;
@@ -670,8 +673,9 @@ ul{
 .LogoKamila{
 	svg{
 		position: absolute;
-    	top: 2px;
+    	top: -35px;
     	width: 100% !important;
+		transform: scale(0.65);
 	}
 }
 svg{
