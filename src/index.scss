@@ -161,21 +161,34 @@ code {
     monospace;
 }
 .AboutKamil{
+	z-index: 99;
+    position: relative;
+
   h1{
     .page-wrap{
-      background: white;
+      background: none;
       .line{
-        background: white;
+        background: none;
       }
     }
   }
 }
+.info{
+    opacity: 0.8;
+    background-color: white;
+    padding: 5%;
+    border-radius: 10px;
+}
 .page{
-  position: relative;
-  z-index: 99;
-  display: block;
-  margin-top: 0%;
-  width: 100%;
+	position: relative;
+    z-index: 99;
+    display: block;
+
+    margin-top: 0% !important;
+    background: none;
+    margin: 10%;
+    padding: 3%;
+    border-radius: 10px;
 }
 .ThreeBack{
   z-index: 1;
@@ -232,7 +245,7 @@ ul{
 .project-details{
   position: relative;
     display: block;
-    z-index: 99999;
+    z-index: 9999;
     margin-top: 7%;
     background: white;
     width: 76%;
@@ -246,20 +259,27 @@ ul{
     padding: 1%;
     width: 50%;
     z-index: 999999;
-    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+    background-image: linear-gradient(to top, #405f83 0%, #8cb3ec 100%);
     margin-top: 3%;
-    opacity: 0.85;
     margin-bottom: 5%;
 	border-radius: 5px;
 	.LogUno{
 		width: 100% !important;
+		padding: 5px;
 		input{
-			background: none;
+			background: white !important;
+			border-radius: 10px;
+    		padding: 5px !important;
+			text-align: center;
+		}
+		label{
+			margin-left: 5px;
 		}
 	}
 	input{
 		font-family: $famillyLog;
 	}
+	.ButtonLogin{width: 30% !important; }
 }
 .Kamcio{
 		position: relative;
@@ -362,12 +382,19 @@ ul{
     position: relative;
     padding: 1%;
     width: 70%;
+	min-height: 300px !important;
     z-index: 999;
-    background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
-    margin-top: 3%;
-    opacity: 0.92;
+    background-image: linear-gradient(to top, #5d95d7 0%, #8cb3ec 100%);
+    margin-top: 5%;
     margin-bottom: 5%;
 	border-radius: 5px;
+    .LogDuo{
+	input{
+	
+		border-radius: 10px;
+		text-align: center;
+	}
+	}
 	.LogDuo{
 		width: 90% !important;
 		margin: 0 auto;
@@ -493,6 +520,12 @@ ul{
 }
 .LogoKamilaNew{
 	opacity: 0;
+}
+
+.AdminDash{
+	h1{
+		color: #00040a;
+	}
 }
 .NewM{
   width: 100%;
@@ -624,10 +657,12 @@ ul{
    
     }
 }
-
+.specialAdm{
+	background-color: violet;
+}
 .Logos{
     position: absolute;
-    z-index: 9999999;
+    z-index: 99;
     display: block;
     background: none;
     top: 5px;
@@ -644,6 +679,7 @@ ul{
     width: 80%;
     margin: 0 auto;
     margin-top: 4%;
+	color: white !important;
 }
 .NowyK{
   margin-left: 2%;
@@ -669,6 +705,16 @@ ul{
   input{
     margin-bottom: 5%;
   }
+}
+.Green{
+	background-color: greenyellow !important;
+}
+.OutButt{
+    background: deepskyblue;
+	opacity: 0.5;
+	input{
+		margin-bottom: 5%;
+	}
 }
 .LogoKamila{
 	svg{

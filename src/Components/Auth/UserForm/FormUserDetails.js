@@ -6,12 +6,13 @@ import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 export class FormUserDetails extends Component {
+  
     continue = (e) => {
             e.preventDefault();
             this.props.nextStep();
     }
     render() {
-        const {values, handleChange, auth} = this.props;
+        const {values, handleChange, auth, error} = this.props;
         if(auth.uid) return <Redirect to="/"/>
         return (
             <MuiThemeProvider>
@@ -30,7 +31,8 @@ export class FormUserDetails extends Component {
                     floatingLabelText="Nazwisko"
                     onChange={handleChange('surname')}
                     defaultValue={values.surname}/>
-                   
+
+                   {(values.name & values.surname) ?
                     <RaisedButton
                         label="Dalej"
                         primary={true}
@@ -38,6 +40,14 @@ export class FormUserDetails extends Component {
                         onClick={this.continue}
                         className="ButtonNew"
                     />
+                    : <RaisedButton 
+                         label="Dalej"
+                         className='OutButt'
+                         style={styles.button1}
+                         onClick={error}
+                         />
+                         
+                    }
                      </div>
                 </React.Fragment>
             </MuiThemeProvider>

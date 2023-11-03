@@ -6,7 +6,10 @@ import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 
+
 export class FormPersonalDetails extends Component {
+
+
     continue = (e) => {
         e.preventDefault();
         this.props.nextStep();
@@ -17,7 +20,7 @@ export class FormPersonalDetails extends Component {
         this.props.prevStep();
     }
     render() {
-        const {values, handleChange, auth} = this.props;
+        const {values, handleChange, auth, error}= this.props;
         if(auth.uid) return <Redirect to="/"/>
         return (
             <MuiThemeProvider>
@@ -25,7 +28,7 @@ export class FormPersonalDetails extends Component {
                     <div className="container FormKamil">
                     <TextField  
                     className="LogDuo"
-                    hintText="Podaj Adres"
+                    hintText="Nazwa Ulicy wrazaz z numerem"
                     floatingLabelText="Adres"
                     onChange={handleChange('address')}
                     defaultValue={values.address}/>
@@ -48,6 +51,10 @@ export class FormPersonalDetails extends Component {
                     floatingLabelText="000-000-000"
                     onChange={handleChange('phone')}
                     defaultValue={values.phone}/>
+                 
+
+                 
+                 {(values.address & values.city & values.post ) ?
                     <RaisedButton
                         label="Dalej"
                         primary={true}
@@ -55,6 +62,14 @@ export class FormPersonalDetails extends Component {
                         onClick={this.continue}
                         className="ButtonNew"
                     />
+                    : <RaisedButton 
+                         label="Dalej"
+                         className='OutButt'
+                         style={styles.button1}
+                         onClick={error}
+                         />
+                         
+                    }
                          <RaisedButton
                         label="Powrót"
                         primary={true}
@@ -62,6 +77,9 @@ export class FormPersonalDetails extends Component {
                         onClick={this.back}
                         className="ButtonNew"
                     />
+                 
+                  
+                 
                      </div>
                 </React.Fragment>
             </MuiThemeProvider>
@@ -85,7 +103,8 @@ const styles={
 
 const mapStateToProps = (state) => {
     return{
-        auth: state.firebase.auth
+        auth: state.firebase.auth,
+        
     }
 }
 

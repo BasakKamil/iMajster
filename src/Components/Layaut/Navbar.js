@@ -8,6 +8,7 @@ import Logo from './Logo';
 const Navbar = (props) =>{
    const {auth, profile} = props;
    const links = auth.uid ? <LinksLoginIn profile={profile}/> : <LinksLoginOut/> ;
+   console.log(links);
     return(
         <div className="NavbarBasi">
                 <nav className="nav-wrapper">

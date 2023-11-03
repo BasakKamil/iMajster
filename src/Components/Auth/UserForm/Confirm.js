@@ -16,7 +16,7 @@ export class Confirm extends Component {
         this.props.prevStep();
     }
     render() {
-        const {values, handleChange, auth} = this.props;
+        const {values, handleChange, auth, error} = this.props;
         if(auth.uid) return <Redirect to="/"/>
         return (
             <MuiThemeProvider>
@@ -38,6 +38,7 @@ export class Confirm extends Component {
                     onChange={handleChange('password')}
                     defaultValue={values.password}/>
                    
+                   { ( values.emial, values.password )?
                     <RaisedButton
                         label="Dalej"
                         primary={true}
@@ -45,6 +46,14 @@ export class Confirm extends Component {
                         onClick={this.continue}
                         className="ButtonNew"
                     />
+                    : <RaisedButton 
+                         label="Dalej"
+                         className='OutButt'
+                         style={styles.button1}
+                         onClick={error}
+                         />
+                         
+                    }
                     <RaisedButton
                         label="Powrót"
                         primary={true}

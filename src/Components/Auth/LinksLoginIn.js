@@ -29,7 +29,6 @@ const LinksLoginIn =(props)=> {
                  <li><button className="btn btn-primary" onClick={props.signOut}>Wyloguj się!</button></li>    
                  <li><Basket/></li>        
                </ul> 
-               
                {dropDownOpen ? <NewMenu /> : null}
             </div>
         )

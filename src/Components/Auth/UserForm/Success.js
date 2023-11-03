@@ -72,7 +72,7 @@ export class Success extends Component {
                         primary={true}
                         style={styles.button}
                         onClick={this.handleSubmit}
-                        className="ButtonNew"
+                        className="ButtonNew Green"
                     />
                     <RaisedButton
                         label="Powrót"

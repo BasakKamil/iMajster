@@ -22,7 +22,7 @@ export class Contact extends Component {
                     <div><h2>Gdzie mnie Szukać ?</h2>
                     Wraszawa - Wawer - Radość
                     lub 
-                    Holandia:
+                    ROTTERDAM
                     
                     </div>
                     </div>

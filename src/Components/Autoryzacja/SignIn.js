@@ -56,13 +56,13 @@ export class SignIn extends Component {
                     label="Zaloguj !"
                     primary={true}
                     onClick={this.handleSubmit}
-                    className="ButtonLogin btn btn-warning"
+                    className="ButtonLogin btn btn-success"
                 />
                  <p className="ErrorInfo">
                          {authError ? <p>{authError}</p> : null}
                  </p>
                  </div>   
-                 <div className="work">Website/App for Everybody and repair Apple !</div> 
+                 <div className="work">Musisz sie Zarejstrowac lub Zalogowac by wejsc do Aplikacji </div> 
                  </React.Fragment>
              </MuiThemeProvider>
            

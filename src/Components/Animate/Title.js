@@ -6,12 +6,20 @@ const Title = ({lineContent, lineContent2}) =>{
     let line2 = useRef(null);
 
     useEffect(()=>{
-        TweenMax.from([line1, line2], 0.8, {
+        TweenMax.from([line1], 0.8, {
             delay: 0.8,
-            ease: 'power3.out',
-            y: 64,
+            ease: 'power4.out',
+            y: -200,
             stagger: {
                 amount: 0.15
+            }
+        });
+        TweenMax.from([ line2], 0.7, {
+            delay: 0.7,
+            ease: 'power3.out',
+            x: -1000,
+            stagger: {
+                amount: 0.20
             }
         });
     },[line1,line2]);

@@ -6,6 +6,7 @@ import { IoIosCloud } from 'react-icons/io';
 import { AiFillFolderOpen } from "react-icons/ai";
 import { HiBriefcase } from 'react-icons/hi';
 import { GiFamilyHouse } from 'react-icons/gi';
+import { GrUserAdmin } from 'react-icons/gr';
 
 
 const NewMenu = () =>  {
@@ -22,6 +23,7 @@ const NewMenu = () =>  {
                     <li><NavLink exact to="/about"><FaBeer /><p>O Mnie</p></NavLink></li>
                     <li><NavLink to="/createproject"><AiFillFolderOpen /><p>Zlecenie Naprawy!</p></NavLink></li> 
                     <li><NavLink exact to="/contact"><HiBriefcase/><p>Kontakt</p></NavLink></li>
+                    <li className='specialAdm'><NavLink exact to="/admin"><GrUserAdmin/><p>Dashboard</p></NavLink></li>
                 </ul>
             </div>
         </IconContext.Provider>

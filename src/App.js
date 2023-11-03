@@ -12,6 +12,8 @@ import About from './Components/NavInside/About';
 import UserForm from './Components/Auth/UserForm/UserForm';
 import Ordersum from './store/shop/Ordersum';
 import Navbar from './Components/Layaut/Navbar';
+import Admin from './Components/Admin/Admin';
+
 
 const routes = [
   {path: '/shop', name: "Shop", Component: Shop },
@@ -33,6 +35,7 @@ const App = () => {
                   <Route path="/project/:id" component={ProjectDetails}/>
                   <Route path="/createproject" component={Createproject}/>
                   <Route path="/signin" component={SignIn}/>
+                  <Route path="/admin" component={Admin}/>
                   <Route path="/signup" component={UserForm}/>
                   <Route path="/ordersum" component={Ordersum}/>
                   {routes.map(({path,Component})=>{
