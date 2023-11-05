@@ -10,7 +10,7 @@ import swal from 'sweetalert';
 
 
 
-export class UserForm extends Component {
+export class User extends Component {
     state = {
         step: 1,
         email: '',
@@ -116,4 +116,4 @@ const mapStateToProps = (state) =>{
     }
 }
 
-export default connect(mapStateToProps)(UserForm)
+export default connect(mapStateToProps)(User)
