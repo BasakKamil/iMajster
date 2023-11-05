@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import Map from '../Layaut/Map';
 import { connect } from 'react-redux';
 import Weather from '../API/Weather';
+// import { Redirect } from 'react-router-dom';
 
 export class Contact extends Component {
 
 
     render() {
-        
+        // const {auth} = this.props;
+        // if(!auth.uid) return <Redirect to="/signin" />
         return (
             <div className="ContactPage">
                

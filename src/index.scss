@@ -257,10 +257,10 @@ ul{
 	display: block;
     position: relative;
     padding: 1%;
-    width: 50%;
+    width: 40%;
     z-index: 999999;
-    background-image: linear-gradient(to top, #405f83 0%, #8cb3ec 100%);
-    margin-top: 3%;
+	background-image: linear-gradient(to top, #b4cfee 0%, #9dcea3 100%);
+    margin-top: 10%;
     margin-bottom: 5%;
 	border-radius: 5px;
 	.LogUno{
@@ -381,10 +381,10 @@ ul{
     display: block;
     position: relative;
     padding: 1%;
-    width: 70%;
+    width: 50%;
 	min-height: 300px !important;
     z-index: 999;
-    background-image: linear-gradient(to top, #5d95d7 0%, #8cb3ec 100%);
+    background-image: linear-gradient(to top, #eebfcf 0%, #edc7a1 100%);
     margin-top: 5%;
     margin-bottom: 5%;
 	border-radius: 5px;
@@ -778,6 +778,7 @@ ul{
 .OutButt{
     background: deepskyblue;
 	opacity: 0.5;
+	margin-top: 5%;
 	input{
 		margin-bottom: 5%;
 	}

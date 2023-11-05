@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import ProductDetails from '../Products/ProductDetails';
 import { compose } from 'redux';
 import { firestoreConnect } from 'react-redux-firebase';
@@ -15,9 +15,9 @@ class ProductAll extends Component {
     
 
     render(){  
-    
         const {products} = this.props;     
-            if(Array.isArray(products)){
+            
+             if(Array.isArray(products)){
                 return(   
                     <div className="ProductShow">
                          {this.props.products && this.props.products.map(product => {

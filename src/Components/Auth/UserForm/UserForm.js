@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import FormUserDetails from './FormUserDetails';
 import FormPersonalDetails from './FormPersonalDetails';
 import Confirm from './Confirm';
@@ -10,8 +10,11 @@ import swal from 'sweetalert';
 
 
 
-export class User extends Component {
-    state = {
+class User extends Component {
+
+  
+
+ state = {
         step: 1,
         email: '',
         password: '',
@@ -23,6 +26,7 @@ export class User extends Component {
         phone: 0 ,
         date: new Date()
     }
+    
 
     error = (e) => {
         e.preventDefault();
