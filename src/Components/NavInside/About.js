@@ -15,7 +15,6 @@ class About extends Component{
                 <More/>
             </div>
         )
-    
     }
  
 }
