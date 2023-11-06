@@ -84,6 +84,7 @@
     "scrollmagic-plugin-gsap": "^1.0.3",
     "semver": "6.0.0",
     "serve": "^13.0.4",
+    "sharp": "^0.28.3",
     "style-loader": "",
     "sweetalert": "^2.1.2",
     "terser-webpack-plugin": "^2.3.2",
