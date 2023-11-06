@@ -1,4 +1,4 @@
-import React,{Component, useEffect, useState} from 'react';
+import React,{ useEffect, useState} from 'react';
 import { RiMoneyEuroCircleFill,RiMoneyDollarCircleFill }from 'react-icons/ri';
 
 export default function Weather(){

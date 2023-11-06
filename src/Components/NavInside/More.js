@@ -6,10 +6,10 @@ import Skycons from 'react-skycons';
 const More = () => {
 
 
-  const lat = 52.185970;
-  const long = 21.184840;
-  const proxy = 'https://cors-anywhere.herokuapp.com/';
-  const api = `${proxy}https://api.darksky.net/forecast/a18f321825c2c6503931cf827ff61142/${lat},${long}`;
+  // const lat = 52.185970;
+  // const long = 21.184840;
+  // const proxy = 'https://cors-anywhere.herokuapp.com/';
+  // // const api = `${proxy}https://api.darksky.net/forecast/a18f321825c2c6503931cf827ff61142/${lat},${long}`;
 
   const [ikon,setIkon] = useState(
     {
@@ -21,7 +21,7 @@ const More = () => {
 
 useEffect(()=>{
 
-
+setIkon({})
 
 
 
