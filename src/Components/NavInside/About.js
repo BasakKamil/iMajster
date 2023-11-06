@@ -11,6 +11,7 @@ class About extends Component{
         return (
             <div className="container AboutKamil">
                 <Title lineContent="Witaj w zakladce" lineContent2=" o Mnie"/>
+                <di>Znowu</di>
                 <More/>
             </div>
         )
