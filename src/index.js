@@ -10,6 +10,8 @@ import thunk from 'redux-thunk';
 import { reduxFirestore ,getFirestore } from 'redux-firestore';
 import { reactReduxFirebase ,getFirebase } from 'react-redux-firebase';
 import fbConfig from './config/fbconfig';
+import Loader from './Components/Animate/Loader';
+
 
 //Dzieki temu sie logują i rejstrują uzytkownicy
 const store = createStore(rootReducer, 
@@ -20,20 +22,19 @@ const store = createStore(rootReducer,
     )
 );
 
-// const [load,setload] = useState(false);
-
-// useEffect(() => {
-//     window.onload = () => {
-//         setload(true);    
-//     } 
-// }, []);
 
 
 
 
 // dzięki temu po przeładowaniu strony zalogowany uzytkownik nie zostanie wylogowany 
 store.firebaseAuthIsReady.then(()=>{
-    ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
+    ReactDOM.render(
+    <Provider store={store}>
+        <>
+        <Loader/>
+        <App />
+        </>
+    </Provider>, document.getElementById('root'));
     serviceWorker.register();
 })
 

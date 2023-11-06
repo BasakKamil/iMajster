@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React, { Component } from 'react'
 import FormUserDetails from './FormUserDetails';
 import FormPersonalDetails from './FormPersonalDetails';
 import Confirm from './Confirm';
@@ -6,6 +6,7 @@ import Success from './Success';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import swal from 'sweetalert';
+
 
 
 
@@ -65,7 +66,8 @@ class User extends Component {
         const { email, password, name, surname, address,post, city, phone ,date} = this.state;
         const values = {email, password, name, surname, address, post, city, phone, date}
         const {auth} = this.props;
-        if(auth.uid) return <Redirect to="/"/>
+        if(auth.uid) { return <Redirect to="/"/> }
+  
         // eslint-disable-next-line default-case
         switch(step){
             case 1:

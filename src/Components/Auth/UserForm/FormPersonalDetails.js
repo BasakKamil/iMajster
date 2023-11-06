@@ -54,7 +54,7 @@ export class FormPersonalDetails extends Component {
                  
 
                  
-                 {(values.address & values.city & values.post ) ?
+                 {(values.address && values.city && values.post ) ?
                     <RaisedButton
                         label="Dalej"
                         primary={true}

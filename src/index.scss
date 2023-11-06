@@ -772,6 +772,14 @@ ul{
     margin-bottom: 5%;
   }
 }
+.Loader{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 99999999999;
+    opacity: 0.9;
+}
 .Green{
 	background-color: greenyellow !important;
 }

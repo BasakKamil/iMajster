@@ -32,7 +32,7 @@ export class FormUserDetails extends Component {
                     onChange={handleChange('surname')}
                     defaultValue={values.surname}/>
 
-                   {(values.name & values.surname) ?
+                   {(values.name && values.surname) ?
                     <RaisedButton
                         label="Dalej"
                         primary={true}

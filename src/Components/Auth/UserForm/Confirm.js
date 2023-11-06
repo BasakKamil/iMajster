@@ -38,7 +38,7 @@ export class Confirm extends Component {
                     onChange={handleChange('password')}
                     defaultValue={values.password}/>
                    
-                   { ( values.emial, values.password )?
+                   { ( values.emial || values.password )?
                     <RaisedButton
                         label="Dalej"
                         primary={true}
