@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react';
 import gsap from 'gsap';
 import { useLayoutEffect } from 'react'
-import Skycons from 'react-skycons';
+// import Skycons from 'react-skycons';
 
 const More = () => {
 
@@ -82,12 +82,12 @@ useLayoutEffect(() => {
            <div className="WeatherApp"> 
                    
                    <p className="Tempka"></p>
-                   <Skycons 
+                   {/* <Skycons 
                      color='black' 
                      icon={ikon.skycons} 
                      autoplay={false}
                      className="Emota"
-                   /> 
+                   />  */}
                </div>
            </div>
            <div class="col">
