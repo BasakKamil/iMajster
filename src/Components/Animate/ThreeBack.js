@@ -8,6 +8,7 @@ import Foto2 from '../../images/logawww/slub.jpg';
 import Foto3 from '../../images/logawww/amman.jpg';
 import Foto4 from '../../images/logawww/soprano.png';
 
+
 export class ThreeBack extends Component {
     constructor(props){
         super(props);
@@ -22,9 +23,7 @@ export class ThreeBack extends Component {
             products: [],
             editMode : false
         };
-        this.cloudParticles = [];
-    
-    
+        this.cloudParticles = []; 
     }
 
   
@@ -51,6 +50,18 @@ export class ThreeBack extends Component {
             this.cloudParticles.push(this.cloud);
             this.scene.add(this.cloud); 
         }   
+    }
+
+    nieuwe = () => {
+
+        this.geomet = new THREE.PlaneGeometry(400,100);
+        this.mater = new THREE.MeshToonMaterial({
+            color: 0x0b7703
+        } ); 
+        this.capsule = new THREE.Mesh(this.geomet, this.mater ); 
+        this.capsule.position.set( 100,200,-200 );
+        // this.cloudParticles.push(this.capsule);
+        this.scene.add( this.capsule );
     }
 
     stars = (texture) =>{
@@ -95,6 +106,7 @@ export class ThreeBack extends Component {
             this.addCube(this.box[j]);
         } 
     }
+    
     box = (Foto1) =>{
 
         // Utworze sobie schemat do boxów stron wwww
@@ -109,12 +121,10 @@ export class ThreeBack extends Component {
           ];
         this.boxown= new THREE.Mesh(this.box, this.boxmaterial);
         this.boxown.position.set(0,30,-30);
-        this.addCube(this.boxown);
-      
-       
-       
+        this.addCube(this.boxown); 
 
     }
+
     superSztorm = () => {
         this.width = window.innerWidth;
         this.height = window.innerHeight;
@@ -144,9 +154,10 @@ export class ThreeBack extends Component {
         this.loader = new THREE.TextureLoader().load(smoke);
         this.loader2 = new THREE.TextureLoader().load(stars);
         this.kamil(this.loader);
-
-        this.pushBox();
+        // this.pushBox();
+        this.nieuwe();
         this.animate();
+     
        
     
     
@@ -159,12 +170,14 @@ export class ThreeBack extends Component {
     animate = () =>{
         this.frameId = window.requestAnimationFrame(this.animate);
         this.renderer.render(this.scene, this.camera);
-       for(let j=0;j<this.foto.length;j++){
-          this.box[j].rotation.z += 0.01;
-       }
+
+    //    for(let j=0;j<this.foto.length;j++){
+    //       this.box[j].rotation.z += 0.01;
+    //    }
         this.cloudParticles.forEach(p=>{
             p.rotation.z -=0.01; 
         });
+
         if(Math.random() > 0.93 || this.flash.power > 100){
             if(this.flash.power < 100)
                 this.flash.position.set(
