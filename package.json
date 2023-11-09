@@ -10,7 +10,7 @@
     "@typescript-eslint/parser": "1.6.0",
     "anime": "^0.1.2",
     "animejs": "^3.2.1",
-    "babel-eslint": "10.0.1",
+    "babel-eslint": "^10.1.0",
     "babel-jest": "24.7.1",
     "babel-loader": "8.0.5",
     "babel-plugin-named-asset-import": "^0.3.2",
@@ -170,6 +170,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.22.15",
     "babel-plugin-inline-react-svg": "^1.1.0",
     "react-svg-loader": "^3.0.3",
     "webpack-dev-server": "^3.7.2"
