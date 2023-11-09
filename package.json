@@ -84,7 +84,7 @@
     "scrollmagic-plugin-gsap": "^1.0.3",
     "semver": "6.0.0",
     "serve": "^13.0.4",
-    "sharp": "^0.32.6",
+    "sharp": "^0.22.1",
     "style-loader": "^2.0.0",
     "sudo": "^1.0.3",
     "swal": "^0.1.0",
