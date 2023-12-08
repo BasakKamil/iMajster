@@ -1,0 +1,1198 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+
+$background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+$famillyLog: 'Kanit', sans-serif;
+$fontBut: 'Righteous', cursive;
+$fontcena: 'Anton', sans-serif;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $famillyLog;
+  background: $background-image;
+	tr{
+		td{
+			
+			margin: 2px;
+		}
+	}
+  button{
+    margin-top: 5%;
+  }
+}
+.Sum{
+    width: 100%;
+}
+
+.NiceBasket{
+    position: absolute;
+    left: 1px;
+	top:100%;
+	z-index: 120;
+    width: 100%;
+    background: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb);
+    padding: 2%;
+	table{
+		width: 80%;
+		margin: 0 auto;
+		tbody{
+			.een{
+				background: linear-gradient(to right, rgb(131, 58, 180), rgb(253, 29, 29), rgb(252, 176, 69));
+				border-radius: 10px;
+			}
+		}
+	}
+}
+.Miniaturka{
+	width: 8% !important;
+}
+.OrderSum{
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+.InfoProfile{
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.BasketFull{
+	position: fixed;
+    z-index: 99999999999999;
+    padding: 1%;
+    display: block;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    right: 2.5%;
+	top: 35%;
+	width: 20%;
+	border-radius: 
+	10px;
+	tr{
+		td:nth-child(2){
+			border: 1px solid black
+		}
+		td:nth-child(3){
+			border: 1px solid black
+		}
+	}
+}
+.NiceBasketNull{
+    width: 15%;
+    position: fixed;
+    right: 1.5%;
+    padding: 2px;
+    border-radius: 10px;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+.KamilABut{
+		margin-left: 2%;
+		margin-right: 2%;
+		margin-top: 5px;
+}
+
+.TotalBasket{
+    background: lightyellow;
+	color: black;
+	font-family: $fontcena;
+    margin-top: 2%;
+	font-size: 20px;
+	b{
+		color: purple;
+	}
+}
+.DashboardCont{
+	.row{
+		display: block;
+		position: relative;
+		z-index: 9;
+		width: 80%;
+		margin-left: 10%;
+		margin-top: 2%;
+		margin-bottom: 5%;
+		opacity: 0.85;
+	}
+  }
+.work{
+	
+		background: black;
+		display: block;
+		z-index: 999999999;
+		position: relative;
+		color: white;
+		font-size: 20px;
+		width: 100%;
+		height: 30px;
+		opacity: 0.75;
+	
+}
+.OrderSum{
+	tbody{
+		tr:nth-child(1){
+			background: black;
+			color: white;
+	}
+
+	}
+}
+
+.LogoKamila{
+	z-index: 99;
+    display: block;
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    min-height: 40px;
+    opacity: 1;
+	.ProfileInitLog{
+			text-decoration: none;
+   			 color: black;
+   			 opacity: 0.8;
+  			 width: 100%;
+   			 background: white;
+   			 margin: 0 auto;
+			border-radius: 10px;
+		}
+
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.AboutKamil{
+	z-index: 99;
+    position: relative;
+
+  h1{
+    .page-wrap{
+      background: none;
+      .line{
+        background: none;
+      }
+    }
+  }
+}
+.info{
+    opacity: 0.8;
+    background-color: white;
+    padding: 5%;
+    border-radius: 10px;
+}
+.page{
+	position: relative;
+    z-index: 99;
+    display: block;
+
+    margin-top: 0% !important;
+    background: none;
+    margin: 10%;
+    padding: 3%;
+    border-radius: 10px;
+}
+.ThreeBack{
+  z-index: 1;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: 100%;
+  canvas{
+    width: 100% !important;
+    height: 100% !important;
+
+  }
+}
+.price{
+    background: aquamarine;
+    color: black;
+    font-size: 22px;
+}
+.NavbarBasi{
+  z-index: 99999;
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+	.nav-wrapper{
+		position: fixed;
+		width: 100%;
+		z-index: 999999999999999999999999999;
+		height: max-content;
+		min-height: max-content;
+		background: linear-gradient(to right, rgb(31, 162, 255), rgb(18, 216, 250), rgb(166, 255, 203));
+		opacity: 0.9;
+	}
+}
+.BasketShop{
+	button{
+		margin-top: 4%;
+	}
+}
+ul{
+  li{
+    width:25%;
+    height: auto;
+    float: left;
+	list-style: none;
+	z-index: 99999999999999;
+    a{
+      text-decoration: none;
+    }
+  }
+}
+
+.project-details{
+  position: relative;
+    display: block;
+    z-index: 9999;
+    margin-top: 7%;
+    background: white;
+    width: 76%;
+    border-radius: 10px;
+    margin-left: 10%;
+    padding: 2%;
+}
+.FormKamilLog{
+	display: block;
+    position: relative;
+    padding: 1%;
+    width: 40%;
+    z-index: 999999;
+	background-image: linear-gradient(to top, #b4cfee 0%, #9dcea3 100%);
+    margin-top: 10%;
+    margin-bottom: 5%;
+	border-radius: 5px;
+	.LogUno{
+		width: 100% !important;
+		padding: 5px;
+		input{
+			background: white !important;
+			border-radius: 10px;
+    		padding: 5px !important;
+			text-align: center;
+		}
+		label{
+			margin-left: 5px;
+		}
+	}
+	input{
+		font-family: $famillyLog;
+	}
+	.ButtonLogin{width: 30% !important; }
+}
+.Kamcio{
+		position: relative;
+		z-index: 99999;
+}
+.Burgerek{
+	width: 35%;
+}
+.InUl{
+    display: grid !important;
+    height: auto;
+    min-height: 50px;
+    width: 100%;
+	padding: 0;
+
+}
+.NewStat{
+	ul{
+		width: 100%;
+		display: flex;
+		li:nth-child(1){
+			color: red;
+		}
+		li{
+			width: 50%;
+		}
+	}
+}
+.NotificationsKamcia{
+	background-color: black;
+	opacity: 1;
+    margin-top: 2%;
+	border-radius: 10px;
+	display: table;
+    padding: 2%;
+	width: 100%;
+    color: white;
+}
+.Null{
+	background: red;
+    width: 100%;
+    height: auto;
+    min-height: 30px;
+    z-index: 9999999;
+    position: relative;
+}
+.IteamDetails{
+	width: 100%;
+	float: left;
+    background: none;
+    border-radius: 10px;
+    margin: 3%;  
+    height: auto;
+    min-height: 120px;
+	display: flex;
+	position: relative;
+		.ProductInfo{
+			width: 40%;
+			background: white;
+			float: left;
+			border-right: 1px solid darkgrey;
+			border-radius: 10px 0px 0px 10px;
+		}
+		.PhotoProduct{
+			width: 40%;
+			float: left;
+			img{
+				width: 100%;
+			}
+		}
+	button{	
+			margin: 0;
+			margin-bottom: 1px;
+			margin-top: 1px;
+	}
+}
+
+.EquilBasi{
+    background: greenyellow;
+    color: black;
+    font-size: 30px;
+}
+.Description{
+	max-height: 200px;
+}
+.SumOrderKamila{
+    display: block;
+    position: relative;
+    z-index: 9999999;
+    width: 90%;
+	margin: 0 auto;
+	display: flow-root;
+    margin-top: 2%;
+    background: white;
+    border-radius: 10px;
+    min-height: 100px;
+}
+.FormKamil{
+    display: block;
+    position: relative;
+    padding: 1%;
+    width: 50%;
+	min-height: 300px !important;
+    z-index: 999;
+    background-image: linear-gradient(to top, #eebfcf 0%, #edc7a1 100%);
+    margin-top: 5%;
+    margin-bottom: 5%;
+	border-radius: 5px;
+    .LogDuo{
+	input{
+	
+		border-radius: 10px;
+		text-align: center;
+	}
+	}
+	.LogDuo{
+		width: 90% !important;
+		margin: 0 auto;
+	}
+}
+.NowyK{
+  a{
+    color: white;
+  }
+  
+}
+.DataFront{
+    background: darkslategrey;
+    color: white;
+}
+
+.ContactPage{
+  margin-top: 1%;
+  background: white;
+  z-index: 9999999;
+  position: relative;
+  z-index: 9;
+  width: 80%;
+  left: 10%;
+  border-radius: 10px;
+  padding: 2%;
+  margin-bottom: 2%;
+}
+
+.whiteForemka{
+  padding: 2%;
+}
+
+.input-field{
+  
+    width: 90%;
+    margin: 0 auto;
+    label{
+      width: 48%;
+    float: left;
+    margin: 1%;
+    }
+    input{
+      width: 48%;
+    float: left;
+    margin: 1%;
+    }
+    textarea{
+      width: 48%;
+      float: left;
+      margin: 1%;
+      max-height: 250px;
+    }
+    select{
+      width: 48%;
+    float: left;
+    margin: 1%;
+    }
+
+}
+.ShopKamila{
+    position: relative;
+    display: block;
+    width: 100%;
+    float: left;
+    z-index: 99;
+    text-align: center;
+    margin: 0 auto;
+    padding: 2%;
+    h2{
+      opacity: 0;
+    }
+    nav{
+      width: 100%;
+      display: block;
+      position: relative;
+      min-height: 50px;
+      margin: 0 auto;
+    }
+    main{
+      section{
+        min-height: 100vh;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    
+      }
+      .iPhone{
+        background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+      }
+      .iPad{
+        background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+      }
+      .iPod{
+        background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+      }
+      .iMac{
+        background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+      }
+      .MacBook{
+        background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+      }
+    }
+
+}
+
+.Mooie{
+		svg{
+			overflow: visible !important;
+			width: 18%;
+			color: blue;
+			height: auto;
+			float: left;
+			display: flex;
+			transform: scale(0.5);
+			justify-content: center;
+			position: relative;
+			z-index: 99;
+		  }
+	  
+}
+.Alle{
+	
+		background-color: beige;
+	
+}
+.Mooie2{
+
+	svg {
+		overflow: visible !important;
+		width: 18%;
+		color: green;
+		height: auto;
+		float: left;
+		display: flex;
+		transform: scale(0.5);
+		justify-content: center;
+		position: relative;
+		z-index: 99;
+	}
+}
+
+
+.ErrorInfo{
+  margin-top: 2%;
+  padding: 1%;
+
+}
+.Dolce{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+  div:nth-child(1){	
+	color: black;
+    width: 75%;
+    margin: 3%;
+    float: left;
+  }
+  div:nth-child(2){
+	color: red;
+	margin: 3%;
+  }
+ 
+}
+.Euro{
+	font-size: 20px;
+	font-weight: bold;
+	text-align: right;
+	div:nth-child(1){	
+	  color: black;
+	  width: 75%;
+	  margin: 3%;
+	  float: left;
+	}
+	div:nth-child(2){
+	  color: blue;
+	  margin: 3%;
+	}
+   
+  }
+.Frank{
+  font-size: 20px;
+  color: blue;
+  font-weight: bold;
+}
+.LogoKamilaNew{
+	opacity: 0;
+}
+
+.AdminDash{
+	h1{
+		color: #00040a;
+	}
+}
+.NewM{
+  width: 100%;
+  position: relative;
+  z-index: 99999;
+  float: left;
+  height: auto;
+  min-height: 50px;
+  text-align: center;
+  background: white;
+  opacity: 0.9;
+  ul{
+    li{
+      width: 90%;
+	    a{
+	      svg{
+			width: 9%;
+			color: black;
+			float: left;
+	 	   }
+	  	p{
+			width: 90%;
+       		padding: 1%;
+        	float: left;
+			font-size: 25px;
+			text-transform: uppercase;
+			background: -webkit-linear-gradient(rgb(113, 229, 125), rgb(98, 232, 218));
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+			font-family: 'Nabla', cursive;
+			text-shadow: 2px 2px #00040a;
+			letter-spacing: 2px;
+	  	}
+		p:hover{
+			font-size: 28px;	
+		}
+		}
+		svg{
+			width: 9%;
+			color: black;
+			float: left;
+	 	   }
+    }
+  }
+}
+
+.LinksIn{
+	ul{
+		display: flex;
+	}
+}
+
+.CloseBasket{
+	display: block;
+    width: 100%;
+	button{
+		width: 20%;
+		margin-top: 2% !important;
+	}
+	img{
+		width: 30%;
+	}
+	.Nowe{
+		width: 50%;
+		text-align: center;
+		float: left;
+		margin-top: 3%;
+		font-family: 'Nabla', cursive;
+		background: -webkit-linear-gradient(#71e57d, #62e8da);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-family: 'Nabla', cursive;
+		text-shadow: 2px 2px #00040a;
+		letter-spacing: 2px;
+	}
+
+}
+.Reducto{
+
+	padding: 0;
+    margin: 0;
+
+	li:nth-child(1){
+		width: 15%;
+	}
+
+	li:nth-child(2){
+		width: 15%;
+	}
+
+	li:nth-child(3){
+		width: 45%;
+	}
+
+}
+.WeatherApp{
+  position: relative;
+  display: block;
+  z-index: 99999;
+  height: auto;
+  min-height: 100px;
+  .Tempka{
+   
+    width: 50%;
+    float: left;
+  }
+  canvas{
+    width: 50% !important;
+    float: left;
+    transform: scale(0.6);
+  }
+}
+.Current{
+    border-radius: 10px;
+    margin-bottom: 2%;
+	margin-top: 5%;
+	.container{
+		margin: 1%;
+	}
+}
+.AllMap{
+  
+    display: block;
+    position: relative;
+    height: auto;
+    border: 1px solid black;
+    min-height: 100px;
+    .MapkaKamila{
+      display: block;
+      width: 100% !important;
+      height: 400px;
+   
+    }
+}
+.specialAdm{
+	background-color: violet;
+}
+.Logos{
+    position: absolute;
+    z-index: 99;
+    display: block;
+    background: none;
+    top: 5px;
+    right: 1px;
+    color: white;
+    width: 25%;
+	
+}
+.ButtonLogin{
+    position: relative;
+    overflow: visible;
+    display: table;
+    height: auto;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 4%;
+	color: white !important;
+}
+.NowyK{
+  margin-left: 2%;
+}
+.LinksOut{
+    display: block;
+	width: 100%;
+	position: absolute;
+	z-index: 999;
+    height: auto;
+    min-height: 50px;
+    ul{
+      li{
+        margin-left: 1%;
+   		margin-right: 1%;
+    	text-decoration: none;
+    	list-style: none;
+    	width: 31%;
+
+      }
+    }
+}
+.ButtonNew{
+  background: deepskyblue;
+  input{
+    margin-bottom: 5%;
+  }
+}
+.Loader{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 99999999999;
+    opacity: 0.9;
+}
+.Green{
+	background-color: greenyellow !important;
+}
+.OutButt{
+    background: deepskyblue;
+	opacity: 0.5;
+	margin-top: 5%;
+	input{
+		margin-bottom: 5%;
+	}
+}
+.LogoKamila{
+	svg{
+		position: absolute;
+    	top: -35px;
+    	width: 100% !important;
+		transform: scale(0.65);
+		display: none;
+	}
+}
+svg{
+	    overflow: visible !important;
+		width: 90%;
+		height: auto;
+		display: block;
+		position: relative;
+		z-index: 99;
+		transform: scale(0.5);	
+}
+svg:hover{
+	transform: scale(0.75);	
+}
+.st0{enable-background:new    ;}
+	.st1{clip-path:url(#SVGID_2_);enable-background:new    ;}
+	.st2{fill:#C1C1C1;}
+	.st3{fill:#C4C4C4;}
+	.st4{fill:#C7C7C7;}
+	.st5{fill:#CACACA;}
+	.st6{fill:#CDCDCD;}
+	.st7{fill:#D0D0D0;}
+	.st8{fill:#D4D4D4;}
+	.st9{fill:#D7D7D7;}
+	.st10{fill:#DADADA;}
+	.st11{fill:#DDDDDD;}
+	.st12{fill:#E0E0E0;}
+	.st13{fill:#E3E3E3;}
+	.st14{fill:#E6E6E6;}
+	.st15{fill:#E8E8E8;}
+	.st16{fill:#BEBEBE;}
+	.st17{clip-path:url(#SVGID_4_);enable-background:new    ;}
+	.st18{fill:#1A1A1A;}
+	.st19{fill:#2A2A2A;}
+	.st20{clip-path:url(#SVGID_6_);enable-background:new    ;}
+	.st21{clip-path:url(#SVGID_8_);enable-background:new    ;}
+	.st22{clip-path:url(#SVGID_10_);enable-background:new    ;}
+	.st23{fill:#BBBBBB;}
+	.st24{fill:#B8B8B8;}
+	.st25{fill:#B5B5B5;}
+	.st26{fill:#B2B2B2;}
+	.st27{fill:#AFAFAF;}
+	.st28{fill:#ABABAB;}
+	.st29{fill:#A8A8A8;}
+	.st30{fill:#A5A5A5;}
+	.st31{fill:#A2A2A2;}
+	.st32{fill:#9F9F9F;}
+	.st33{fill:#9C9C9C;}
+	.st34{clip-path:url(#SVGID_12_);enable-background:new    ;}
+	.st35{clip-path:url(#SVGID_14_);enable-background:new    ;}
+	.st36{clip-path:url(#SVGID_16_);enable-background:new    ;}
+	.st37{clip-path:url(#SVGID_18_);enable-background:new    ;}
+	.st38{clip-path:url(#SVGID_20_);enable-background:new    ;}
+	.st39{clip-path:url(#SVGID_22_);enable-background:new    ;}
+	.st40{fill:#D2D2D2;}
+	.st41{clip-path:url(#SVGID_24_);enable-background:new    ;}
+	.st42{clip-path:url(#SVGID_26_);enable-background:new    ;}
+	.st43{clip-path:url(#SVGID_28_);enable-background:new    ;}
+	.st44{fill:#CFCFCF;}
+	.st45{fill:#ACACAC;}
+	.st46{clip-path:url(#SVGID_30_);enable-background:new    ;}
+	.st47{clip-path:url(#SVGID_32_);enable-background:new    ;}
+	.st48{clip-path:url(#SVGID_34_);enable-background:new    ;}
+	.st49{clip-path:url(#SVGID_36_);enable-background:new    ;}
+	.st50{clip-path:url(#SVGID_38_);enable-background:new    ;}
+	.st51{fill:#CECECE;}
+	.st52{clip-path:url(#SVGID_40_);enable-background:new    ;}
+	.st53{clip-path:url(#SVGID_42_);enable-background:new    ;}
+	.st54{clip-path:url(#SVGID_44_);enable-background:new    ;}
+	.st55{clip-path:url(#SVGID_46_);enable-background:new    ;}
+	.st56{clip-path:url(#SVGID_48_);enable-background:new    ;}
+	.st57{clip-path:url(#SVGID_50_);enable-background:new    ;}
+	.st58{clip-path:url(#SVGID_52_);enable-background:new    ;}
+	.st59{clip-path:url(#SVGID_54_);enable-background:new    ;}
+	.st60{clip-path:url(#SVGID_56_);enable-background:new    ;}
+	.st61{clip-path:url(#SVGID_58_);enable-background:new    ;}
+	.st62{fill:#D1D1D1;}
+	.st63{clip-path:url(#SVGID_60_);enable-background:new    ;}
+	.st64{clip-path:url(#SVGID_62_);enable-background:new    ;}
+	.st65{clip-path:url(#SVGID_64_);enable-background:new    ;}
+	.st66{clip-path:url(#SVGID_66_);enable-background:new    ;}
+	.st67{clip-path:url(#SVGID_68_);enable-background:new    ;}
+	.st68{clip-path:url(#SVGID_70_);enable-background:new    ;}
+	.st69{clip-path:url(#SVGID_72_);enable-background:new    ;}
+	.st70{clip-path:url(#SVGID_74_);enable-background:new    ;}
+	.st71{clip-path:url(#SVGID_76_);enable-background:new    ;}
+	.st72{clip-path:url(#SVGID_78_);enable-background:new    ;}
+	.st73{clip-path:url(#SVGID_80_);enable-background:new    ;}
+	.st74{clip-path:url(#SVGID_82_);enable-background:new    ;}
+	.st75{clip-path:url(#SVGID_84_);enable-background:new    ;}
+	.st76{clip-path:url(#SVGID_86_);enable-background:new    ;}
+	.st77{clip-path:url(#SVGID_88_);enable-background:new    ;}
+	.st78{clip-path:url(#SVGID_90_);enable-background:new    ;}
+	.st79{clip-path:url(#SVGID_92_);enable-background:new    ;}
+	.st80{fill:#B4B4B4;}
+	.st81{clip-path:url(#SVGID_94_);enable-background:new    ;}
+	.st82{clip-path:url(#SVGID_96_);enable-background:new    ;}
+	.st83{clip-path:url(#SVGID_98_);enable-background:new    ;}
+	.st84{clip-path:url(#SVGID_100_);enable-background:new    ;}
+	.st85{clip-path:url(#SVGID_102_);enable-background:new    ;}
+	.st86{clip-path:url(#SVGID_104_);enable-background:new    ;}
+	.st87{clip-path:url(#SVGID_106_);enable-background:new    ;}
+	.st88{clip-path:url(#SVGID_108_);enable-background:new    ;}
+	.st89{clip-path:url(#SVGID_110_);enable-background:new    ;}
+	.st90{clip-path:url(#SVGID_112_);enable-background:new    ;}
+	.st91{clip-path:url(#SVGID_114_);enable-background:new    ;}
+	.st92{clip-path:url(#SVGID_116_);enable-background:new    ;}
+	.st93{clip-path:url(#SVGID_118_);enable-background:new    ;}
+	.st94{clip-path:url(#SVGID_120_);enable-background:new    ;}
+	.st95{clip-path:url(#SVGID_122_);enable-background:new    ;}
+	.st96{clip-path:url(#SVGID_124_);enable-background:new    ;}
+	.st97{clip-path:url(#SVGID_126_);enable-background:new    ;}
+	.st98{clip-path:url(#SVGID_128_);enable-background:new    ;}
+	.st99{clip-path:url(#SVGID_130_);enable-background:new    ;}
+	.st100{clip-path:url(#SVGID_132_);enable-background:new    ;}
+	.st101{clip-path:url(#SVGID_134_);enable-background:new    ;}
+	.st102{clip-path:url(#SVGID_136_);enable-background:new    ;}
+	.st103{clip-path:url(#SVGID_138_);enable-background:new    ;}
+	.st104{clip-path:url(#SVGID_140_);enable-background:new    ;}
+	.st105{clip-path:url(#SVGID_142_);enable-background:new    ;}
+	.st106{clip-path:url(#SVGID_144_);enable-background:new    ;}
+	.st107{clip-path:url(#SVGID_146_);enable-background:new    ;}
+	.st108{clip-path:url(#SVGID_148_);enable-background:new    ;}
+	.st109{clip-path:url(#SVGID_150_);enable-background:new    ;}
+	.st110{clip-path:url(#SVGID_152_);enable-background:new    ;}
+	.st111{clip-path:url(#SVGID_154_);enable-background:new    ;}
+	.st112{clip-path:url(#SVGID_156_);enable-background:new    ;}
+	.st113{clip-path:url(#SVGID_158_);enable-background:new    ;}
+	.st114{clip-path:url(#SVGID_160_);enable-background:new    ;}
+	.st115{clip-path:url(#SVGID_162_);enable-background:new    ;}
+	.st116{clip-path:url(#SVGID_164_);enable-background:new    ;}
+	.st117{clip-path:url(#SVGID_166_);enable-background:new    ;}
+	.st118{clip-path:url(#SVGID_168_);enable-background:new    ;}
+	.st119{clip-path:url(#SVGID_170_);enable-background:new    ;}
+	.st120{clip-path:url(#SVGID_172_);enable-background:new    ;}
+	.st121{clip-path:url(#SVGID_174_);enable-background:new    ;}
+	.st122{clip-path:url(#SVGID_176_);enable-background:new    ;}
+	.st123{clip-path:url(#SVGID_178_);enable-background:new    ;}
+	.st124{clip-path:url(#SVGID_180_);enable-background:new    ;}
+	.st125{clip-path:url(#SVGID_182_);enable-background:new    ;}
+	.st126{clip-path:url(#SVGID_184_);enable-background:new    ;}
+	.st127{clip-path:url(#SVGID_186_);enable-background:new    ;}
+	.st128{clip-path:url(#SVGID_188_);enable-background:new    ;}
+	.st129{clip-path:url(#SVGID_190_);enable-background:new    ;}
+	.st130{clip-path:url(#SVGID_192_);enable-background:new    ;}
+	.st131{clip-path:url(#SVGID_194_);enable-background:new    ;}
+	.st132{clip-path:url(#SVGID_196_);enable-background:new    ;}
+	.st133{clip-path:url(#SVGID_198_);enable-background:new    ;}
+	.st134{fill:#E4E4E4;}
+	.st135{clip-path:url(#SVGID_200_);enable-background:new    ;}
+	.st136{clip-path:url(#SVGID_202_);enable-background:new    ;}
+	.st137{clip-path:url(#SVGID_204_);enable-background:new    ;}
+	.st138{clip-path:url(#SVGID_206_);enable-background:new    ;}
+	.st139{clip-path:url(#SVGID_208_);enable-background:new    ;}
+	.st140{clip-path:url(#SVGID_210_);enable-background:new    ;}
+	.st141{clip-path:url(#SVGID_212_);enable-background:new    ;}
+	.st142{clip-path:url(#SVGID_214_);enable-background:new    ;}
+	.st143{fill:#CCCCCC;}
+	.st144{clip-path:url(#SVGID_216_);enable-background:new    ;}
+	.st145{clip-path:url(#SVGID_218_);enable-background:new    ;}
+	.st146{clip-path:url(#SVGID_220_);enable-background:new    ;}
+	.st147{clip-path:url(#SVGID_222_);enable-background:new    ;}
+	.st148{clip-path:url(#SVGID_224_);enable-background:new    ;}
+	.st149{clip-path:url(#SVGID_226_);enable-background:new    ;}
+	.st150{fill:#9E9E9E;}
+	.st151{clip-path:url(#SVGID_228_);enable-background:new    ;}
+	.st152{clip-path:url(#SVGID_230_);enable-background:new    ;}
+	.st153{clip-path:url(#SVGID_232_);enable-background:new    ;}
+	.st154{clip-path:url(#SVGID_234_);enable-background:new    ;}
+	.st155{clip-path:url(#SVGID_236_);enable-background:new    ;}
+	.st156{clip-path:url(#SVGID_238_);enable-background:new    ;}
+	.st157{fill:#CBCBCB;}
+	.st158{clip-path:url(#SVGID_240_);enable-background:new    ;}
+	.st159{clip-path:url(#SVGID_242_);enable-background:new    ;}
+	.st160{clip-path:url(#SVGID_244_);enable-background:new    ;}
+	.st161{clip-path:url(#SVGID_246_);enable-background:new    ;}
+	.st162{clip-path:url(#SVGID_248_);enable-background:new    ;}
+	.st163{clip-path:url(#SVGID_250_);enable-background:new    ;}
+	.st164{clip-path:url(#SVGID_252_);enable-background:new    ;}
+	.st165{clip-path:url(#SVGID_254_);enable-background:new    ;}
+	.st166{clip-path:url(#SVGID_256_);enable-background:new    ;}
+	.st167{clip-path:url(#SVGID_258_);enable-background:new    ;}
+	.st168{clip-path:url(#SVGID_260_);enable-background:new    ;}
+	.st169{fill:#9D9D9D;}
+	.st170{clip-path:url(#SVGID_262_);enable-background:new    ;}
+	.st171{clip-path:url(#SVGID_264_);enable-background:new    ;}
+	.st172{clip-path:url(#SVGID_266_);enable-background:new    ;}
+	.st173{fill:#DBDBDB;}
+	.st174{clip-path:url(#SVGID_268_);enable-background:new    ;}
+	.st175{clip-path:url(#SVGID_270_);enable-background:new    ;}
+	.st176{clip-path:url(#SVGID_272_);enable-background:new    ;}
+	.st177{clip-path:url(#SVGID_274_);enable-background:new    ;}
+	.st178{clip-path:url(#SVGID_276_);enable-background:new    ;}
+	.st179{clip-path:url(#SVGID_278_);enable-background:new    ;}
+	.st180{clip-path:url(#SVGID_280_);enable-background:new    ;}
+	.st181{clip-path:url(#SVGID_282_);enable-background:new    ;}
+	.st182{clip-path:url(#SVGID_284_);enable-background:new    ;}
+	.st183{clip-path:url(#SVGID_286_);enable-background:new    ;}
+	.st184{clip-path:url(#SVGID_288_);enable-background:new    ;}
+	.st185{clip-path:url(#SVGID_290_);enable-background:new    ;}
+	.st186{clip-path:url(#SVGID_292_);enable-background:new    ;}
+	.st187{clip-path:url(#SVGID_294_);enable-background:new    ;}
+	.st188{clip-path:url(#SVGID_296_);enable-background:new    ;}
+	.st189{clip-path:url(#SVGID_298_);enable-background:new    ;}
+	.st190{clip-path:url(#SVGID_300_);enable-background:new    ;}
+	.st191{clip-path:url(#SVGID_302_);enable-background:new    ;}
+	.st192{clip-path:url(#SVGID_304_);enable-background:new    ;}
+	.st193{clip-path:url(#SVGID_306_);enable-background:new    ;}
+	.st194{clip-path:url(#SVGID_308_);enable-background:new    ;}
+	.st195{fill:#D3D3D3;}
+	.st196{clip-path:url(#SVGID_310_);enable-background:new    ;}
+	.st197{clip-path:url(#SVGID_312_);enable-background:new    ;}
+	.st198{clip-path:url(#SVGID_314_);enable-background:new    ;}
+	.st199{clip-path:url(#SVGID_316_);enable-background:new    ;}
+	.st200{clip-path:url(#SVGID_318_);enable-background:new    ;}
+	.st201{clip-path:url(#SVGID_320_);enable-background:new    ;}
+	.st202{clip-path:url(#SVGID_322_);enable-background:new    ;}
+	.st203{clip-path:url(#SVGID_324_);enable-background:new    ;}
+	.st204{clip-path:url(#SVGID_326_);enable-background:new    ;}
+	.st205{clip-path:url(#SVGID_328_);enable-background:new    ;}
+	.st206{clip-path:url(#SVGID_330_);enable-background:new    ;}
+	.st207{clip-path:url(#SVGID_332_);enable-background:new    ;}
+	.st208{clip-path:url(#SVGID_334_);enable-background:new    ;}
+	.st209{clip-path:url(#SVGID_336_);enable-background:new    ;}
+	.st210{clip-path:url(#SVGID_338_);enable-background:new    ;}
+	.st211{clip-path:url(#SVGID_340_);enable-background:new    ;}
+	.st212{clip-path:url(#SVGID_342_);enable-background:new    ;}
+	.st213{clip-path:url(#SVGID_344_);enable-background:new    ;}
+	.st214{clip-path:url(#SVGID_346_);enable-background:new    ;}
+	.st215{clip-path:url(#SVGID_348_);enable-background:new    ;}
+	.st216{clip-path:url(#SVGID_350_);enable-background:new    ;}
+	.st217{clip-path:url(#SVGID_352_);enable-background:new    ;}
+	.st218{clip-path:url(#SVGID_354_);enable-background:new    ;}
+	.st219{clip-path:url(#SVGID_356_);enable-background:new    ;}
+	.st220{clip-path:url(#SVGID_358_);enable-background:new    ;}
+	.st221{clip-path:url(#SVGID_360_);enable-background:new    ;}
+	.st222{clip-path:url(#SVGID_362_);enable-background:new    ;}
+	.st223{clip-path:url(#SVGID_364_);enable-background:new    ;}
+	.st224{clip-path:url(#SVGID_366_);enable-background:new    ;}
+	.st225{clip-path:url(#SVGID_368_);enable-background:new    ;}
+	.st226{clip-path:url(#SVGID_370_);enable-background:new    ;}
+	.st227{clip-path:url(#SVGID_372_);enable-background:new    ;}
+	.st228{clip-path:url(#SVGID_374_);enable-background:new    ;}
+	.st229{clip-path:url(#SVGID_376_);enable-background:new    ;}
+	.st230{clip-path:url(#SVGID_378_);enable-background:new    ;}
+	.st231{clip-path:url(#SVGID_380_);enable-background:new    ;}
+	.st232{clip-path:url(#SVGID_382_);enable-background:new    ;}
+	.st233{clip-path:url(#SVGID_384_);enable-background:new    ;}
+	.st234{clip-path:url(#SVGID_386_);enable-background:new    ;}
+	.st235{clip-path:url(#SVGID_388_);enable-background:new    ;}
+	.st236{clip-path:url(#SVGID_390_);enable-background:new    ;}
+	.st237{clip-path:url(#SVGID_392_);enable-background:new    ;}
+	.st238{clip-path:url(#SVGID_394_);enable-background:new    ;}
+	.st239{clip-path:url(#SVGID_396_);enable-background:new    ;}
+	.st240{clip-path:url(#SVGID_398_);enable-background:new    ;}
+	.st241{clip-path:url(#SVGID_400_);enable-background:new    ;}
+	.st242{clip-path:url(#SVGID_402_);enable-background:new    ;}
+	.st243{clip-path:url(#SVGID_404_);enable-background:new    ;}
+	.st244{clip-path:url(#SVGID_406_);enable-background:new    ;}
+	.st245{clip-path:url(#SVGID_408_);enable-background:new    ;}
+	.st246{clip-path:url(#SVGID_410_);enable-background:new    ;}
+	.st247{clip-path:url(#SVGID_412_);enable-background:new    ;}
+	.st248{clip-path:url(#SVGID_414_);enable-background:new    ;}
+	.st249{clip-path:url(#SVGID_416_);enable-background:new    ;}
+	.st250{clip-path:url(#SVGID_418_);enable-background:new    ;}
+	.st251{clip-path:url(#SVGID_420_);enable-background:new    ;}
+	.st252{clip-path:url(#SVGID_422_);enable-background:new    ;}
+	.st253{clip-path:url(#SVGID_424_);enable-background:new    ;}
+	.st254{clip-path:url(#SVGID_426_);enable-background:new    ;}
+	.st255{clip-path:url(#SVGID_428_);enable-background:new    ;}
+	.st256{clip-path:url(#SVGID_430_);enable-background:new    ;}
+	.st257{fill:#E5E5E5;}
+	.st258{clip-path:url(#SVGID_432_);enable-background:new    ;}
+	.st259{clip-path:url(#SVGID_434_);enable-background:new    ;}
+	.st260{clip-path:url(#SVGID_436_);enable-background:new    ;}
+	.st261{clip-path:url(#SVGID_438_);enable-background:new    ;}
+	.st262{clip-path:url(#SVGID_440_);enable-background:new    ;}
+	.st263{clip-path:url(#SVGID_442_);enable-background:new    ;}
+	.st264{clip-path:url(#SVGID_444_);enable-background:new    ;}
+	.st265{clip-path:url(#SVGID_446_);enable-background:new    ;}
+	.st266{clip-path:url(#SVGID_448_);enable-background:new    ;}
+	.st267{clip-path:url(#SVGID_450_);enable-background:new    ;}
+	.st268{clip-path:url(#SVGID_452_);enable-background:new    ;}
+	.st269{clip-path:url(#SVGID_454_);enable-background:new    ;}
+	.st270{clip-path:url(#SVGID_456_);enable-background:new    ;}
+	.st271{clip-path:url(#SVGID_458_);enable-background:new    ;}
+	.st272{clip-path:url(#SVGID_460_);enable-background:new    ;}
+	.st273{clip-path:url(#SVGID_462_);enable-background:new    ;}
+	.st274{clip-path:url(#SVGID_464_);enable-background:new    ;}
+	.st275{clip-path:url(#SVGID_466_);enable-background:new    ;}
+	.st276{clip-path:url(#SVGID_468_);enable-background:new    ;}
+	.st277{clip-path:url(#SVGID_470_);enable-background:new    ;}
+	.st278{clip-path:url(#SVGID_472_);enable-background:new    ;}
+	.st279{clip-path:url(#SVGID_474_);enable-background:new    ;}
+	.st280{clip-path:url(#SVGID_476_);enable-background:new    ;}
+	.st281{clip-path:url(#SVGID_478_);enable-background:new    ;}
+	.st282{clip-path:url(#SVGID_480_);enable-background:new    ;}
+	.st283{clip-path:url(#SVGID_482_);enable-background:new    ;}
+	.st284{clip-path:url(#SVGID_484_);enable-background:new    ;}
+	.st285{clip-path:url(#SVGID_486_);enable-background:new    ;}
+	.st286{fill:#A1A1A1;}
+	.st287{clip-path:url(#SVGID_488_);enable-background:new    ;}
+	.st288{clip-path:url(#SVGID_490_);enable-background:new    ;}
+	.st289{clip-path:url(#SVGID_492_);enable-background:new    ;}
+	.st290{clip-path:url(#SVGID_494_);enable-background:new    ;}
+	.st291{clip-path:url(#SVGID_496_);enable-background:new    ;}
+	.st292{clip-path:url(#SVGID_498_);enable-background:new    ;}
+	.st293{clip-path:url(#SVGID_500_);enable-background:new    ;}
+	.st294{clip-path:url(#SVGID_502_);enable-background:new    ;}
+	.st295{clip-path:url(#SVGID_504_);enable-background:new    ;}
+	.st296{clip-path:url(#SVGID_506_);enable-background:new    ;}
+	.st297{clip-path:url(#SVGID_508_);enable-background:new    ;}
+	.st298{clip-path:url(#SVGID_510_);enable-background:new    ;}
+	.st299{clip-path:url(#SVGID_512_);enable-background:new    ;}
+	.st300{clip-path:url(#SVGID_514_);enable-background:new    ;}
+	.st301{clip-path:url(#SVGID_516_);enable-background:new    ;}
+	.st302{clip-path:url(#SVGID_518_);enable-background:new    ;}
+	.st303{clip-path:url(#SVGID_520_);enable-background:new    ;}
+	.st304{clip-path:url(#SVGID_522_);enable-background:new    ;}
+	.st305{clip-path:url(#SVGID_524_);enable-background:new    ;}
+	.st306{clip-path:url(#SVGID_526_);enable-background:new    ;}
+	.st307{clip-path:url(#SVGID_528_);enable-background:new    ;}
+	.st308{clip-path:url(#SVGID_530_);enable-background:new    ;}
+	.st309{clip-path:url(#SVGID_532_);enable-background:new    ;}
+	.st310{clip-path:url(#SVGID_534_);enable-background:new    ;}
+	.st311{enable-background:new    ;}
+	.st312{fill:none;}
+	.st313{fill:#E9D700;}
+	.st314{fill:#EAD800;}
+	.st315{fill:#C0B300;}
+
+
+@media screen and (max-width: 820px){
+  .input-field { 
+    label{
+      width: 100%;
+    }
+    input{
+      width: 100%;
+    }
+    textarea{
+      width: 100%;
+    }
+  }
+  .NewM{
+    ul{
+      li{
+        width: 100% !important;
+      }
+    }
+  }
+  .Current{
+    p{
+      width: 100%;
+    }
+  }
+  .ProductShow{
+	  width: 100%;
+  }
+  .NiceBasket{
+	  width: 30%;
+  }
+  .ShopKamila{
+	  hr{
+		  display: none;
+	  }
+  }
+
+}
+@media screen and (max-width: 620px){
+.IteamDetails {
+	width: 94%;}
+}
+@media screen and (max-width: 1000px){
+	.FormKamilLog{
+		width: 90%;  
+	}
+	.Logos {width: 40%;}
+
+	.CloseBasket {
+		display: block;
+		width: 72%;
+		position: absolute;
+		border-radius: 1px 1px 10px 0px;
+		left: 0px;
+		top: 100%;
+		background: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb);
+		}
+
+		.Nowe{
+			width: 15%;
+		}
+}
+
+
