@@ -5,7 +5,7 @@ import NewMenu from '../Layaut/NewMenu';
 import Burger from '../../images/burger.png';
 import Basket from '../Layaut/Basket';
 import { useLocation } from 'react-router-dom';
-
+// import Language from '../Layaut/Language';
 
 const LinksLoginIn =(props)=> {
 
@@ -28,6 +28,7 @@ const LinksLoginIn =(props)=> {
                  <li><img className="Burgerek" onClick={toggle} src={Burger} alt="Burger"/></li>
                  <li><button className="btn btn-primary" onClick={props.signOut}>Wyloguj się!</button></li>    
                  <li><Basket/></li>        
+                 {/* <li><Language/></li> */}
                </ul> 
                {dropDownOpen ? <NewMenu /> : null}
             </div>

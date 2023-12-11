@@ -1,0 +1,19 @@
+{
+    "welcom" : "Witaj w React",
+    "Lange" : "Polski",
+
+    "Information" : {
+        "shop_info" : "Sklep jest ..."
+    },
+
+    "Menu" : {
+        "login" :  {
+            "log_in" : "Zaloguj sie!",
+            "log_out" : "Wyloguj sie",
+            "password" : "Haslo"
+        },
+        "infoError" : "Musisz sie Zarejstrowac lub Zalogowac by wejsc do Aplikacji "
+    }
+
+
+}

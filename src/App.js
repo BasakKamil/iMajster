@@ -15,6 +15,8 @@ import Navbar from './Components/Layaut/Navbar';
 import Admin from './Components/Admin/Admin';
 
 
+
+
 const routes = [
   {path: '/shop', name: "Shop", Component: Shop },
   {path: '/contact', name: "Contact", Component: Contact },
@@ -23,7 +25,6 @@ const routes = [
 ]
 
 const App = () => {
-
 
   return (
     <React.Fragment>

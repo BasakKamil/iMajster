@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber';
 // import { OrbitControls } from '@react-three/drei';
 import Box from '../../Animate/BOX/Box';
 // import Sphere from '../Animate/BOX/Box2';
-import Header from './Header';
+import { useTranslation } from 'react-i18next';
 
 
 
@@ -11,7 +11,7 @@ import Header from './Header';
 
 const More = () => {
 
-
+const { t } = useTranslation();
 
 
 
@@ -19,7 +19,7 @@ const More = () => {
   return(
     <div className="info">
       <div className="box" >
-     <Header/>
+           <h1 className='Test'> {t('welcom')} </h1>
       </div>
        <div className="container">
         <div className="row">
@@ -34,7 +34,7 @@ const More = () => {
              </Canvas>
            </div>
            <div className="col">
-            Sklep powstawal przez kilka lat ze wzgledu na moja emigracje z Polski do Holandii.
+            {t('Information.shop_info')}
            </div>
         </div>
         <div className="row">

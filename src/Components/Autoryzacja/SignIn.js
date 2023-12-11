@@ -1,68 +1,86 @@
-import React, { Component } from 'react';
+import React, { Component,useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { signIn } from '../../store/actions/authActions';
 import { Redirect } from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RadioButton';
+import { useTranslation } from 'react-i18next';
 
-export class SignIn extends Component {
-    state = {
-        email: '',
-        password: ''
-    }
 
-    handleChange = input => (e) => {
-        this.setState({
-            [input]: e.target.value
-        })
-    } 
-    handleSubmit = (e) => {
+function SignIn(props){
+  
+     const { t } = useTranslation();
+     const [ email,setEmial ] = useState({
+        title: 'Kamil@op2.pl',
+        body: '',
+        intText: 'Email'
+    });
+     const [ password, setPassword ] = useState({
+        title: 'password',
+        body: '',
+        hintText : 'Password'
+     });
+     const [ label, setLabel ] = useState('Log in');
+
+
+
+    const handleSubmit = (e) => {
+
+        const a = {
+            email: email.body,
+            password: password.body
+        }
         e.preventDefault();
-        this.props.signIn(this.state);
-       
-        
+        props.signIn(a);
+
+           
     } 
+
+    useEffect(() => {   
+        setLabel(t('Menu.login.log_in'));
+    });
+
 
    
 
-    render() {
-        const {auth,authError} = this.props;
-        if(auth.uid) return <Redirect to="/" />
         
+        const {auth,authError} = props;       
+        if(auth.uid) return <Redirect to="/" />
         return (
             <MuiThemeProvider>
                 <React.Fragment>
                 <div className="container FormKamilLog">
                 <TextField  
-                hintText="email"
+                hintText={email.intText}
                 type="email" 
                 className="LogUno"
+                defaultValue={email.title}
                 floatingLabelText="email"
-                onChange={this.handleChange('email')}
-                defaultValue={this.state.email}
+                onChange={(e) => setEmial({...email, body: e.target.value})}
+                value={email.body}
                />
                 <br/>
                 <TextField  
-                hintText="password"
+                hintText={password.hintText}
                 type="password"
                 className="LogUno"
-                floatingLabelText="password"
-                onChange={this.handleChange('password')}
-                defaultValue={this.state.password}
+                defaultValue={password.title}
+                floatingLabelText={password.hintText}
+                onChange={(e) => setPassword({...password, body: e.target.value})}
                 />
                
                 <RaisedButton
-                    label="Zaloguj !"
+                    label={label}
                     primary={true}
-                    onClick={this.handleSubmit}
+                    onClick={handleSubmit}
                     className="ButtonLogin btn btn-success"
                 />
                  <p className="ErrorInfo">
                          {authError ? <p>{authError}</p> : null}
                  </p>
                  </div>   
-                 <div className="work">Musisz sie Zarejstrowac lub Zalogowac by wejsc do Aplikacji </div> 
+                 <div className="work"> {t('Menu.infoError')} </div> 
                  </React.Fragment>
              </MuiThemeProvider>
            
@@ -70,7 +88,7 @@ export class SignIn extends Component {
             
         )
     }
-}
+
 const mapStateToProps= (state) => {
     return{
         authError: state.auth.authError,

@@ -11,28 +11,30 @@ import { reduxFirestore ,getFirestore } from 'redux-firestore';
 import { reactReduxFirebase ,getFirebase } from 'react-redux-firebase';
 import fbConfig from './config/fbconfig';
 import Loader from './Components/Animate/Loader';
-import gloabl_pl from './Translation/Pl/global.json';
-import gloabl_en from './Translation/En/global.json';
-import gloabl_nl from './Translation/Nl/global.json';
-import i18next from 'i18next';
-import { I18nextProvider } from 'react-i18next';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import { I18nextProvider, initReactI18next } from 'react-i18next';
+import i18n from "i18next";
+import LanguageDetector from 'i18next-browser-languagedetector';
+import HttpApi from 'i18next-http-backend';
 
-i18next.init({
-    interpolation: { escapeValue: false },
-    lng: "pl",
-    resources: {    
-        pl: {
-            global : gloabl_pl
+i18n
+    .use(initReactI18next)
+    .use(LanguageDetector)
+    .use(HttpApi)
+    .init({
+        supportedLangs: ['en','nl' ,'pl'],
+        interpolation: { escapeValue: false },
+        falbacklang: 'en',
+        detection: {
+            order: ['htmlTag', 'cookie', 'localStorage', 'sessionStorage', 'navigator', 'path', 'subdomain'],
+            caches: ['cookie']
         },
-        en: {
-            global : gloabl_en
+        backend: {
+            loadPath: '/assets/locales/{{lng}}/translation.json',
         },
-        nl: {
-            global : gloabl_nl
-        },
-
-    }
-})
+        react: { useSuspense: false }
+    })
 
 
 
@@ -53,7 +55,7 @@ const store = createStore(rootReducer,
 store.firebaseAuthIsReady.then(()=>{
     ReactDOM.render(
         <I18nextProvider>
-            <Provider store={store} i18n={i18next}>
+            <Provider store={store} i18n={i18n}>
                 <>
                     <Loader/>
                     <App />

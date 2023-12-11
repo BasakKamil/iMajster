@@ -1,0 +1,19 @@
+{
+    "welcom" : "Welcome to React",
+    "Lange" : "English",
+
+    "Information" : {
+        "shop_info" : "Shop is ..."
+    },
+    "Menu" : {
+        "login" :  {
+            "log_in" : "Log in!",
+            "log_out" : "Log Out!",
+            "password" : "Password"
+        },
+        "infoError" : "You must login or register if you want buying or watching "
+    }
+
+
+
+}

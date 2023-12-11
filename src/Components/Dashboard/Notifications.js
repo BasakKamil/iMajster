@@ -7,7 +7,7 @@ const Notifications = (props)=>{
      
         <div className="NotificationsKamcia">
             <div> {notifications && notifications.map(item =>{
-                console.log(item);
+                // console.log(item);
                 return (
                     <div className="NewStat">
                     <ul key={item.id}>

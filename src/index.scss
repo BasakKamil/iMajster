@@ -25,7 +25,6 @@ body {
 .Sum{
     width: 100%;
 }
-
 .NiceBasket{
     position: absolute;
     left: 1px;
@@ -751,6 +750,17 @@ ul{
 .NowyK{
   margin-left: 2%;
 }
+.KamilaNav{
+	z-index: 99999999999999999999999;
+	li{
+			width: 100% !important;
+			float: left;	
+	}
+
+	button{	
+			margin: 2%;
+	}
+}
 .LinksOut{
     display: block;
 	width: 100%;
@@ -764,7 +774,7 @@ ul{
    		margin-right: 1%;
     	text-decoration: none;
     	list-style: none;
-    	width: 31%;
+    	width: 23%;
 
       }
     }

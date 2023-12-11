@@ -4,11 +4,11 @@ import LinksLoginIn from '../Auth/LinksLoginIn';
 import LinksLoginOut from '../Auth/LinksLoginOut';
 import { connect } from 'react-redux';
 import Logo from './Logo';
+// import Language from './Language';
 
 const Navbar = (props) =>{
    const {auth, profile} = props;
    const links = auth.uid ? <LinksLoginIn profile={profile}/> : <LinksLoginOut/> ;
-   console.log(links);
     return(
         <div className="NavbarBasi">
                 <nav className="nav-wrapper">

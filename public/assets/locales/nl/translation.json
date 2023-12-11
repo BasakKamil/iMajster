@@ -1,0 +1,19 @@
+{
+    "welcom" : "Welkom in React",
+    "Lange" : "Netherlandse",
+
+    "Information" : {
+        "shop_info" : "Winkel is ..."
+    },
+    "Menu" : {
+        "login" :  {
+            "log_in" : "Annmelden",
+            "log_out" : "UitLoggen",
+            "password" : "Wachtwoord"
+            
+        },
+        "infoError" : "Je moet eerst inloggen of nieuwe rekening aanmaken als Je wilt iets kopen of kijken "
+    }
+
+
+}
