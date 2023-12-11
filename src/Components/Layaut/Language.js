@@ -33,12 +33,12 @@ const Language = () => {
     return(
         
         <div className="dropdown">
-            <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"  >
+            <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" value="value" >
                 {t('Lange')}
             </button>
    
 
-            <ul className="dropdown-menu KamilaNav" aria-labelledby="dropdownMenuButton1">
+            <ul className="KamilaNav dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     {languages.map(({code,name,country_code, codeUpper}) => (
                         <li key={country_code} >
                             <button className="dropdown-item" onClick={()=>i18next.changeLanguage(code)} >      

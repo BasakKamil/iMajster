@@ -9,9 +9,27 @@
         "login" :  {
             "log_in" : "Log in!",
             "log_out" : "Log Out!",
-            "password" : "Password"
+            "password" : "Password",
+            "load": "Loading...",
+            "open": "Open",
+            "close":"Close",
+            "register": "New Account"
         },
-        "infoError" : "You must login or register if you want buying or watching "
+        "infoError" : "You must login or register if you want buying or watching ",
+        "pieces" : "Pieces"
+    },
+    "Contact": {
+        "title" : "Contact",
+        "info" : {
+            "lub" : "or",
+            "cont" : "How can you contact me?",
+            "look" : "Where you can find me ",
+            "Dolar" :"Price of Dollar",
+            "Euro" : "Price of Euro "
+        }
+    },
+    "Basket": {
+        "Empty": "Basket is empty !"
     }
 
 

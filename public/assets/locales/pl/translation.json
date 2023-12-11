@@ -10,9 +10,27 @@
         "login" :  {
             "log_in" : "Zaloguj sie!",
             "log_out" : "Wyloguj sie",
-            "password" : "Haslo"
+            "password" : "Haslo",
+            "load": "Laduje sie...",
+            "open": "OTWORZ",
+            "close":"ZAMKNIJ",
+            "register": "Zarejstruj sie"
         },
-        "infoError" : "Musisz sie Zarejstrowac lub Zalogowac by wejsc do Aplikacji "
+        "infoError" : "Musisz sie Zarejstrowac lub Zalogowac by wejsc do Aplikacji ",
+        "pieces" : "Ilosc"
+    },
+    "Contact": {
+        "title" : "Kontakt",
+        "info" : {
+            "lub" : "lub",
+            "cont" : "Jak się ze mną Skontaktować ?",
+            "look" : "Gdzie mozna mnie znalezc ",
+            "Dolar" :"Cena Dolara",
+            "Euro" : "Cena Euro"
+        }
+    },
+    "Basket": {
+        "Empty": "Koszyk jest Pusty !"
     }
 
 

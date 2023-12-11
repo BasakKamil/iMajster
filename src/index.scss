@@ -680,7 +680,7 @@ ul{
 	}
 
 	li:nth-child(3){
-		width: 45%;
+		width: 30%;
 	}
 
 }
@@ -751,6 +751,7 @@ ul{
   margin-left: 2%;
 }
 .KamilaNav{
+	display: none;
 	z-index: 99999999999999999999999;
 	li{
 			width: 100% !important;

@@ -1,5 +1,7 @@
 import React,{ useEffect, useState} from 'react';
 import { RiMoneyEuroCircleFill,RiMoneyDollarCircleFill }from 'react-icons/ri';
+import { useTransition } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function Weather(){
 
@@ -10,7 +12,7 @@ const eur = "https://api.nbp.pl/api/exchangerates/rates/c/eur?format=json";
 const [dolar,setDolar] = useState(0);
 const [euro,setEuro] = useState(0);
 const [loading, setLoading] = useState(true);
-
+const { t } = useTranslation();
 
 function Round(n, k){
                     let factor = Math.pow(10, k+1);
@@ -40,17 +42,18 @@ function Round(n, k){
 
   },[]);
 
+
         return(
                 <div>
                    {loading ? ( 
-                      "Laduje sie..."
+                      t('Menu.login.load')
                    ) : (
                     <>
                     <div className="Current Alle"> 
                         <div class="container">
                           <div class="row">
                             <div className="col Dolce">    
-                              <div>Obecny stan Dolara to: </div>
+                              <div>{t('Contact.info.Dolar')} </div>
                               <div>{ dolar } </div> 
                             </div>
                             <div class="col Mooie2"><RiMoneyDollarCircleFill/></div>
@@ -60,7 +63,7 @@ function Round(n, k){
                         <div class="container">
                           <div class="row">
                             <div className="col Euro">    
-                              <div>Obecny stan Euro to: </div>
+                              <div>{t('Contact.info.Euro')}  </div>
                               <div>{ euro } </div> 
                             </div>
                             <div class="col Mooie"><RiMoneyEuroCircleFill/></div>

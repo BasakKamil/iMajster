@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import {createOrder} from '../actions/createOrder';
 import { Redirect } from 'react-router-dom';
 import StepOrdertwo from './Stepordertwo';
+import { useTranslation } from 'react-i18next';
+import BasketEmpty from './BasketEmpty';
 
 
 
@@ -46,11 +48,12 @@ class Cart extends Component{
     render(){
         const {auth} = this.props;
         const {stepOrder} = this.state;
+      
         
         if(!auth.uid) return <Redirect to="/signin" />
         if(this.props.items.length === 0){
             return(
-                <div className="NiceBasketZero">Koszyk jest pusty !!!</div>
+                <div className="NiceBasketZero"> <BasketEmpty/> </div>
             )
         } 
         // eslint-disable-next-line default-case

@@ -9,11 +9,30 @@
         "login" :  {
             "log_in" : "Annmelden",
             "log_out" : "UitLoggen",
-            "password" : "Wachtwoord"
+            "password" : "Wachtwoord",
+            "load": "Laden...",
+            "open": "Open",
+            "close":"Sluit",
+            "register": "Rekening aanmaken"
             
         },
-        "infoError" : "Je moet eerst inloggen of nieuwe rekening aanmaken als Je wilt iets kopen of kijken "
+        "infoError" : "Je moet eerst inloggen of nieuwe rekening aanmaken als Je wilt iets kopen of kijken ",
+        "pieces" : "Aantal stuks"
+    },
+    "Contact": {
+        "title" : "Contact opnemen",
+        "info" : {
+            "lub" : "of",
+            "cont" : "Hoe kunt u contact met mij opnemen ?",
+            "look" : " Waar je kan mij vinden ",
+            "Dolar" :"Dollar prijs ",
+            "Euro" : "Euro prijs "
+        }   
+    },
+    "Basket": {
+        "Empty": "Mand is leeg !"
     }
+
 
 
 }

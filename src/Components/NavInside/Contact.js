@@ -2,27 +2,29 @@ import React, { Component } from 'react';
 import Map from '../Layaut/Map';
 import { connect } from 'react-redux';
 import Weather from '../API/Weather';
-// import { Redirect } from 'react-router-dom';
+import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
-export class Contact extends Component {
+
+function Contact() {
 
 
-    render() {
-        // const {auth} = this.props;
+  
+        const { t } = useTranslation();
         // if(!auth.uid) return <Redirect to="/signin" />
         return (
             <div className="ContactPage">
-               
+               <h1>{t('Contact.info.cont')}</h1>
                 <div className="map container">
                 <div className="Paper row">
                     <div className="Check col">
-                            <h2>Jak się ze mną Skontaktować ?</h2>
+                            <h2></h2>
                             <div>Tel. 796 895 079<br/>
                             E-Mail: Bastric91@gmail.com<br/>
                             </div>
-                            <div><h2>Gdzie mnie Szukać ?</h2>
+                            <div><h2>{t('Contact.info.look')}</h2>
                            Wraszawa - Wawer - Radość
-                           lub 
+                          <span> {t('Contact.info.lub')} </span> 
                            ROTTERDAM
                     
                            </div>
@@ -41,7 +43,7 @@ export class Contact extends Component {
             </div>
         )
     }
-}
+
 const mapStateToProps = (state) => {
     return{
         auth: state.firebase.auth

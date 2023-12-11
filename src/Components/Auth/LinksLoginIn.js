@@ -5,15 +5,16 @@ import NewMenu from '../Layaut/NewMenu';
 import Burger from '../../images/burger.png';
 import Basket from '../Layaut/Basket';
 import { useLocation } from 'react-router-dom';
-// import Language from '../Layaut/Language';
+import Language from '../Layaut/Language';
+import { useTransition } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const LinksLoginIn =(props)=> {
 
 
     const [dropDownOpen, setDropDownOpen] = useState(false);
     const toggle = () => setDropDownOpen(prevState => !prevState); 
-
-   
+    const { t } = useTranslation();
     const {pathname} = useLocation();
 
     useEffect(() => {
@@ -26,15 +27,15 @@ const LinksLoginIn =(props)=> {
             <div className="LinksIn">
                 <ul className='Reducto'>
                  <li><img className="Burgerek" onClick={toggle} src={Burger} alt="Burger"/></li>
-                 <li><button className="btn btn-primary" onClick={props.signOut}>Wyloguj się!</button></li>    
+                 <li><button className="btn btn-primary" onClick={props.signOut}>{t('Menu.login.log_out')}</button></li>    
                  <li><Basket/></li>        
-                 {/* <li><Language/></li> */}
+                 <li><Language/></li>
                </ul> 
                {dropDownOpen ? <NewMenu /> : null}
             </div>
         )
 }
-// }
+
 
 const mapDispatchToProps = (dispatch) => {
     return{
