@@ -5,6 +5,7 @@
   "dependencies": {
     "@babel/core": "7.4.3",
     "@babel/runtime": "^7.8.4",
+    "@popperjs/core": "^2.11.8",
     "@react-three/drei": "^7.27.3",
     "@react-three/fiber": "^7.0.21",
     "@svgr/webpack": "4.1.0",
