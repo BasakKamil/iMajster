@@ -1,0 +1,52 @@
+{
+    "welcom" : "Witaj w React",
+    "Lange" : "Polski",
+    "Undo" : "Cofnij",
+    "Redo" : "Przywroc",
+    "Stock": "Nie ma nic na Stanie!",
+
+    "Information" : {
+        "shop_info" : "Sklep jest ..."
+    },
+
+    "Menu" : {
+        "login" :  {
+            "log_in" : "Zaloguj sie!",
+            "log_out" : "Wyloguj sie",
+            "password" : "Haslo",
+            "load": "Laduje sie...",
+            "open": "OTWORZ",
+            "close":"ZAMKNIJ",
+            "register": "Zarejstruj sie",
+            "Nav": {
+                "Home_page": "STRONA GLOWNA",
+                "Shop": "SKLEP",
+                "Me": "O MNIE",
+                "Repair" : "ZLECENIE NAPRAWY"
+            }
+
+        },
+        "infoError" : "Musisz sie Zarejstrowac lub Zalogowac by wejsc do Aplikacji ",
+        "pieces" : "Ilosc"
+    },
+    "Contact": {
+        "title" : "Kontakt",
+        "info" : {
+            "lub" : "lub",
+            "cont" : "Jak się ze mną Skontaktować ?",
+            "look" : "Gdzie mozna mnie znalezc ",
+            "Dolar" :"Cena Dolara",
+            "Euro" : "Cena Euro"
+        }
+    },
+    "Basket": {
+        "Empty": "Koszyk jest Pusty !",
+        "Name": "Nazwa",
+        "Description" : "Opis",
+        "Price": "Cena",
+        "Add": "Dodaj",
+        "Delete": "Usun"
+    }
+
+
+}

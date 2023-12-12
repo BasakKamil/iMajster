@@ -1,0 +1,51 @@
+{
+    "welcom" : "Welcome to React",
+    "Lange" : "English",
+    "Undo" : "Undo",
+    "Redo" : "Redo",
+    "Stock": "Nothing on Stock!",
+
+    "Information" : {
+        "shop_info" : "Shop is ..."
+    },
+    "Menu" : {
+        "login" :  {
+            "log_in" : "Log in!",
+            "log_out" : "Log Out!",
+            "password" : "Password",
+            "load": "Loading...",
+            "open": "Open",
+            "close":"Close",
+            "register": "New Account",
+            "Nav": {
+                "Home_page": "HOME PAGE",
+                "Shop": "SHOP",
+                "Me": "ABOUT ME",
+                "Repair" : "REPAIR"
+            }
+        },
+        "infoError" : "You must login or register if you want buying or watching ",
+        "pieces" : "Pieces"
+    },
+    "Contact": {
+        "title" : "Contact",
+        "info" : {
+            "lub" : "or",
+            "cont" : "How can you contact me?",
+            "look" : "Where you can find me ",
+            "Dolar" :"Price of Dollar",
+            "Euro" : "Price of Euro "
+        }
+    },
+    "Basket": {
+        "Empty": "Basket is empty !",
+        "Name": "Name",
+        "Description" : "Description",
+        "Price": "Price",
+        "Add": "Add",
+        "Delete": "Delete"
+    }
+
+
+
+}
