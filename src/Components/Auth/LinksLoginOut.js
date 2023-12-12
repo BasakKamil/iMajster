@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
 import Language from '../Layaut/Language';
 import { useTranslation } from 'react-i18next';

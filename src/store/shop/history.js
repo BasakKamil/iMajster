@@ -1,16 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
-export class History extends Component {
-    render() {
+const  History = (props) => {
+        const { t } = useTranslation();
         return (
             <div className="history-controls">
-                <button className="btn btn-secondary KamilABut" onClick={this.props.undo}>Cofnij</button>
-                <button className="btn btn-secondary KamilABut" onClick={this.props.redo}>Przywróć</button>
+                <button className="btn btn-secondary KamilABut" onClick={props.undo}>{t('Undo')}</button>
+                <button className="btn btn-secondary KamilABut" onClick={props.redo}>{t('Redo')}</button>
             </div>
         )
     }
-}
+
 
 const mapDispatchToProps = (dispatch) => {
     return{

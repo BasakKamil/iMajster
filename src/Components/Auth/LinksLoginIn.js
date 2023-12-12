@@ -6,7 +6,6 @@ import Burger from '../../images/burger.png';
 import Basket from '../Layaut/Basket';
 import { useLocation } from 'react-router-dom';
 import Language from '../Layaut/Language';
-import { useTransition } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const LinksLoginIn =(props)=> {
@@ -14,9 +13,8 @@ const LinksLoginIn =(props)=> {
 
     const [dropDownOpen, setDropDownOpen] = useState(false);
     const toggle = () => setDropDownOpen(prevState => !prevState); 
-    const { t } = useTranslation();
     const {pathname} = useLocation();
-
+    const { t } = useTranslation();
     useEffect(() => {
         setDropDownOpen(false);
         

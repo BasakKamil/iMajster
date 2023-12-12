@@ -203,10 +203,15 @@ code {
 
   }
 }
+.contDesc{
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
 .price{
     background: aquamarine;
     color: black;
     font-size: 22px;
+	margin-top: 5%;
 }
 .NavbarBasi{
   z-index: 99999;
@@ -342,6 +347,10 @@ ul{
 			float: left;
 			border-right: 1px solid darkgrey;
 			border-radius: 10px 0px 0px 10px;
+			p{
+				background: black;
+				color: white;
+			}
 		}
 		.PhotoProduct{
 			width: 40%;
@@ -746,6 +755,13 @@ ul{
     margin: 0 auto;
     margin-top: 4%;
 	color: white !important;
+}
+
+.Desc{
+		width: 100%;
+		float: left;
+		display: block;
+		color: black;
 }
 .NowyK{
   margin-left: 2%;

@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import {createOrder} from '../actions/createOrder';
 import { Redirect } from 'react-router-dom';
 import StepOrdertwo from './Stepordertwo';
-import { useTranslation } from 'react-i18next';
-import BasketEmpty from './BasketEmpty';
+import Steporderone from './Steporderone';
+import BasketEmpty from "./BasketEmpty";
 
 
 
@@ -12,7 +12,8 @@ class Cart extends Component{
     constructor(){
         super();
         this.state={
-            stepOrder: 1
+            stepOrder: 1,
+            delete: "Usun"
         }
         this.order = this.order.bind(this);
     
@@ -48,7 +49,7 @@ class Cart extends Component{
     render(){
         const {auth} = this.props;
         const {stepOrder} = this.state;
-      
+        
         
         if(!auth.uid) return <Redirect to="/signin" />
         if(this.props.items.length === 0){
@@ -60,7 +61,14 @@ class Cart extends Component{
         switch(stepOrder){
             case 1:
             return (
-           
+            //    <Steporderone 
+            //    stepOrder={this.state.stepOrder}
+            //    order={this.order}
+            //    items={this.props.items}
+            //    prevStep ={this.prevStep}
+            //    nextStep={this.nextStep}
+            //    profile={this.props.profile}
+            //    />
                 <div className="NiceBasket">
                   
                     <table>
@@ -73,7 +81,7 @@ class Cart extends Component{
                             {this.props.items.map((item,index) => {
                                 return <tr key={index}>
                                     <td>
-                                        <button  className="btn btn-dark" onClick={()=>this.props.removeFromCart(index)}>Usuń</button>
+                                        <button  className="btn btn-dark" onClick={()=>this.props.removeFromCart(index)}>{this.state.delete}</button>
                                     </td>
                                      <td>{item.name}</td>
                                      <td>{item.price} zł</td>

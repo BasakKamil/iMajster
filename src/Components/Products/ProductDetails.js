@@ -1,33 +1,39 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
+import { useTranslation } from 'react-i18next';
+
 
 
 // import formatCurrency from '../../store/shop/util';
 
-class ProductDetails extends Component{
+function ProductDetails(props){
 
 
-render(){
 
-const {product} = this.props;
-const img = this.props.product.img;
+const { t } = useTranslation();
+const {product} = props;
+const img = props.product.img;
 return(
    
     <div className="IteamDetails">  
         <div className="ProductInfo">
-            <b>Nazwa: {product.name}</b>
-            <p>Opis: {product.content}</p>
-            <p class="price">Cena: {product.price} zł</p>
+          <p> {t('Basket.Name')}  </p>  <b>{product.name}</b>
+          <p className='contDesc'> {t('Basket.Description')}  
+            <span className='Desc'>  
+               {product.content}
+            </span>
+            </p>
+            <p class="price">{t('Basket.Price')} : {product.price} zł</p>
        </div>
         <div className="PhotoProduct"> <img src={img} alt=""/></div>
         {/* <p>Cena: {formatCurrency(product.price)}</p> */}
-       <button className="btn btn-danger" onClick={() => this.props.addToCart(product)} >Dodaj</button>
+       <button className="btn btn-danger" onClick={() => props.addToCart(product)}>{t('Basket.Add')}</button>
     </div>
 )
 
 
 }
-}
+
 
 
 const mapDispatchToProps = (dispatch) =>{

@@ -1,6 +1,10 @@
 {
     "welcom" : "Welkom in React",
     "Lange" : "Netherlandse",
+    "Undo" : "Ongedaan maken",
+    "Redo" : "Opnieuw doen",
+    "Stock": "Niks op Voorraad!",
+
 
     "Information" : {
         "shop_info" : "Winkel is ..."
@@ -13,7 +17,13 @@
             "load": "Laden...",
             "open": "Open",
             "close":"Sluit",
-            "register": "Rekening aanmaken"
+            "register": "Rekening aanmaken",
+            "Nav": {
+                "Home_page": "STARTPAGINE",
+                "Shop": "WINKIEL",
+                "Me": "OVER MIJ",
+                "Repair" : "REPAREREN"
+            }
             
         },
         "infoError" : "Je moet eerst inloggen of nieuwe rekening aanmaken als Je wilt iets kopen of kijken ",
@@ -30,7 +40,12 @@
         }   
     },
     "Basket": {
-        "Empty": "Mand is leeg !"
+        "Empty": "Mand is leeg !",
+        "Name": "Naam",
+        "Description" : "Beschrijving",
+        "Price": "Prijs",
+        "Add": "Toevoegen",
+        "Delete": "Verwijderen"
     }
 
 

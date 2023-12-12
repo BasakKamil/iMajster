@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Map from '../Layaut/Map';
 import { connect } from 'react-redux';
 import Weather from '../API/Weather';
-import { t } from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 
@@ -23,10 +22,9 @@ function Contact() {
                             E-Mail: Bastric91@gmail.com<br/>
                             </div>
                             <div><h2>{t('Contact.info.look')}</h2>
-                           Wraszawa - Wawer - Radość
-                          <span> {t('Contact.info.lub')} </span> 
-                           ROTTERDAM
-                    
+                                Wraszawa - Wawer - Radość
+                                 <span> {t('Contact.info.lub')} </span> 
+                                ROTTERDAM
                            </div>
 
                     </div>

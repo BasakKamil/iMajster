@@ -1,26 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ProductDetails from '../Products/ProductDetails';
 import { compose } from 'redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { connect } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
-class ProductAll extends Component {
+function ProductAll(props){
  
 
-    total(){
-        return this.props.reduce((total,product)=>{
+    const total = () =>{
+        return props.reduce((total,product)=>{
             return total + product.price
         },0)
     } 
     
 
-    render(){  
-        const {products} = this.props;     
+        const { t } = useTranslation();
+        const {products} = props;     
             
              if(Array.isArray(products)){
                 return(   
                     <div className="ProductShow">
-                         {this.props.products && this.props.products.map(product => {
+                         {props.products && props.products.map(product => {
                             return (
                                 <ProductDetails product={product} key={product.id} />
                             ) 
@@ -28,9 +29,9 @@ class ProductAll extends Component {
                     </div>
                 )
             }
-            else return ( <div>Nie ma nic na Stanie!</div>) 
+            else return ( <div class="Nic">{t('Stock')}</div>) 
     }
-}
+
 const mapStateToProps = (state,ownProps) => {
     
     const products = state.firestore.ordered.products;

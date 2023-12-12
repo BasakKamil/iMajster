@@ -1,6 +1,5 @@
 import React,{ useEffect, useState} from 'react';
 import { RiMoneyEuroCircleFill,RiMoneyDollarCircleFill }from 'react-icons/ri';
-import { useTransition } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export default function Weather(){
