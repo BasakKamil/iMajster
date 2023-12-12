@@ -4,8 +4,6 @@ import {createOrder} from '../actions/createOrder';
 import { Redirect } from 'react-router-dom';
 import StepOrdertwo from './Stepordertwo';
 
-
-
 class Cart extends Component{
     constructor(){
         super();
@@ -15,7 +13,6 @@ class Cart extends Component{
         this.order = this.order.bind(this);
     
     }
-   
       //Przejscie dalej
     nextStep = () => {
         const {stepOrder} = this.state;
