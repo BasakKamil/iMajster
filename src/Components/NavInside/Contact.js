@@ -17,7 +17,7 @@ function Contact() {
                 <div className="map container">
                 <div className="Paper row">
                     <div className="Check col">
-                            <h2></h2>
+                            <h2>{t('Contact.title')}</h2>
                             <div>Tel. 796 895 079<br/>
                             E-Mail: Bastric91@gmail.com<br/>
                             </div>

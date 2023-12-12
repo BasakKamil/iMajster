@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import {createOrder} from '../actions/createOrder';
 import { Redirect } from 'react-router-dom';
 import StepOrdertwo from './Stepordertwo';
-import Steporderone from './Steporderone';
+// import Steporderone from './Steporderone';
 import BasketEmpty from "./BasketEmpty";
 
 

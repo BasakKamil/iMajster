@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 const Steporderone = (props) => {
 
     const { t } = useTranslation();
-    
+    console.log( t('Basket.Delete'));
 
     return (
         <div className="NiceBasket">

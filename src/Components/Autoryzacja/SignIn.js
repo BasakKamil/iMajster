@@ -35,7 +35,7 @@ function SignIn(props){
 
            
     } 
-
+    // eslint-disable-next-line
     useEffect(() => {   
         setLabel(t('Menu.login.log_in'));
     });

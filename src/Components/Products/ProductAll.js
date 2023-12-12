@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 
 function ProductAll(props){
  
-
+    // eslint-disable-next-line
     const total = () =>{
         return props.reduce((total,product)=>{
             return total + product.price
