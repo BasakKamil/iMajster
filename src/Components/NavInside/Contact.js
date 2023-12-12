@@ -26,7 +26,6 @@ function Contact() {
                                  <span> {t('Contact.info.lub')} </span> 
                                 ROTTERDAM
                            </div>
-
                     </div>
                     
                     <div className="AllMap col">
