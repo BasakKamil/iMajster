@@ -25,9 +25,10 @@ class User extends Component {
         post: '',
         city: '',
         country: '',
-        phone: 0 ,
+        phone: '' ,
         date: new Date()
     }
+
     
 
     error = (e) => {

@@ -6,12 +6,19 @@ import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
+const countrys = [ 
+    { name: "Netherlands", key: 1 },
+    { name: "Poland", key: 2 }, 
+    { name: "England", key: 3 } 
+];
+
 
 
 export function FormPersonalDetails(props){
 
-    const { t } = useTranslation();
 
+    const { t } = useTranslation();
+ 
     const contin = (e) => {
         e.preventDefault();
         props.nextStep();
@@ -30,6 +37,12 @@ export function FormPersonalDetails(props){
                     <div className="container FormKamil">
                     <TextField  
                     className="LogDuo"
+                    hintText={t('Contact.Country')}
+                    floatingLabelText={t('Contact.Country')}
+                    onChange={handleChange('country')}
+                    defaultValue={countrys[0].name}/>
+                    <TextField  
+                    className="LogDuo"
                     hintText={t('Contact.Number')}
                     floatingLabelText={t('Contact.Street')}
                     onChange={handleChange('address')}
@@ -43,12 +56,6 @@ export function FormPersonalDetails(props){
                     defaultValue={values.city}/>
                     <TextField  
                     className="LogDuo"
-                    hintText={t('Contact.Country')}
-                    floatingLabelText={t('Contact.Country')}
-                    onChange={handleChange('country')}
-                    defaultValue={values.country}/>
-                    <TextField  
-                    className="LogDuo"
                     hintText={t('Contact.PostCode')}
                     floatingLabelText="XX-XXX"
                     onChange={handleChange('post')}
@@ -59,6 +66,7 @@ export function FormPersonalDetails(props){
                     floatingLabelText="000-000-000"
                     onChange={handleChange('phone')}
                     defaultValue={values.phone}/>
+
                  
 
                  
