@@ -24,6 +24,7 @@ class User extends Component {
         address: '',
         post: '',
         city: '',
+        country: '',
         phone: 0 ,
         date: new Date()
     }
@@ -63,8 +64,8 @@ class User extends Component {
    
     render() {
         const { step } = this.state;
-        const { email, password, name, surname, address,post, city, phone ,date} = this.state;
-        const values = {email, password, name, surname, address, post, city, phone, date}
+        const { email, password, name, surname, address, post, city, phone ,date, country } = this.state;
+        const values = {email, password, name, surname, address, post, city, phone, date , country}
         const {auth} = this.props;
         if(auth.uid) { return <Redirect to="/"/> }
   

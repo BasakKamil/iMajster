@@ -9,7 +9,6 @@ export class Stepordertwo extends Component {
         const {items} = this.props;
         const {profile} = this.props;
         
-        console.log(profile);
        
         return (
             <div className="NiceBasket">

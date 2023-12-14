@@ -4,6 +4,7 @@
     "Undo" : "Cofnij",
     "Redo" : "Przywroc",
     "Stock": "Nie ma nic na Stanie!",
+    "Score" : "Znalazlem",
 
     "Information" : {
         "shop_info" : "Sklep jest ..."
@@ -31,6 +32,15 @@
     },
     "Contact": {
         "title" : "Kontakt",
+        "Name" : "Podaj Imie",
+        "Surname" : "Podaj Nazwisko",
+        "Street" : "Ulica",
+        "Number" : "Podaj Ulice wraz z numerem domu/mieszkania",
+        "City" : "Miasto",
+        "CityM" : "Podaj nazwe swojego miasta",
+        "Country" : "Podaj Kraj",
+        "PostCode" : "Kod Pocztowy",
+        "Phone" : "Nummer Telefon ( Kontaktowy )",
         "info" : {
             "lub" : "lub",
             "cont" : "Jak się ze mną Skontaktować ?",
@@ -45,7 +55,10 @@
         "Description" : "Opis",
         "Price": "Cena",
         "Add": "Dodaj",
-        "Delete": "Usun"
+        "Delete": "Usun",
+        "Sum" : "Suma",
+        "Next" : "Dalej",
+        "Back" : "Powrot"
     }
 
 

@@ -4,7 +4,7 @@
     "Undo" : "Ongedaan maken",
     "Redo" : "Opnieuw doen",
     "Stock": "Niks op Voorraad!",
-
+    "Score" : "Ik heb gevonden :",
 
     "Information" : {
         "shop_info" : "Winkel is ..."
@@ -31,6 +31,15 @@
     },
     "Contact": {
         "title" : "Contact opnemen",
+        "Name" : "Je Naam",
+        "Surname" : "Je Achternaam",
+        "Street" : "Straat",
+        "Number" : "Je moet jouw straat met thuis/apartment nummer schrijven",
+        "City" : "Stad",
+        "CityM" : "Je moet jouw stad schrijven",
+        "Country" : "Je land",
+        "PostCode" : "Postcode",
+        "Phone" : "Telefoonnummer",
         "info" : {
             "lub" : "of",
             "cont" : "Hoe kunt u contact met mij opnemen ?",
@@ -45,7 +54,10 @@
         "Description" : "Beschrijving",
         "Price": "Prijs",
         "Add": "Toevoegen",
-        "Delete": "Verwijderen"
+        "Delete": "Verwijderen",
+        "Sum" : "Som",
+        "Next" : "Volgende",
+        "Back" : "Terug"
     }
 
 

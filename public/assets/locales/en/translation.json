@@ -4,6 +4,7 @@
     "Undo" : "Undo",
     "Redo" : "Redo",
     "Stock": "Nothing on Stock!",
+    "Score" : "I find",
 
     "Information" : {
         "shop_info" : "Shop is ..."
@@ -29,6 +30,15 @@
     },
     "Contact": {
         "title" : "Contact",
+        "Name" : "Your Name",
+        "Surname" : "Your Surname",
+        "Street" : "Street",
+        "Number" : "Write your straat with right house/apparment number",
+        "City" : "City",
+        "CityM" : "Write your city",
+        "Country" : "Your country",
+        "PostCode" : "Post code",
+        "Phone" : "Telephone number",
         "info" : {
             "lub" : "or",
             "cont" : "How can you contact me?",
@@ -43,7 +53,10 @@
         "Description" : "Description",
         "Price": "Price",
         "Add": "Add",
-        "Delete": "Delete"
+        "Delete": "Delete",
+        "Sum" : "Sum",
+        "Next" : "Next",
+        "Back" : "Powrot"
     }
 
 

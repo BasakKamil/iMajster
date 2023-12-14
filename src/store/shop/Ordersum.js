@@ -92,7 +92,6 @@ class Ordersum extends Component{
                                      <td></td>
                                 </tr>
                             )
-
                         })}
                     </tbody>
                 </table>

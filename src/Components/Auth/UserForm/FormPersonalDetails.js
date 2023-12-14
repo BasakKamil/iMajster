@@ -1,26 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RadioButton';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 
 
-export class FormPersonalDetails extends Component {
+export function FormPersonalDetails(props){
 
+    const { t } = useTranslation();
 
-    continue = (e) => {
+    const contin = (e) => {
         e.preventDefault();
-        this.props.nextStep();
+        props.nextStep();
     }
 
-    back = (e) => {
+    const back = (e) => {
         e.preventDefault();
-        this.props.prevStep();
+        props.prevStep();
     }
-    render() {
-        const {values, handleChange, auth, error}= this.props;
+
+        const {values, handleChange, auth, error}= props;
         if(auth.uid) return <Redirect to="/"/>
         return (
             <MuiThemeProvider>
@@ -28,42 +30,48 @@ export class FormPersonalDetails extends Component {
                     <div className="container FormKamil">
                     <TextField  
                     className="LogDuo"
-                    hintText="Nazwa Ulicy wrazaz z numerem"
-                    floatingLabelText="Adres"
+                    hintText={t('Contact.Number')}
+                    floatingLabelText={t('Contact.Street')}
                     onChange={handleChange('address')}
                     defaultValue={values.address}/>
                     <br/>
                     <TextField  
                     className="LogDuo"
-                    hintText="Podaj Miasto"
-                    floatingLabelText="Miasto"
+                    hintText={t('Contact.CityM')}
+                    floatingLabelText={t('Contact.City')}
                     onChange={handleChange('city')}
                     defaultValue={values.city}/>
                     <TextField  
                     className="LogDuo"
-                    hintText="Podaj Kod Pocztowy XX-XXX"
+                    hintText={t('Contact.Country')}
+                    floatingLabelText={t('Contact.Country')}
+                    onChange={handleChange('country')}
+                    defaultValue={values.country}/>
+                    <TextField  
+                    className="LogDuo"
+                    hintText={t('Contact.PostCode')}
                     floatingLabelText="XX-XXX"
                     onChange={handleChange('post')}
                     defaultValue={values.post}/>
                     <TextField  
                     className="LogDuo"
-                    hintText="Podaj Telefon Kontaktowy"
+                    hintText={t('Contact.Phone')}
                     floatingLabelText="000-000-000"
                     onChange={handleChange('phone')}
                     defaultValue={values.phone}/>
                  
 
                  
-                 {(values.address && values.city && values.post ) ?
+                 {(values.address && values.city && values.post && values.country ) ?
                     <RaisedButton
-                        label="Dalej"
+                        label={t('Basket.Next')}
                         primary={true}
                         style={styles.button}
-                        onClick={this.continue}
+                        onClick={contin}
                         className="ButtonNew"
                     />
                     : <RaisedButton 
-                         label="Dalej"
+                         label={t('Basket.Next')}
                          className='OutButt'
                          style={styles.button1}
                          onClick={error}
@@ -71,10 +79,10 @@ export class FormPersonalDetails extends Component {
                          
                     }
                          <RaisedButton
-                        label="Powrót"
+                        label={t('Basket.Back')}
                         primary={true}
                         style={styles.buttonBack}
-                        onClick={this.back}
+                        onClick={back}
                         className="ButtonNew"
                     />
                  
@@ -85,7 +93,7 @@ export class FormPersonalDetails extends Component {
             </MuiThemeProvider>
         )
     }
-}
+
 
 const styles={
     button: {

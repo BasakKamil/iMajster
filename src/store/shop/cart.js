@@ -1,113 +1,70 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import {createOrder} from '../actions/createOrder';
 import { Redirect } from 'react-router-dom';
 import StepOrdertwo from './Stepordertwo';
-// import Steporderone from './Steporderone';
+import Steporderone from './Steporderone';
 import BasketEmpty from "./BasketEmpty";
 
 
 
-class Cart extends Component{
-    constructor(){
-        super();
-        this.state={
-            stepOrder: 1,
-            delete: "Usun"
-        }
-        this.order = this.order.bind(this);
+function Cart(props){
     
-    }
+        
+    const [ step, setStep ]= useState(1);
+    
    
-      //Przejscie dalej
-    nextStep = () => {
-        const {stepOrder} = this.state;
-        this.setState({
-            stepOrder: stepOrder + 1
-        });
+    //   //Przejscie dalej
+    const nextStep = () => {
+       setStep( step + 1)
     }
 
-      //Cofnięcie się
-    prevStep = () => {
-        const {stepOrder} = this.state;
-        this.setState({
-            stepOrder: stepOrder - 1
-        })
+    //   //Cofnięcie się
+    const prevStep = () => {
+        setStep( step - 1 )
     }
 
-  
-    total = () =>{
-        return this.props.items.reduce((total,item)=>{
-            return total + item.price
-        },0)
+
+   //    Podsumowanie
+//    const total = () =>{
+//         return props.items.reduce((total,item)=>{
+//             return total + item.price
+//         },0)
+//     }
+
+    const order = () => {    
+       props.createOrder(props.items)
     }
 
-    order = () => {    
-       this.props.createOrder(this.props.items)
-    }
-
-    render(){
-        const {auth} = this.props;
-        const {stepOrder} = this.state;
-        
-        
+    
+        const {auth} = props; 
         if(!auth.uid) return <Redirect to="/signin" />
-        if(this.props.items.length === 0){
+        if(props.items.length === 0){
             return(
                 <div className="NiceBasketZero"> <BasketEmpty/> </div>
             )
         } 
         // eslint-disable-next-line default-case
-        switch(stepOrder){
+        switch(step){
             case 1:
             return (
-            //    <Steporderone 
-            //    stepOrder={this.state.stepOrder}
-            //    order={this.order}
-            //    items={this.props.items}
-            //    prevStep ={this.prevStep}
-            //    nextStep={this.nextStep}
-            //    profile={this.props.profile}
-            //    />
-                <div className="NiceBasket">
-                  
-                    <table>
-                        <tbody>
-                            <tr className='een'>
-                                <th></th>
-                                <th>Nazwa:</th>
-                                <th>Cena:</th>
-                            </tr>
-                            {this.props.items.map((item,index) => {
-                                return <tr key={index}>
-                                    <td>
-                                        <button  className="btn btn-dark" onClick={()=>this.props.removeFromCart(index)}>{this.state.delete}</button>
-                                    </td>
-                                     <td>{item.name}</td>
-                                     <td>{item.price} zł</td>
-                                </tr>
-                            })}
-                        </tbody>
-                    </table>
-                    <br/>
-                            <p className="TotalBasket">
-                                <b>  Wszystko : {this.total()} zł</b>
-                            </p>
-                            <p className='Aantal'>
-                                <b> Ilosc: {this.props.items.length}</b>
-                            </p>
-                            <button className="btn btn-danger" onClick={this.nextStep}>Kup !</button>
-
-                </div>
+                    <Steporderone 
+                    step={step}
+                    order={order}
+                    items={props.items}
+                    prevStep ={prevStep}
+                    nextStep ={nextStep}
+                    profile={props.profile}
+                    />
                 )
             case 2:
                 return (
                     <StepOrdertwo 
-                    order={this.order}
-                    items={this.props.items}
-                    prevStep ={this.prevStep}
-                    nextStep={this.nextStep}
-                    profile={this.props.profile}
+                    order={order}
+                    items={props.items}
+                    prevStep ={prevStep}
+                    nextStep={nextStep}
+                    profile={props.profile}
                     />
                 )
             case 3: 
@@ -118,7 +75,7 @@ class Cart extends Component{
             
         }
 
-    }
+    
 
     const mapStateToProps = (state) => {
         return{

@@ -1,15 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { useTranslation } from 'react-i18next';
 
-export class filter extends Component {
-    render() {
+function filter(props){
+   
+        const { t } = useTranslation();
         return (
             <div className="row FilterKamil">
                 <div className="col-md-4">
-                    Znaleziono: {this.props.count} 
+                    {t('Score')}: {props.count} 
                 </div>
                 <div className="col-md-4">
-                    <select className="form-conrol KamilFormContr" value={this.props.sort}
-                    onChange={this.props.handleChangeSort}>
+                    <select className="form-conrol KamilFormContr" value={props.sort}
+                    onChange={props.handleChangeSort}>
                          <option value="">Select</option>
                          <option value="">Lowest to Highest</option>
                          <option value="">Highest to Lowest</option>
@@ -18,7 +20,7 @@ export class filter extends Component {
                 <div className="col-md-4"></div>
             </div>
         )
-    }
+    
 }
 
 export default filter

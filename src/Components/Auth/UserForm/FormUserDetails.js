@@ -1,18 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RadioButton';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
-export class FormUserDetails extends Component {
+
+export function FormUserDetails(props){
   
-    continue = (e) => {
+    const { t } = useTranslation();
+    const contin = (e) => {
             e.preventDefault();
-            this.props.nextStep();
+            props.nextStep();
     }
-    render() {
-        const {values, handleChange, auth, error} = this.props;
+  
+        const {values, handleChange, auth, error} = props;
         if(auth.uid) return <Redirect to="/"/>
         return (
             <MuiThemeProvider>
@@ -20,28 +23,28 @@ export class FormUserDetails extends Component {
                     <div className="container FormKamil">
                     <TextField  
                     className="LogDuo"
-                    hintText="Podaj imię"
-                    floatingLabelText="Imię"
+                    hintText={t('Contact.Name')}
+                    floatingLabelText={t('Contact.Name')}
                     onChange={handleChange('name')}
                     defaultValue={values.name}/>
                     <br/>
                     <TextField  
                     className="LogDuo"
-                    hintText="Podaj Nazwisko"
-                    floatingLabelText="Nazwisko"
+                    hintText={t('Contact.Surname')}
+                    floatingLabelText={t('Contact.Surname')}
                     onChange={handleChange('surname')}
                     defaultValue={values.surname}/>
 
                    {(values.name && values.surname) ?
                     <RaisedButton
-                        label="Dalej"
+                        label={t('Basket.Next')}
                         primary={true}
                         style={styles.button}
-                        onClick={this.continue}
+                        onClick={contin}
                         className="ButtonNew"
                     />
                     : <RaisedButton 
-                         label="Dalej"
+                         label={t('Basket.Next')}
                          className='OutButt'
                          style={styles.button1}
                          onClick={error}
@@ -52,8 +55,8 @@ export class FormUserDetails extends Component {
                 </React.Fragment>
             </MuiThemeProvider>
         )
-    }
 }
+
 
 const styles={
     button: {
