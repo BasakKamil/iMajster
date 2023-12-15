@@ -30,10 +30,19 @@
         "pieces" : "Aantal stuks"
     },
     "Contact": {
+        "Nam" : "Naam",
+        "Sur" : "Achternaam",
         "title" : "Contact opnemen",
         "Name" : "Je Naam",
         "Surname" : "Je Achternaam",
         "Street" : "Straat",
+        "Address" : "Adres",
+        "Email" : "Jouwe E-mailadres",
+        "Em" : "Jouwe  e-mail is jouwe log in ook",
+        "Password" :  "Jouwe Wachtwoord",
+        "Pas" : "Het is jouwe wachtwoord",
+        "Nat" : "Land",
+        "Register" : "Registreer",
         "Number" : "Je moet jouw straat met thuis/apartment nummer schrijven",
         "City" : "Stad",
         "CityM" : "Je moet jouw stad schrijven",
@@ -56,7 +65,7 @@
         "Add": "Toevoegen",
         "Delete": "Verwijderen",
         "Sum" : "Som",
-        "Next" : "Volgende",
+        "Next" : "Doorgaan",
         "Back" : "Terug"
     },
     "Lang" : {

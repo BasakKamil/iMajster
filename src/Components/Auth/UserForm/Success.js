@@ -1,30 +1,33 @@
-import React, { Component } from 'react';
+import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RadioButton';
 import {List, ListItem} from 'material-ui/List';
 import { connect } from 'react-redux';
 import { signUp } from '../../../store/actions/authActions';
 import { Redirect } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
-export class Success extends Component {
-    continue = (e) => {
+function Success(props){
+    
+    // const continu = (e) => {
+    //     e.preventDefault();
+    //     props.nextStep();
+    // }
+    const { t } = useTranslation();
+
+    const back = (e) =>{
         e.preventDefault();
-        this.props.nextStep();
+        props.prevStep();
     }
 
-    back = (e) =>{
+    const handleSubmit = (e) => {
         e.preventDefault();
-        this.props.prevStep();
-    }
-
-    handleSubmit = (e) => {
-        e.preventDefault();
-        this.props.signUp(this.props.values);
+        props.signUp(props.values);
         console.log("No stary zaraz będziesz miał dostęp do Apki Basiego :D");
     } 
 
-    render() {
-        const {auth, authError,values:{email, password, name, surname, address, post, city, phone, date}} = this.props;
+    
+        const {auth, authError,values:{email, password, name, surname, address, post, city, phone, date, country}} = props;
         console.log(date);
         if(auth.uid) return <Redirect to="/"/>
         return (
@@ -33,52 +36,56 @@ export class Success extends Component {
                     <div className="container FormKamil">
                     <List>
                         <ListItem
-                        primaryText="Imie"
+                        primaryText={t('Contact.Nam')}
                         secondaryText={name}
                         />
                         <ListItem
-                        primaryText="Nazwisko"
+                        primaryText={t('Contact.Sur')}
                         secondaryText={surname}
                         />
                          <ListItem
-                        primaryText="Telefon kontaktowy"
+                        primaryText={t('Contact.Phone')}
                         secondaryText={phone}
                         />
                         <ListItem
-                        primaryText="Adres"
+                        primaryText={t('Contact.Address')}
                         secondaryText={address}
                         />
                         <ListItem
-                        primaryText="Kod Pocztowy"
+                        primaryText={t('Contact.PostCode')}
                         secondaryText={post}
                         />
                         <ListItem
-                        primaryText="Miasto"
+                        primaryText={t('Contact.City')}
                         secondaryText={city}
                         />
+                        <ListItem
+                        primaryText={t('Contact.Nat')}
+                        secondaryText={country}
+                        />
                          <ListItem
-                        primaryText="Twój Email jako Login"
+                        primaryText={t('Contact.Em')}
                         secondaryText={email}
                         />
                         <ListItem
-                        primaryText=" Twoje Hasło do zapamietania!"
+                        primaryText={t('Contact.Pas')}
                         secondaryText={password}
                         />
                        
                     </List>
                    
                     <RaisedButton
-                        label="Zarejstruj się!"
+                        label={t('Contact.Register')}
                         primary={true}
                         style={styles.button}
-                        onClick={this.handleSubmit}
+                        onClick={handleSubmit}
                         className="ButtonNew Green"
                     />
                     <RaisedButton
-                        label="Powrót"
+                        label={t('Basket.Back')}
                         primary={true}
                         style={styles.buttonBack}
-                        onClick={this.back}
+                        onClick={back}
                         className="ButtonNew"
                     />
                     <div className="errSignUp"> {authError ? <p>{authError}</p>: null }</div>
@@ -87,7 +94,7 @@ export class Success extends Component {
             </MuiThemeProvider>
         )
     }
-}
+
 
 const styles={
     button: {
