@@ -57,7 +57,13 @@
         "Sum" : "Sum",
         "Next" : "Next",
         "Back" : "Powrot"
+    },
+    "Lang" : {
+        "Poland" : "Poland",
+        "England" : "England",
+        "Netherlands" : "Netherlands"
     }
+
 
 
 

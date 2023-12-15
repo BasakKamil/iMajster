@@ -5,12 +5,10 @@ import RaisedButton from 'material-ui/RadioButton';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-
-const countrys = [ 
-    { name: "Netherlands", key: 1 },
-    { name: "Poland", key: 2 }, 
-    { name: "England", key: 3 } 
-];
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 
 
 
@@ -35,12 +33,24 @@ export function FormPersonalDetails(props){
             <MuiThemeProvider>
                 <React.Fragment>
                     <div className="container FormKamil">
-                    <TextField  
-                    className="LogDuo"
-                    hintText={t('Contact.Country')}
-                    floatingLabelText={t('Contact.Country')}
-                    onChange={handleChange('country')}
-                    defaultValue={countrys[0].name}/>
+                            <div>
+                            <FormControl sx={{ m: 1, minWidth: 80 }} className='CountField'>
+                                <InputLabel id="demo-simple-select-autowidth-label">{t('Contact.Country')}</InputLabel>
+                                <Select
+                                    labelId="demo-simple-select-autowidth-label"
+                                    id="demo-simple-select-autowidth"
+                                    onChange={handleChange('country')}
+                                    autoWidth
+                                    label={t('Contact.Country')}
+                                >
+                                    <MenuItem value="" className='Mijn'><em>None</em></MenuItem>
+                                    <MenuItem value='Polska' className='Mijn'>{t('Lang.Poland')}</MenuItem>
+                                    <MenuItem value='Niderlandy' className='Mijn'>{t('Lang.Netherlands')}</MenuItem>
+                                    <MenuItem value='Anglia' className='Mijn'>{t('Lang.England')}</MenuItem>
+                                </Select>
+                            </FormControl>
+                            </div>
+          
                     <TextField  
                     className="LogDuo"
                     hintText={t('Contact.Number')}

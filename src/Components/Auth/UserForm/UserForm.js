@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import FormUserDetails from './FormUserDetails';
 import FormPersonalDetails from './FormPersonalDetails';
 import Confirm from './Confirm';
@@ -10,12 +10,11 @@ import swal from 'sweetalert';
 
 
 
-
-class User extends Component {
+function User(props){
 
   
 
- state = {
+ const [state,setState] = useState({
         step: 1,
         email: '',
         password: '',
@@ -27,11 +26,11 @@ class User extends Component {
         country: '',
         phone: '' ,
         date: new Date()
-    }
+    });
 
     
 
-    error = (e) => {
+    const error = (e) => {
         e.preventDefault();
         swal({
             title: "UWAGA",
@@ -42,32 +41,29 @@ class User extends Component {
     }
 
     //Przejscie dalej
-    nextStep = () => {
-        const {step} = this.state;
-        this.setState({
-            step: step + 1
-        });
+    const nextStep = () => {
+        const {step} = state;
+        setState({...state, step: step + 1});
     }
 
     //Cofnięcie się
-    prevStep = () => {
-        const {step} = this.state;
-        this.setState({
-            step: step - 1
-        })
+    const prevStep = () => {
+        const {step} = state;
+        setState({...state, step: step - 1})
     }
 
-    handleChange = input => e => {
-        this.setState({
+     const handleChange = input => e => {
+        setState({...state,
             [input]: e.target.value
         })
     } 
+
    
-    render() {
-        const { step } = this.state;
-        const { email, password, name, surname, address, post, city, phone ,date, country } = this.state;
+   
+        const { step } = state;
+        const { email, password, name, surname, address, post, city, phone ,date, country } = state;
         const values = {email, password, name, surname, address, post, city, phone, date , country}
-        const {auth} = this.props;
+        const {auth} = props;
         if(auth.uid) { return <Redirect to="/"/> }
   
         // eslint-disable-next-line default-case
@@ -75,48 +71,48 @@ class User extends Component {
             case 1:
                 return(
                     <FormUserDetails
-                    nextStep={this.nextStep}
-                    handleChange={this.handleChange}
+                    nextStep={nextStep}
+                    handleChange={handleChange}
                     values={values}
-                    error={this.error}
+                    error={error}
                     />
                 )
             case 2: 
                     return(
                     <FormPersonalDetails 
-                    name={this.state.name}
-                    surname={this.state.surname}
-                    nextStep={this.nextStep}
-                    prevStep={this.prevStep}
-                    handleChange={this.handleChange}
+                    name={state.name}
+                    surname={state.surname}
+                    nextStep={nextStep}
+                    prevStep={prevStep}
+                    handleChange={handleChange}
                     values={values}
-                    error={this.error}
+                    error={error}
                     />
                     )
             case 3:
                     return(
                     <Confirm
-                    nextStep={this.nextStep}
-                    prevStep={this.prevStep}
-                    handleChange={this.handleChange}
+                    nextStep={nextStep}
+                    prevStep={prevStep}
+                    handleChange={handleChange}
                     values={values}  
-                    error={this.error}
+                    error={error}
                     />
                     )
             case 4 :
          
                     return(
                     <Success
-                    nextStep={this.nextStep}
-                    prevStep={this.prevStep}
+                    nextStep={nextStep}
+                    prevStep={prevStep}
                     values={values}  
-                    error={this.error}
+                    error={error}
                     />
                     )
 
         }
     }
-}
+
 
 const mapStateToProps = (state) =>{
     return{
