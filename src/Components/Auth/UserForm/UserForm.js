@@ -6,6 +6,7 @@ import Success from './Success';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import swal from 'sweetalert';
+import { useTranslation } from 'react-i18next';
 
 
 
@@ -13,7 +14,7 @@ import swal from 'sweetalert';
 function User(props){
 
   
-
+ const { t } = useTranslation();
  const [state,setState] = useState({
         step: 1,
         email: '',
@@ -33,8 +34,8 @@ function User(props){
     const error = (e) => {
         e.preventDefault();
         swal({
-            title: "UWAGA",
-            text: "Musisz uzupelnic wszystkie pola!",
+            title: t('Basket.Att'),
+            text: t('Basket.All'),
             icon: "error",
             button: "OK!"
           });
@@ -58,7 +59,6 @@ function User(props){
         })
     } 
 
-   
    
         const { step } = state;
         const { email, password, name, surname, address, post, city, phone ,date, country } = state;

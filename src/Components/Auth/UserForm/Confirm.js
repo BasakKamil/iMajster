@@ -1,49 +1,53 @@
-import React, { Component } from 'react';
+import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RadioButton';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
-export class Confirm extends Component {
-    continue = (e) => {
-            e.preventDefault();
-            this.props.nextStep();
-    }
+export function Confirm(props) {
 
-    back = (e) =>{
+     const { t } = useTranslation();
+
+     const cont = (e) => {
         e.preventDefault();
-        this.props.prevStep();
+        props.nextStep();
     }
-    render() {
-        const {values, handleChange, auth, error} = this.props;
+
+    const back = (e) =>{
+        e.preventDefault();
+        props.prevStep();
+    }
+
+        const {values, handleChange, auth, error} = props;
         if(auth.uid) return <Redirect to="/"/>
         return (
             <MuiThemeProvider>
                 <React.Fragment>
                     <div className="container FormKamil">
                     <TextField  
-                    hintText="Podaj Email"
+                    hintText={t('Contact.Email')}
                     type="email"
                     className="LogDuo"
-                    floatingLabelText="Email"
+                    floatingLabelText={t('Contact.Email')}
                     onChange={handleChange('email')}
                     defaultValue={values.email}/>
                     <br/>
                     <TextField  
-                    hintText="Podaj Hasło"
+                    hintText={t('Contact.Password')}
                     type="password"
                     className="LogDuo"
-                    floatingLabelText="Hasło"
+                    floatingLabelText={t('Menu.login.password')}
                     onChange={handleChange('password')}
                     defaultValue={values.password}/>
                    
-                   { ( values.emial || values.password )?
+                   { ( values.emial , values.password )?
                     <RaisedButton
-                        label="Dalej"
+                        label={t('Basket.Next')}
                         primary={true}
                         style={styles.button}
-                        onClick={this.continue}
+                        onClick={cont}
                         className="ButtonNew"
                     />
                     : <RaisedButton 
@@ -55,10 +59,10 @@ export class Confirm extends Component {
                          
                     }
                     <RaisedButton
-                        label="Powrót"
+                        label={t('Basket.Back')}
                         primary={true}
                         style={styles.buttonBack}
-                        onClick={this.back}
+                        onClick={back}
                         className="ButtonNew"
                     />
                      </div>
@@ -66,7 +70,7 @@ export class Confirm extends Component {
             </MuiThemeProvider>
         )
     }
-}
+
 
 const styles={
     button: {

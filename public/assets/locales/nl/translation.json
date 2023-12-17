@@ -5,6 +5,11 @@
     "Redo" : "Opnieuw doen",
     "Stock": "Niks op Voorraad!",
     "Score" : "Ik heb gevonden :",
+    "Send" : "Versturen!",
+    "Action" : {
+        "Error" : "Fout is gebeurd :(",
+        "Success" : "Succes!"
+    },
 
     "Information" : {
         "shop_info" : "Winkel is ..."
@@ -66,7 +71,9 @@
         "Delete": "Verwijderen",
         "Sum" : "Som",
         "Next" : "Doorgaan",
-        "Back" : "Terug"
+        "Back" : "Terug",
+        "All" : "Je moet eerst alle velden vullen !",
+        "Att" : "AANDACHT!"
     },
     "Lang" : {
         "Poland" : "Polen",

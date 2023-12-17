@@ -9,10 +9,7 @@ import { useTranslation } from 'react-i18next';
 
 function Success(props){
     
-    // const continu = (e) => {
-    //     e.preventDefault();
-    //     props.nextStep();
-    // }
+   
     const { t } = useTranslation();
 
     const back = (e) =>{

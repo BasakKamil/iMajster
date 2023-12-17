@@ -5,10 +5,17 @@
     "Redo" : "Przywroc",
     "Stock": "Nie ma nic na Stanie!",
     "Score" : "Znalazlem",
+    "Send" : "Wyslij!",
+
+    "Action" : {
+        "Error" : "Nie Udało się zalogować :(",
+        "Success" : "Sukces!"
+    },
 
     "Information" : {
         "shop_info" : "Sklep jest ..."
     },
+
 
     "Menu" : {
         "login" :  {
@@ -67,7 +74,9 @@
         "Delete": "Usun",
         "Sum" : "Suma",
         "Next" : "Dalej",
-        "Back" : "Powrot"
+        "Back" : "Powrot",
+        "All" : "Musisz uzupelnic wszystkie pola!",
+        "Att" : "UWAGA!"
     },
     "Lang" : {
         "Poland" : "Polska",

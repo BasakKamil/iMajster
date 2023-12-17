@@ -5,6 +5,11 @@
     "Redo" : "Redo",
     "Stock": "Nothing on Stock!",
     "Score" : "I find",
+    "Send" : "Send!",
+    "Action" : {
+        "Error" : "Something is Wrog :(",
+        "Success" : "Success!"
+    },
 
     "Information" : {
         "shop_info" : "Shop is ..."
@@ -65,7 +70,9 @@
         "Delete": "Delete",
         "Sum" : "Sum",
         "Next" : "Next",
-        "Back" : "Powrot"
+        "Back" : "Back",
+        "All" : "You must fill all fields first !",
+        "Att" : "ATTENTION!"
     },
     "Lang" : {
         "Poland" : "Poland",

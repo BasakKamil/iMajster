@@ -1,23 +1,30 @@
-const initState = {
 
+
+const initState = {
+         a : "Nie Udało się zalogować :(",
+         b: "Udało się zalogować :)"
 }
 
+
+
+
 const authReducer = (state= initState, action) => {
+    
      // eslint-disable-next-line default-case
      switch(action.type){
-         
+                  
           // eslint-disable-next-line no-fallthrough
           case 'LOGIN_ERROR' :
-               console.log(' Nie Udało się zalogować :(');
+               console.log(initState.a);
                return{
                     ...state,
-                    authError: 'Coś wpisałeś nie tak :/'
+                    authError: initState.a
                }
           case 'LOGIN_SUCCESS':
-               console.log('Udało się zalogować :)');
+               console.log(initState.b);
                return{
                     ...state,
-                    authError: null
+                    authError: initState.b
                }
           case 'SIGNOUT_SUCCESS':
                console.log('DO zobaczenia niedługo :)');
