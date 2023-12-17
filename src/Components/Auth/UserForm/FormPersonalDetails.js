@@ -90,8 +90,8 @@ export function FormPersonalDetails(props){
                     />
                     : <RaisedButton 
                          label={t('Basket.Next')}
-                         className='OutButt'
-                         style={styles.button1}
+                         className='OutButt btn-danger'
+                         style={styles.button}
                          onClick={error}
                          />
                          

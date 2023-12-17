@@ -5,12 +5,14 @@
 // @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 
 $background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 $famillyLog: 'Archivo Black', sans-serif;
 $fontBut: 'Archivo Black', sans-serif;
 $fontcena: 'Archivo Black', sans-serif;
+$price: 'Shrikhand', serif;
 body {
   margin: 0;
   padding: 0;
@@ -220,6 +222,9 @@ code {
     font-size: 22px;
 	margin-top: 5%;
 }
+.project-details{
+	padding: 3% !important;
+}
 .NavbarBasi{
   z-index: 99999;
     position: relative;
@@ -320,6 +325,20 @@ ul{
 		}
 	}
 }
+.authorProject{
+	text-align: center;
+	padding: 1%;
+	background: aquamarine;
+	border-radius: 0 10px 10px 0px;
+	font-family: $price;
+}
+.card-title{
+	background-color: cornflowerblue;
+	padding: 1%;
+	border-radius: 10px 0px 0px 10px;
+	font-family: $price;
+	
+}
 .NotificationsKamcia{
 	background-color: black;
 	opacity: 1;
@@ -349,14 +368,26 @@ ul{
 	display: flex;
 	position: relative;
 		.ProductInfo{
+			position: relative;
 			width: 40%;
 			background: white;
 			float: left;
+			padding: 2%;
 			border-right: 1px solid darkgrey;
 			border-radius: 10px 0px 0px 10px;
 			p{
 				background: black;
 				color: white;
+			}
+			.price{
+				position: absolute;
+  				bottom: 5%;
+  				width: 90%;
+  				padding: 2%;
+				background: aquamarine;
+				color: black;
+				font-family: $price !important;
+				padding: 1%;
 			}
 		}
 		.PhotoProduct{

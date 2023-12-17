@@ -83,7 +83,7 @@ function Success(props){
                         primary={true}
                         style={styles.buttonBack}
                         onClick={back}
-                        className="ButtonNew"
+                        className="ButtonNew btn-danger"
                     />
                     <div className="errSignUp"> {authError ? <p>{authError}</p>: null }</div>
                      </div>
