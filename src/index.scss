@@ -1,12 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Kanit&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Kanit&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
 
 $background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-$famillyLog: 'Kanit', sans-serif;
-$fontBut: 'Righteous', cursive;
-$fontcena: 'Anton', sans-serif;
+$famillyLog: 'Archivo Black', sans-serif;
+$fontBut: 'Archivo Black', sans-serif;
+$fontcena: 'Archivo Black', sans-serif;
 body {
   margin: 0;
   padding: 0;
@@ -161,8 +165,7 @@ body {
 
 }
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: $famillyLog;
 }
 .AboutKamil{
 	z-index: 99;
@@ -631,7 +634,7 @@ ul{
 			background: -webkit-linear-gradient(rgb(113, 229, 125), rgb(98, 232, 218));
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
-			font-family: 'Nabla', cursive;
+			font-family: $famillyLog;
 			text-shadow: 2px 2px #00040a;
 			letter-spacing: 2px;
 	  	}
@@ -669,11 +672,10 @@ ul{
 		text-align: center;
 		float: left;
 		margin-top: 3%;
-		font-family: 'Nabla', cursive;
 		background: -webkit-linear-gradient(#71e57d, #62e8da);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
-		font-family: 'Nabla', cursive;
+		font-family: $famillyLog;
 		text-shadow: 2px 2px #00040a;
 		letter-spacing: 2px;
 	}
