@@ -32,8 +32,8 @@ const Language = () => {
 
     return(
         
-        <div className="dropdown">
-            <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" value="value" >
+        <div className="dropdown" defaultValue="close">
+            <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" data-toggle="dropdown" value="value" >
                 {t('Lange')}
             </button>
    
