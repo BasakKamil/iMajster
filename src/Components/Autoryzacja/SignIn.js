@@ -14,12 +14,12 @@ function SignIn(props){
      const [ email,setEmial ] = useState({
         title: 'Kamil@op2.pl',
         body: '',
-        intText: 'Email'
+        intText: t('Contact.Email')
     });
      const [ password, setPassword ] = useState({
         title: 'password',
         body: '',
-        hintText : 'Password'
+        hintText : t('Contact.Password')
      });
      const [ label, setLabel ] = useState('Log in');
 
@@ -51,21 +51,21 @@ function SignIn(props){
                 <React.Fragment>
                 <div className="container FormKamilLog">
                 <TextField  
-                hintText={email.intText}
+                hintText={t('Contact.Email')}
                 type="email" 
                 className="LogUno"
                 defaultValue={email.title}
-                floatingLabelText="email"
+                floatingLabelText={t('Contact.Email')}
                 onChange={(e) => setEmial({...email, body: e.target.value})}
                 value={email.body}
                />
                 <br/>
                 <TextField  
-                hintText={password.hintText}
+                hintText={t('Contact.Password')}
                 type="password"
                 className="LogUno"
                 defaultValue={password.title}
-                floatingLabelText={password.hintText}
+                floatingLabelText={t('Contact.Password')}
                 onChange={(e) => setPassword({...password, body: e.target.value})}
                 />
                
