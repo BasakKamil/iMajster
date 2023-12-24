@@ -3,18 +3,24 @@ import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 import { Redirect } from 'react-router-dom';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { useTranslation } from 'react-i18next';
+
 
 
 const ProjectDetails = (props) => {
-
-const {project, auth} = props;
   
+ const {project, auth} = props;
+ const { t } = useTranslation();
+ const history = useHistory();
+ function terug(){
+      history.goBack();
+ }
+
  if(!auth.uid) return <Redirect to="/signin" />   
 
  if(project){
     return(
-
-
       <div class="container project-details">
          <div class="row">
             <div class="col-sm-8 card-title">Project Title {project.title}</div>
@@ -26,29 +32,21 @@ const {project, auth} = props;
               <p>{project.content}</p>
             </div>
          </div>
+          <button onClick={terug} type="button" class="btn btn-primary">{t('Basket.Back')}</button> 
       </div>
 
-    //  <div className="project-details">
-    //  <div className="card">
-    //  <span className="card-title"> Project Title {project.title}</span>
 
-    //     <div className="authorProject">
-    //       <p className="Auth">Autor: {project.authorFirstName} {project.authorLastName}</p>
-    //     </div>
-    //     <span className="textAll">Opis: <br/>
-    //     {project.content}</span>
-    //  </div>
-    // </div>
     )
-  } else {
+  } 
+  else {
     return(
      <div className="Loading">Loading...</div>
     )
   }
+
 }
 
 const mapStateToProps = (state, ownProps) =>{
-    console.log(ownProps);
     const id = ownProps.match.params.id;
     const projects = state.firestore.data.projects;
     const project = projects ? projects[id] : null

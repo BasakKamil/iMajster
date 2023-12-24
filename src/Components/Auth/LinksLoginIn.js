@@ -15,9 +15,9 @@ const LinksLoginIn =(props)=> {
     const toggle = () => setDropDownOpen(prevState => !prevState); 
     const {pathname} = useLocation();
     const { t } = useTranslation();
+
     useEffect(() => {
         setDropDownOpen(false);
-        
     },[ pathname ]);
 
    
