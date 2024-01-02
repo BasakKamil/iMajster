@@ -26,7 +26,8 @@ function User(props){
         city: '',
         country: '',
         phone: '' ,
-        date: new Date()
+        date: new Date(),
+        admin: false
     });
 
     
@@ -61,8 +62,8 @@ function User(props){
 
    
         const { step } = state;
-        const { email, password, name, surname, address, post, city, phone ,date, country } = state;
-        const values = {email, password, name, surname, address, post, city, phone, date , country}
+        const { email, password, name, surname, address, post, city, phone ,date, country, admin } = state;
+        const values = {email, password, name, surname, address, post, city, phone, date , country, admin}
         const {auth} = props;
         if(auth.uid) { return <Redirect to="/"/> }
   

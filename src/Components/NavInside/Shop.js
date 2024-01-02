@@ -10,20 +10,14 @@ import History from '../../store/shop/history';
 
 
 
-
-
-
 class Shop extends Component{
     constructor(){
         super();
       
         this.state ={
             filteredProducts:[],
-            cart: []
-            
+            cart: []    
         }
-
-       
 
         this.addToCart = this.addToCart.bind(this)
         this.removeFromCart = this.removeFromCart.bind(this)
@@ -86,8 +80,6 @@ class Shop extends Component{
         })
     }
    
-
-  
   
     render(){
              const {auth} = this.props;
@@ -98,8 +90,6 @@ class Shop extends Component{
                     <History/>
                     <hr/>
                     <ProductAll />
-
-   
                 </div>
                 
             )
@@ -108,8 +98,8 @@ class Shop extends Component{
      
 
 
-            }
         }
+}
 const mapStateToProps = (state,ownProps) => {
     const products = state.firestore.ordered.products;
     return{

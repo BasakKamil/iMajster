@@ -1,12 +1,12 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { useTranslation } from 'react-i18next';
-
+// import Shopify from './Shopify';
 
 
 // import formatCurrency from '../../store/shop/util';
 
-function ProductDetails(props){
+function ProductDetails(props,{variantId}){
 
 
 
@@ -27,6 +27,10 @@ return(
        </div>
         <div className="PhotoProduct"> <img src={img} alt=""/></div>
         {/* <p>Cena: {formatCurrency(product.price)}</p> */}
+        <div>
+            {/* <Shopify /> */}
+
+        </div>
        <button className="btn btn-danger" onClick={() => props.addToCart(product)}>{t('Basket.Add')}</button>
     </div>
 )

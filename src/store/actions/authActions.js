@@ -42,7 +42,8 @@ export const signUp = (newUser) => {
                 city: newUser.city,
                 phone: newUser.phone,
                 date: newUser.date,
-                initials: newUser.name + newUser.surname[0]
+                initials: newUser.name + newUser.surname[0],
+                admin: newUser.admin
             }).then(()=>{
                 dispatch({type:'SIGNUP_SUCCESS'})
             }).catch(err => {
@@ -52,3 +53,7 @@ export const signUp = (newUser) => {
 
     }
 }
+
+
+
+
