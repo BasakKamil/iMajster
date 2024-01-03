@@ -4,7 +4,7 @@ export const createOrder = (order,description) => {
         const firestore = getFirestore();
         const profile = getState().firebase.profile;
         const author = getState().firebase.auth.uid;
-        console.log(description);
+        // console.log(description);
         firestore.collection('orders').add({
             authorFirstName: profile.name,
             authorLastName: profile.surname,

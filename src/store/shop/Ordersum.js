@@ -1,31 +1,66 @@
-import React,{Component} from 'react';
+import React,{ useEffect, useState} from 'react';
 import {connect} from 'react-redux';
 import {createOrder} from '../actions/createOrder';
 import { Redirect } from 'react-router-dom';
-import StripeCheckout from 'react-stripe-checkout';
+import { useTranslation } from 'react-i18next';
+// import { loadStripe } from '@stripe/stripe-js';
 
 
+function Ordersum(props){
 
-class Ordersum extends Component{
+    const [sum,setSum] = useState(0);
+    const [dol,setDol] = useState(0);
+    const [description,setDescription] = useState({});
+    const { t } = useTranslation();
 
-    state = {
-        description: {},
-        dolarek: 0, 
-        suma: 0
-    }
-
-    handleChange = input => e => {
-        this.setState({
-            [input]: e.target.value
-        })
-        
-    } 
-    order = () =>{
-        this.props.createOrder(this.props.items,this.state.description);
+    const terug = () => {
+        props.history.push('/shop');
+        console.log(props)
     }
 
 
-    dolce = (a) =>{
+    const order = () =>{
+        props.createOrder(props.items,description);
+        props.history.push('/');
+    }
+
+
+    // let  stripePromise;
+    // const getStripe = () => {
+    //     if(!stripePromise){
+    //          stripePromise = loadStripe(`${process.env.REACT_APP_STRIPE_KEY}`);
+    //     }
+    //     return stripePromise;
+    // }
+
+    
+    // const Checkout = () => {
+    //     const itemy = {
+    //         price: "price_1OULH0I23OgygHg9KKqSQFGG",
+    //         quantity: 1
+    //     };
+
+    //     const checkoutoptions = {
+    //         lineItems: [itemy],
+    //         mode: "payment",
+    //         successUrl: `${window.location.origin}`,
+    //         cancelUrl: `${window.location.origin}`
+    //     };    
+    // }
+
+    
+    // const redirectToCheckOut = async() => {
+    //     console.log("redirectToCheckOut");
+    //     const stripe = await getStripe();
+    //     const { error } = await stripe.redirectToCheckOut;
+    //     console.log(error)
+
+    // }
+
+
+
+
+    const dolce = (a) =>{
         const proxyy = 'https://cors-anywhere.herokuapp.com/';
         const doll = `${proxyy}https://api.nbp.pl/api/exchangerates/rates/c/usd?format=json`;
         fetch(doll)
@@ -38,15 +73,16 @@ class Ordersum extends Component{
           n = Math.round(Math.round(n*factor)/10);
           return n/(factor/10);
         }
-        let ameryka =  Round(course, 2);
-        let sum = a/ameryka;
-        this.setState({dolarek : ameryka, suma: sum}); 
+        let ameryk =  Round(course, 2);
+        let sum = a/ameryk;
+        setSum(sum);
+        setDol(ameryk);
         });
              
     }
 
-    totalsum = () =>{
-       return this.props.items.reduce((total,item)=>{
+    const totalsum = () =>{
+       return props.items.reduce((total,item)=>{
             return total + item.price
         },0)    
 
@@ -54,24 +90,23 @@ class Ordersum extends Component{
 
   
 
-    handleToken = (token,addresses,orders) =>{
-        console.log(token,addresses,orders);
-        this.order();
+    // const handleToken = (token,addresses,orders) =>{
+    //     console.log(token,addresses,orders);
+    //     order();
         
        
-    }
-    componentDidMount(){
-        let a = this.totalsum()
-        this.dolce(a);
-      
-       
-    }
-    
-    render(){
+    // }
+
+
+
+    useEffect(() => {
+        let a = totalsum()
+        dolce(a);
+      });
+   
         
-        const {auth} = this.props;
-        const {items} = this.props;
-        const {profile} = this.props;
+        const {auth, items, profile} = props;
+     
         if(!auth.uid) return <Redirect to="/signin" />
         if(items.length===0) return <Redirect to="/shop" />
         return(
@@ -80,7 +115,7 @@ class Ordersum extends Component{
                 <table className="OrderSum">
                     <tbody>
                         <tr>
-                            <td>Nazwa</td>
+                            <td>{t('Basket.Name')}</td>
                             <td>Cena</td>
                             <td>Sztuk</td>
                         </tr>
@@ -119,31 +154,28 @@ class Ordersum extends Component{
                         </tr>
                         <tr>
                             <td>Dodatkowe info:</td>
-                            <td><textarea onChange={this.handleChange("description")} className="Description"></textarea></td>
+                            <td><textarea onChange={(e)=> setDescription(e.target.value)} className="Description"></textarea></td>
                         </tr>
                     </tbody>
                 </table>
-                    <div>$ = {this.state.dolarek} <br/></div>
-                    <p className="EquilBasi">Suma: {this.totalsum()} zł</p>
-                    <p>Suma w $: {this.state.suma} $</p>
+                    <div>$ = {dol} <br/></div>
+                    <p className="EquilBasi">Suma: {totalsum()} zł</p>
+                    <p>Suma w $: {sum} $</p>
 
 
                     <div className="enquil">
-                        <StripeCheckout 
-                        stripeKey="pk_test_EcCwO3KxmaJx7fQb18wrJ4fZ00w3vwuc9G"
-                        token={this.handleToken} 
-                        billingAddress
-                        shippingAddress
-                        orders={this.props.items}
-                        amount={this.state.suma *100}/>
-                
-                         <button onClick={this.order} className="btn btn-success">Zamów</button>
+
+                   
+                         <button className="btn btn-danger" onClick={terug}>{t('Basket.Back')}</button>
+                         <br/>
+                         <button onClick={order} className="btn btn-success">Zamów</button>
+                       
                     </div>
             </div>
         )
     
     }
-    }
+    
  
 
 const mapStateToProps= (state) =>{
@@ -151,13 +183,13 @@ const mapStateToProps= (state) =>{
         items: state.cart.cart,
         auth: state.firebase.auth,
         profile: state.firebase.profile
-
     }
 }
 
 const mapDispatchToProps = (dispatch) =>{
     return{
         createOrder: (order, description) =>  dispatch(createOrder(order,description))
+        // createOrder: (order) =>  dispatch(createOrder(order))
     }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(Ordersum)

@@ -13,7 +13,7 @@ import UserForm from './Components/Auth/UserForm/UserForm';
 import Ordersum from './store/shop/Ordersum';
 import Navbar from './Components/Layaut/Navbar';
 import Admin from './Components/Admin/Admin';
-
+import "@stripe/stripe-js";
 
 
 

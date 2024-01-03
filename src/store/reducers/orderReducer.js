@@ -1,5 +1,8 @@
+
 const initState = {
- 
+    loading: false,
+    items: [],
+    error: "", 
 }
 
 const orderReducer = (state= initState, action) => {
@@ -7,13 +10,17 @@ const orderReducer = (state= initState, action) => {
     switch(action.type){
          case 'CREATE_ORDER':
              console.log('Utworzono Zamówienie :D ', action.order);
-             alert('Dziekujemy za złoenie Zamówienia :)');
-             return state
+             return { 
+                ...state,
+                authError: null 
+            }
+    
          case 'CREATE_ORDER_ERROR':
              console.log('Utowrzono Zamówienie Błędnie :(', action.error);
-             return state
+             return { ...state }
+
          default:
-            return state
+            return state;
     }
    
 }

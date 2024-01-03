@@ -25,12 +25,6 @@ function Cart(props){
     }
 
 
-   //    Podsumowanie
-//    const total = () =>{
-//         return props.items.reduce((total,item)=>{
-//             return total + item.price
-//         },0)
-//     }
 
     const order = () => {    
        props.createOrder(props.items)

@@ -1,21 +1,19 @@
-import React, { Component } from 'react'
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-export class Stepordertwo extends Component {
+export function Stepordertwo(props){
 
-    realize = () =>{
-        this.props.order()
-    }
-    render() {
-        const {items} = this.props;
-        const {profile} = this.props;
+   
+        const { t } = useTranslation();
+        const {items,profile} = props;
         
        
         return (
             <div className="NiceBasket">
-                Podsumowanie!
+                {t('Summary')}
                 <table className="Sum">
                 <tbody>
-                <tr><td>Nazwa:</td><td>Szt</td></tr>
+                <tr><td>{t('Basket.Name')}</td><td>{t('Menu.pieces')}</td></tr>
                 {items.map((item,index)=>{
                 return <tr key={index}>
                                  <td>{item.name}</td>
@@ -26,21 +24,21 @@ export class Stepordertwo extends Component {
                 </tbody>
              
                 </table>
-                <b className="AdressSend"> Adres do Wysyłki: </b>
+                <b className="AdressSend"> {t('Contact.Address')}: </b>
                 <table>
                     <tbody>
                         <tr>
-                            <td>Imie i nazwisko:</td>
+                            <td>{t('Contact.Nam')} {t('Contact.Sur')}</td>
                              <td>{profile.name} {profile.surname}</td>
                         </tr>
                     </tbody>
                 </table>
 
-                <button onClick={this.props.prevStep} className="btn btn-secondary">Cofnij</button>
-                <button onClick={this.props.nextStep} className="btn btn-danger">Zamawiam!</button>
+                <button onClick={props.prevStep} className="btn btn-secondary">{t('Basket.Back')}</button>
+                <button onClick={props.nextStep} className="btn btn-danger">{t('Basket.Next')}</button>
             </div>
         )
     }
-}
+
 
 export default Stepordertwo

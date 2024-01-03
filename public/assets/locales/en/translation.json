@@ -6,6 +6,8 @@
     "Stock": "Nothing on Stock!",
     "Score" : "I find",
     "Send" : "Send!",
+    "Summary" : "Summary",
+
     "Action" : {
         "Error" : "Something is Wrog :(",
         "Success" : "Success!"

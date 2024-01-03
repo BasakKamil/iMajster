@@ -49,6 +49,7 @@ const Steporderone = (props) => {
                     <b> {t('Menu.pieces')} : {props.items.length}</b>
                 </p>
                 <button className="btn btn-danger" onClick={props.nextStep}>{t('Basket.Next')}</button>
+               
 
     </div>
 
