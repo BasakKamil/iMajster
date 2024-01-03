@@ -25,7 +25,7 @@ function Success(props){
 
     
         const {auth, authError,values:{email, password, name, surname, address, post, city, phone, country, date}} = props;
-        console.log(admin, date);
+        console.log(date);
         if(auth.uid) return <Redirect to="/"/>
         return (
             <MuiThemeProvider>
