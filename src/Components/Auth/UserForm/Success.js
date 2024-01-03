@@ -24,8 +24,8 @@ function Success(props){
     } 
 
     
-        const {auth, authError,values:{email, password, name, surname, address, post, city, phone, date, country}} = props;
-        console.log(date);
+        const {auth, authError,values:{email, password, name, surname, address, post, city, phone, admin, country, date}} = props;
+        console.log(admin, date);
         if(auth.uid) return <Redirect to="/"/>
         return (
             <MuiThemeProvider>
@@ -68,6 +68,8 @@ function Success(props){
                         primaryText={t('Contact.Pas')}
                         secondaryText={password}
                         />
+                
+                 
                        
                     </List>
                    
