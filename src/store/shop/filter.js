@@ -1,24 +1,20 @@
-import React, { Component } from 'react';
-import { useTranslation } from 'react-i18next';
+import React from 'react';
+
 
 function filter(props){
-   
-        const { t } = useTranslation();
+
         return (
-            <div className="row FilterKamil">
-                <div className="col-md-4">
-                    {t('Score')}: {props.count} 
-                </div>
-                <div className="col-md-4">
-                    <select className="form-conrol KamilFormContr" value={props.sort}
-                    onChange={props.handleChangeSort}>
-                         <option value="">Select</option>
-                         <option value="">Lowest to Highest</option>
-                         <option value="">Highest to Lowest</option>
-                    </select>
-                </div>
-                <div className="col-md-4"></div>
+
+            <div class="dropdown">
+                    <button className="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Filter Products
+                    </button>
+                    <ul className="dropdown-menu MenuKamilcia" onChange={props.handleChangeSort}>
+                        <li><button class="dropdown-item" type="button" value={props.sort}>Lowest to Highest</button></li><br/>
+                        <li><button class="dropdown-item" type="button" value={props.sort}>Highest to Lowest</button></li>
+                    </ul>
             </div>
+
         )
     
 }

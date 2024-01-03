@@ -265,6 +265,41 @@ ul{
 .loader{
 		position: absolute; 
 }
+
+.DashAdm{
+	position: relative;
+	z-index: 99999999999999999999;
+	text-align: center;
+	
+}
+.DashAdmPage{
+	background: white;
+	text-align: center;
+	padding: 5%;
+}
+.Kammaplist{
+	background-color: black;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 5px;
+	color: yellow;
+}
+.AdminDash{
+	background-color: white;
+	border-radius: 10px;
+	padding: 5%;
+	margin: 5%;
+  }
+.ContKamila{
+	position: fixed;
+	top: 12%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.8;
+	padding: 1%;
+	border-radius: 10px;
+	z-index: 99999999;
+  }
 .project-details{
   position: relative;
     display: block;

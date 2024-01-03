@@ -6,7 +6,9 @@
     "Stock": "Niks op Voorraad!",
     "Score" : "Ik heb gevonden :",
     "Send" : "Versturen!",
-    "Summary" : "Samenvatting",
+    "Extra information" : "Extra informatie voor verkoper",
+    "Order": "Ik bestel!",
+    "Date": "Datum",
 
     "Action" : {
         "Error" : "Fout is gebeurd :(",

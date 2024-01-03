@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Notifications from './Notifications';
 import ProjectList from '../Project/ProjectList';
 import { connect } from 'react-redux';
@@ -6,9 +6,9 @@ import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 import { Redirect } from 'react-router-dom';
 
-export class Dashboard extends Component {
-    render() {
-        const { projects, auth, notifications} = this.props;
+function Dashboard(props){
+
+        const { projects, auth, notifications} = props;
         // console.log(notifications);
         if(!auth.uid) return <Redirect to="/signin"/>
         return (
@@ -25,7 +25,7 @@ export class Dashboard extends Component {
             </div>
         )
     }
-}
+
 const mapStateToProps = (state) =>{
    
     return{

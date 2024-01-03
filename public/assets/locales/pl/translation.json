@@ -7,6 +7,9 @@
     "Score" : "Znalazlem",
     "Send" : "Wyslij!",
     "Summary" : "Podsumowanie",
+    "Extra information" : "Dodatkowa Informacja dla sprzedawcy",
+    "Order": "Zamawiam!",
+    "Date": "Data",
 
     "Action" : {
         "Error" : "Nie Udało się zalogować :(",

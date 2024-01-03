@@ -15,7 +15,6 @@ function Ordersum(props){
 
     const terug = () => {
         props.history.push('/shop');
-        console.log(props)
     }
 
 
@@ -111,13 +110,13 @@ function Ordersum(props){
         if(items.length===0) return <Redirect to="/shop" />
         return(
             <div className="SumOrderKamila">
-               <p className="CallOrder">Podsumoawnie Zamowienia :D</p> 
+               <p className="CallOrder">{t('Summary')}</p> 
                 <table className="OrderSum">
                     <tbody>
                         <tr>
                             <td>{t('Basket.Name')}</td>
-                            <td>Cena</td>
-                            <td>Sztuk</td>
+                            <td>{t('Basket.Price')}</td>
+                            <td>{t('Menu.pieces')}</td>
                         </tr>
                         {items.map((item,index)=>{
                             return(
@@ -133,34 +132,34 @@ function Ordersum(props){
                 <table className="InfoProfile">
                     <tbody>
                         <tr>
-                             <td>Imie i Nazwisko: </td>
+                             <td>{t('Contact.Nam')} {t('Contact.Sur')}</td>
                              <td>{profile.name} {profile.surname}</td>
                         </tr>
                         <tr>
-                             <td>Ulica: </td>
+                             <td>{t('Contact.Street')}</td>
                              <td>{profile.address}</td>
                         </tr>
                         <tr>
-                             <td>Kod Pocztowy: </td>
+                             <td>{t('Contact.PostCode')}</td>
                              <td>{profile.post}</td>
                         </tr>
                         <tr>
-                             <td>Miasto: </td>
+                             <td>{t('Contact.City')}</td>
                              <td>{profile.city}</td>
                         </tr>
                         <tr>
-                             <td>Telefon: </td>
+                             <td>{t('Contact.Phone')}</td>
                              <td>{profile.phone}</td>
                         </tr>
                         <tr>
-                            <td>Dodatkowe info:</td>
+                            <td>{t('Extra information')}</td>
                             <td><textarea onChange={(e)=> setDescription(e.target.value)} className="Description"></textarea></td>
                         </tr>
                     </tbody>
                 </table>
                     <div>$ = {dol} <br/></div>
-                    <p className="EquilBasi">Suma: {totalsum()} zł</p>
-                    <p>Suma w $: {sum} $</p>
+                    <p className="EquilBasi">{t('Basket.Sum')}{totalsum()} zł</p>
+                    <p>{t('Basket.Sum')} $: {sum} $</p>
 
 
                     <div className="enquil">
@@ -168,7 +167,7 @@ function Ordersum(props){
                    
                          <button className="btn btn-danger" onClick={terug}>{t('Basket.Back')}</button>
                          <br/>
-                         <button onClick={order} className="btn btn-success">Zamów</button>
+                         <button onClick={order} className="btn btn-success">{t('Order')}</button>
                        
                     </div>
             </div>

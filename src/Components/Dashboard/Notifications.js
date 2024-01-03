@@ -7,20 +7,20 @@ const Notifications = (props)=>{
      
         <div className="NotificationsKamcia">
             <div> {notifications && notifications.map(item =>{
-                // console.log(item);
-                return (
-                    <div className="NewStat">
-                    <ul key={item.id}>
-                     <li>
-                        {item.user}
-                     </li>
-                     <li>
-                         {item.content}
-                     </li>
+                    console.log(item);
+                        return (
+                            <div className="NewStat">
+                                <ul key={item.id}>
+                                        <li>
+                                            {item.user}
+                                        </li>
+                                        <li>
+                                            {item.content}
+                                        </li>
                      
-                    </ul>
-                    </div>
-                )
+                                </ul>
+                            </div>
+                            )
             })}</div>
         </div>
     )

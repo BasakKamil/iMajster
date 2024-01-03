@@ -14,6 +14,8 @@ import Ordersum from './store/shop/Ordersum';
 import Navbar from './Components/Layaut/Navbar';
 import Admin from './Components/Admin/Admin';
 import "@stripe/stripe-js";
+import AdminDash from './Components/Admin/AdminDash';
+import AdminDelete from './Components/Admin/AdminDelete';
 
 
 
@@ -21,7 +23,8 @@ const routes = [
   {path: '/shop', name: "Shop", Component: Shop },
   {path: '/contact', name: "Contact", Component: Contact },
   {path: '/about', name: "About", Component: About },
-  
+  {path: '/adminadd', name: "Admin Add", Component: Admin },
+  {path: '/admindelete', name: "Admin Delete", Component: AdminDelete },
 ]
 
 const App = () => {
@@ -36,7 +39,7 @@ const App = () => {
                   <Route path="/project/:id" component={ProjectDetails}/>
                   <Route path="/createproject" component={Createproject}/>
                   <Route path="/signin" component={SignIn}/>
-                  <Route path="/admin" component={Admin}/>
+                  <Route path="/admin" component={AdminDash}/>
                   <Route path="/signup" component={UserForm}/>
                   <Route path="/ordersum" component={Ordersum}/>
                   {routes.map(({path,Component})=>{
