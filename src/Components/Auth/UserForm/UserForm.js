@@ -62,8 +62,8 @@ function User(props){
 
    
         const { step } = state;
-        const { email, password, name, surname, address, post, city, phone ,admin, country, date } = state;
-        const values = {email, password, name, surname, address, post, city, phone, admin , country, date}
+        const { email, password, name, surname, address, post, city, phone , country, date } = state;
+        const values = {email, password, name, surname, address, post, city, phone, country, date}
         const {auth} = props;
         if(auth.uid) { return <Redirect to="/"/> }
   

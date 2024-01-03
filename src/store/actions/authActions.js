@@ -43,7 +43,6 @@ export const signUp = (newUser) => {
                 phone: newUser.phone,
                 date: newUser.date,
                 initials: newUser.name + newUser.surname[0],
-                admin: newUser.admin
             }).then(()=>{
                 dispatch({type:'SIGNUP_SUCCESS'})
             }).catch(err => {
