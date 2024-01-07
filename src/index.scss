@@ -8,11 +8,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 
+
 $background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 $famillyLog: 'Archivo Black', sans-serif;
 $fontBut: 'Archivo Black', sans-serif;
 $fontcena: 'Archivo Black', sans-serif;
 $price: 'Shrikhand', serif;
+
 body {
   margin: 0;
   padding: 0;
@@ -132,7 +134,7 @@ body {
 	
 	background: #000;
 	display: block;
-	z-index: 999999999;
+	z-index: 999;
 	position: relative;
 	color: #fff;
 	font-size: 20px;
@@ -250,27 +252,34 @@ code {
 		margin-top: 4%;
 	}
 }
-ul{
-  li{
-    width:25%;
-    height: auto;
-    float: left;
-	list-style: none;
-	z-index: 99999999999999;
-    a{
-      text-decoration: none;
-    }
-  }
-}
+
 .loader{
 		position: absolute; 
 }
+.NieuweImg{width: 10% !important}
+.Reducto{
+	li{
+	  width:25%;
+	  height: auto;
+	  float: left;
+	  list-style: none;
+	  z-index: 99999999999999;
+	  a{
+		text-decoration: none;
+	  }
+	}
+  }
 
 .DashAdm{
 	position: relative;
 	z-index: 99999999999999999999;
 	text-align: center;
 	
+}
+.MenuKamilcia{
+  li{
+	width: 100%;
+	}
 }
 .DashAdmPage{
 	background: white;
@@ -488,11 +497,33 @@ ul{
 		margin: 0 auto;
 	}
 }
+
+.BasiBas{
+	position: absolute;
+	bottom: 2%;
+	float: left;
+	width: 100%;
+	left: 0%;
+	font-family: $price;
+}
+
 .NowyK{
+  margin: 5%;
   a{
-    color: white;
-  }
-  
+    color: black;
+	text-decoration: none;
+	font-size: 25px;
+  }  
+}
+.NowyBut{
+	margin: 3%;
+	a{
+		list-style: none;
+  		text-decoration: none;
+  		color: white;
+  		background: black;
+  		padding: 2%;
+	}
 }
 .DataFront{
     background: darkslategrey;
@@ -664,6 +695,33 @@ ul{
 	}
    
   }
+
+.LinksOutShow{
+  display: block;
+  position: absolute;
+  width: 35%;
+	.Op{
+		background: white;
+		opacity: 0.78;
+		height: 100vh;
+		ul{
+			background: white;
+            min-height: 500px;
+			li{
+				float: left;
+				width: 100%;
+				list-style: none;
+				img{
+					width: 25%;
+				}
+			}
+		}
+	}
+}
+.BurgerekOnze{ 
+	width: 25%;
+	float: left;
+}
 .Frank{
   font-size: 20px;
   color: blue;
@@ -704,12 +762,11 @@ ul{
         	float: left;
 			font-size: 25px;
 			text-transform: uppercase;
-			background: -webkit-linear-gradient(rgb(113, 229, 125), rgb(98, 232, 218));
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
+			// background: -webkit-linear-gradient(rgb(113, 229, 125), rgb(98, 232, 218));
 			font-family: $famillyLog;
 			text-shadow: 2px 2px #00040a;
 			letter-spacing: 2px;
+			color: darkturquoise;
 	  	}
 		p:hover{
 			font-size: 28px;	
@@ -740,9 +797,7 @@ ul{
 		text-align: center;
 		float: left;
 		margin-top: 3%;
-		background: -webkit-linear-gradient(#71e57d, #62e8da);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+		// background: -webkit-linear-gradient(#71e57d, #62e8da);
 		font-family: $famillyLog;
 		text-shadow: 2px 2px #00040a;
 		letter-spacing: 2px;

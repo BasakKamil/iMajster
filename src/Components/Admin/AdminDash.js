@@ -1,5 +1,4 @@
 import React from "react";
-import Admin from "./Admin";
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
@@ -14,7 +13,7 @@ return(
             <h1>PLATFORMA ADMINA:</h1>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
+                    <span class="navbar-brand" alt="AdminMenu" value="" >Navbar</span>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>

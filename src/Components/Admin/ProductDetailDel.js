@@ -4,13 +4,14 @@ import { deleteProduct } from "../../store/actions/productsActions";
 
 const ProductDetailDel = (props) => {
 
-    const {product,deleteProduct} = props;
+    const {product} = props;
 
 return(
     <div className="Kammaplist row" key={product.id}> 
                             <div className="col">
                                 <div> { product.name } </div>
                                 <div> { product.id } </div>
+                                <img className="NieuweImg" src={ product.img }  alt="Small in Shop"  />
                                 <button value={product.id} onClick={(e) => ( props.deleteProduct(e.target.value))} className="btn btn-danger">Delete</button>
                             </div>
     </div>

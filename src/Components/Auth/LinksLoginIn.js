@@ -22,7 +22,7 @@ const LinksLoginIn =(props)=> {
 
    
         return (
-            <div className="LinksIn">
+            <div className="Links">
                 <ul className='Reducto'>
                  <li><img className="Burgerek" onClick={toggle} src={Burger} alt="Burger"/></li>
                  <li><button className="btn btn-primary" onClick={props.signOut}>{t('Menu.login.log_out')}</button></li>    
