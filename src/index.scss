@@ -517,12 +517,13 @@ code {
 }
 .NowyBut{
 	margin: 3%;
-	a{
+	span{
 		list-style: none;
   		text-decoration: none;
   		color: white;
   		background: black;
   		padding: 2%;
+		cursor: grab;
 	}
 }
 .DataFront{

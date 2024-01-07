@@ -15,7 +15,7 @@ function LinksLoginOut(){
           <div className="LinksOutShow">
             {dropDownOpen ? <div className='Op'>
                <ul>
-                 <li><div onClick={Toggle} className="NowyBut"><a href="#">{t('Menu.login.close')}</a></div></li>
+                 <li><div  onClick={Toggle} className="NowyBut"><span>{t('Menu.login.close')}</span></div></li>
                  <li><div  className="NowyK"><Link onClick={Toggle} to="/signin">{t('Menu.login.log_in')}</Link></div></li>
                  <li><div  className="NowyK"><Link onClick={Toggle} to="/signup">{t('Menu.login.register')}</Link></div></li> 
                  <li><div  className="NowyK"><Link onClick={Toggle} to="/contact">{t('Contact.title')}</Link></div></li> 
