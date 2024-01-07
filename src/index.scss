@@ -508,11 +508,25 @@ code {
 }
 
 .NowyK{
-  margin: 5%;
+	float: left;
+	width: 100%;
   a{
-    color: black;
+	width: 96%;
+	color: #000;
 	text-decoration: none;
 	font-size: 25px;
+	float: left;
+	padding: 2%;
+	margin: 2%;
+	svg{
+			width: 25%;
+			float: left;
+	}
+	p{
+		width: 65%;
+  		float: left;
+		margin: 5%;
+	}
   }  
 }
 .NowyBut{
@@ -897,9 +911,7 @@ code {
 		display: block;
 		color: black;
 }
-.NowyK{
-  margin-left: 2%;
-}
+
 .KamilaNav{
 	display: none;
 	z-index: 99999999999999999999999;
