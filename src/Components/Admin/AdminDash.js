@@ -2,10 +2,13 @@ import React from "react";
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
+import Notifications from '../Dashboard/Notifications';
+import { firestoreConnect } from 'react-redux-firebase';
+import { compose } from 'redux';
 
 function AdminDash(props){
 
-const {auth} = props;
+const {auth,notifications} = props;
 if(!auth.uid) return <Redirect to="/signin" />
 return(
 
@@ -33,6 +36,10 @@ return(
             </div>
             </div>
             </nav>
+
+            <div className="col s12 m5 offset-m1">
+                         <Notifications notifications={notifications}/>
+            </div>
     </div>
 
 )    
@@ -41,9 +48,16 @@ return(
 
 const mapStateToProps = (state) => {
     return{
-        auth: state.firebase.auth
+        auth: state.firebase.auth,
+        notifications: state.firestore.ordered.notifications
     }
 }
 
 
-export default connect(mapStateToProps)(AdminDash)
+
+export default compose(
+    connect(mapStateToProps),
+    firestoreConnect([ 
+        {collection: 'notifications', limit: 12, orderBy:['time','desc']}
+])
+)(AdminDash) 

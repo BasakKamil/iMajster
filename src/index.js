@@ -10,7 +10,6 @@ import thunk from 'redux-thunk';
 import { reduxFirestore ,getFirestore } from 'redux-firestore';
 import { reactReduxFirebase ,getFirebase } from 'react-redux-firebase';
 import fbConfig from './config/fbconfig';
-import Loader from './Components/Animate/Loader';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import { I18nextProvider, initReactI18next } from 'react-i18next';
@@ -51,15 +50,13 @@ const store = createStore(rootReducer,
 
 
 
+
 // dzięki temu po przeładowaniu strony zalogowany uzytkownik nie zostanie wylogowany 
 store.firebaseAuthIsReady.then(()=>{
     ReactDOM.render(
         <I18nextProvider>
             <Provider store={store} i18n={i18n}>
-                <>
-                    <Loader/>
                     <App />
-                </>
             </Provider> 
         </I18nextProvider>,    
         document.getElementById('root'));

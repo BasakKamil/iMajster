@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useEffect, useState}  from 'react';
 import './App.css';
 import ThreeBack from './Components/Animate/ThreeBack';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
@@ -16,6 +16,7 @@ import Admin from './Components/Admin/Admin';
 import "@stripe/stripe-js";
 import AdminDash from './Components/Admin/AdminDash';
 import AdminDelete from './Components/Admin/AdminDelete';
+import Loader from './Components/Animate/Loader';
 
 
 
@@ -29,9 +30,19 @@ const routes = [
 
 const App = () => {
 
+
+const [ Load, setLoad ] = useState(false);
+
+useEffect(()=>{
+  setTimeout(()=>{
+    setLoad(true)
+  },5000)
+},[])
+
   return (
     <React.Fragment>
     <Router>
+      { Load ? 
       <div className="App">
         <Navbar/>
                <Switch>
@@ -51,7 +62,10 @@ const App = () => {
                    })}   
                 </Switch>
           
-      </div>  
+      </div>
+      :
+      <Loader/>  
+      }
     </Router>
     <ThreeBack/>
    </React.Fragment>
