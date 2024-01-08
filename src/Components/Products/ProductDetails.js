@@ -10,7 +10,7 @@ function ProductDetails(props){
 
 const { t } = useTranslation();
 const {product} = props;
-const img = props.product.img;
+const img = product.img;
 return(
    
     <motion.div 

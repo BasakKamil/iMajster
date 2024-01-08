@@ -6,6 +6,12 @@
     "Stock": "Nothing on Stock!",
     "Score" : "I find",
     "Send" : "Send!",
+    "Summary" : "Summary",
+    "Extra information" : "Extra information for seller",
+    "Order": "Order!",
+    "Date": "Date",
+    "CRB": "Copyright by Kamil Basak",
+
     "Action" : {
         "Error" : "Something is Wrog :(",
         "Success" : "Success!"

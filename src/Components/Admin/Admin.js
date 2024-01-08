@@ -1,16 +1,16 @@
 import React,{ useState} from 'react';
 import { connect } from 'react-redux';
-import { Redirect, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
 import {createProduct} from '../../store/actions/productsActions';
 
 
 function Admin(props){
-    const history = useHistory();
+    // const history = useHistory();
         const [product,setProduct] = useState({
             content: '',
             name: '',
             img: '',
-            price: '',
+            price: 40,
             section: ''
         });
 
@@ -22,12 +22,13 @@ function Admin(props){
 
         const create= () => {
             props.createProduct(product);
-            props.history.push('/');
+            // props.history.push('/');
+            
         } 
 
-        function back(){
-           history.goBack();
-        }
+        // function back(){
+        //    history.goBack();
+        // }
 
   
    
@@ -40,7 +41,7 @@ function Admin(props){
                     <div className='row'>
                             <h2>Admin</h2>
                         <div className='col'>
-                            <form>
+                            <form className='KamilFormAdd'>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Content</label>
                                     <input id="content" value={product.content} onChange={handleChange}/>
@@ -62,7 +63,7 @@ function Admin(props){
                                     <input id="section" value={product.section} onChange={handleChange}/>
                                 </div>
                                 <button type="submit" class="btn btn-primary" onClick={create}>Submit</button>
-                                <button class="btn btn-danger" onClick={back}>Powrot</button>
+                                {/* <button class="btn btn-danger" onClick={back}>Powrot</button> */}
                                 
                             </form>
                         </div>

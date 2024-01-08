@@ -6,6 +6,11 @@ export const createProduct = (product) => {
    
         // console.log(description);
         firestore.collection('products').add({
+            // name: product.name,
+            // content: product.content,
+            // img: product.img,
+            // price: product.price,
+            // section: product.section
             ...product
         }).then(()=>{
             dispatch({type: 'CREATE_PRODUCT', product});
