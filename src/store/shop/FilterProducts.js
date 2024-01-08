@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function Filter(props){
+function FilterProducts(props){
 
     
 
@@ -28,4 +28,4 @@ function Filter(props){
     
 }
 
-export default Filter
+export default FilterProducts

@@ -22,7 +22,7 @@ function Admin(props){
 
         const create= () => {
             props.createProduct(product);
-            // props.history.push('/');
+            props.history.push('/');
             
         } 
 

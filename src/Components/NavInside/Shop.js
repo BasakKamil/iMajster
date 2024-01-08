@@ -5,7 +5,8 @@ import ProductAll from '../Products/ProductAll';
 import History from '../../store/shop/history';
 import { compose } from 'redux';
 import { firestoreConnect } from 'react-redux-firebase';
-import Filter from '../../store/shop/Filter';
+import FilterProducts from '../../store/shop/FilterProducts';
+
 
 
 function Shop(props){
@@ -44,7 +45,7 @@ return (
         <div className="container text-center ContKamila">
            <div className="row">
                 <div className="col col-lg-2">
-                  <Filter filtered={filtered} setFiltered={setFiltered} products={products} activeGenere={activeGenere} setActiveGenere={setActiveGenere} onFilterValueSelected={onFilterValueSelected}/>   
+                  <FilterProducts filtered={filtered} setFiltered={setFiltered} products={products} activeGenere={activeGenere} setActiveGenere={setActiveGenere} onFilterValueSelected={onFilterValueSelected}/>   
                 </div> 
                 <div className="col col-lg-2"><History/></div>
            </div>
