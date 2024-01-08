@@ -18,7 +18,7 @@ function ProductAll(props){
                         layout
                         className="ProductShow">
                         <AnimatePresence >
-                         {props.products && props.products.map(product => {
+                         {products && products.map(product => {
                             return (
                                 <ProductDetails product={product} key={product.id} />
                             ) 

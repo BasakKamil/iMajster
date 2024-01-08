@@ -10,9 +10,31 @@ import Filter from '../../store/shop/Filter';
 
 function Shop(props){
 
-const [filtered, setFiltered] = useState([]);
-const [activeGenere, setActiveGenere] = useState();
 const {auth,products} = props;
+const [activeGenere, setActiveGenere] = useState([]);
+const [filtered, setFiltered] = useState('all');
+
+
+
+// let filteredProductList = activeGenere.filter((product)=>{
+    // if(filtered ==='all'){
+    //     console.log(product)
+    // }
+    // else if(filtered ==='iPhone'){
+    //     console.log(product) 
+    // }
+//     // return product
+// })
+
+// useEffect(() => {
+//     setActiveGenere([products]);
+// },[]);
+
+
+function onFilterValueSelected(filterValue){
+    setFiltered(filterValue);
+    console.log(activeGenere);
+}
 
 
 
@@ -22,7 +44,7 @@ return (
         <div className="container text-center ContKamila">
            <div className="row">
                 <div className="col col-lg-2">
-                  <Filter filtered={filtered} setFiltered={setFiltered} products={products} activeGenere={activeGenere} setActiveGenere={setActiveGenere}/>   
+                  <Filter filtered={filtered} setFiltered={setFiltered} products={products} activeGenere={activeGenere} setActiveGenere={setActiveGenere} onFilterValueSelected={onFilterValueSelected}/>   
                 </div> 
                 <div className="col col-lg-2"><History/></div>
            </div>
