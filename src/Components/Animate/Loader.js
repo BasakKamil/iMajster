@@ -5,8 +5,6 @@ import ClipLoader from "react-spinners/ClipLoader";
 export default function Loader(){
 
 
-
-
     return(
               <div className="Loader">
                   <div className="Gif">

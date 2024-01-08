@@ -30,6 +30,22 @@ body {
     margin-top: 5%;
   }
 }
+
+.Gif{
+	padding: 10%;
+    margin: 10%;
+	text-align: center;
+	h1{
+		text-align: center;
+  		font-family: $price;
+	}
+
+	span{
+		margin: 0 auto;
+  		text-align: center;
+	}
+}
+
 .dropdown-menu.show{
 	z-index: 9999999999 !important;
 }
@@ -199,11 +215,8 @@ code {
 	position: relative;
     z-index: 99;
     display: block;
-
     margin-top: 0% !important;
     background: none;
-    margin: 10%;
-    padding: 3%;
     border-radius: 10px;
 }
 .ThreeBack{
@@ -253,9 +266,7 @@ code {
 	}
 }
 
-.loader{
-		position: absolute; 
-}
+
 .NieuweImg{width: 10% !important}
 .Reducto{
 	li{
@@ -300,7 +311,7 @@ code {
 	margin: 5%;
   }
 .ContKamila{
-	position: fixed;
+	position: relative !important;
 	top: 12%;
 	width: 100%;
 	background-color: black;
@@ -327,7 +338,7 @@ code {
     width: 40%;
     z-index: 999;
 	background-image: linear-gradient(to top, #b4cfee 0%, #9dcea3 100%);
-    margin-top: 10%;
+    margin-top: 5%;
     margin-bottom: 5%;
 	border-radius: 5px;
 	.LogUno{
@@ -421,7 +432,7 @@ code {
 	position: relative;
 		.ProductInfo{
 			position: relative;
-			width: 40%;
+			width: 45%;
 			background: white;
 			float: left;
 			padding: 2%;
@@ -443,7 +454,7 @@ code {
 			}
 		}
 		.PhotoProduct{
-			width: 40%;
+			width: 45%;
 			float: left;
 			img{
 				width: 100%;
@@ -550,7 +561,7 @@ code {
 }
 
 .ContactPage{
-  margin-top: 1%;
+  margin-top: 0%;
   background: white;
   z-index: 9999999;
   position: relative;
@@ -714,6 +725,11 @@ code {
 	}
    
   }
+ 
+.ProductShow{
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+} 
 
 .LinksOutShow{
   display: block;
@@ -721,7 +737,7 @@ code {
   width: 50%;
 	.Op{
 		background: white;
-		opacity: 0.78;
+		opacity: 0.9;
 		height: 100vh;
 		ul{
 			background: white;
@@ -956,9 +972,9 @@ code {
 	position: absolute;
     width: 100%;
     height: 100%;
-    background: white;
     z-index: 99999999999;
     opacity: 0.9;
+	background: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb);
 }
 .Green{
 	background-color: greenyellow !important;

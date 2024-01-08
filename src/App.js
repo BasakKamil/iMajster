@@ -24,8 +24,13 @@ const routes = [
   {path: '/shop', name: "Shop", Component: Shop },
   {path: '/contact', name: "Contact", Component: Contact },
   {path: '/about', name: "About", Component: About },
-  {path: '/adminadd', name: "Admin Add", Component: Admin },
-  {path: '/admindelete', name: "Admin Delete", Component: AdminDelete },
+  {path: '/adminadd', name: "Admin Add Products", Component: Admin },
+  {path: '/admindelete', name: "Admin Delete Products", Component: AdminDelete },
+  {path: '/ordersum' ,name: "Ordersum", Component: Ordersum },
+  {path: '/signup', name: 'Sing Up', Component: UserForm },
+  {path: '/admin', name: 'Administrator', Component: AdminDash },
+  {path: '/signin', name: 'Sign In', Component: SignIn },
+  {path: '/createproject', name: 'Create Project', Component: Createproject }
 ]
 
 const App = () => {
@@ -36,7 +41,7 @@ const [ Load, setLoad ] = useState(false);
 useEffect(()=>{
   setTimeout(()=>{
     setLoad(true)
-  },5000)
+  },2000)
 },[])
 
   return (
@@ -45,23 +50,17 @@ useEffect(()=>{
       { Load ? 
       <div className="App">
         <Navbar/>
-               <Switch>
+                <Switch>
                   <Route exact path="/" component={Dashboard}/>
                   <Route path="/project/:id" component={ProjectDetails}/>
-                  <Route path="/createproject" component={Createproject}/>
-                  <Route path="/signin" component={SignIn}/>
-                  <Route path="/admin" component={AdminDash}/>
-                  <Route path="/signup" component={UserForm}/>
-                  <Route path="/ordersum" component={Ordersum}/>
                   {routes.map(({path,Component})=>{
-                  return <Route key="name" path={path} exact>
+                  return  <Route key="name" path={path} exact>
                             <div className="page">
                               <Component/>
                             </div>
-                        </Route>
+                          </Route>
                    })}   
                 </Switch>
-          
       </div>
       :
       <Loader/>  

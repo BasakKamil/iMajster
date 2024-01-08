@@ -52,6 +52,7 @@
     "firebase": "^7.6.1",
     "firebase-tools": "^7.11.0",
     "flag-icon-css": "^4.1.7",
+    "framer-motion": "^4.1.17",
     "fs-extra": "7.0.1",
     "git": "^0.1.5",
     "google-map-react": "^1.1.6",

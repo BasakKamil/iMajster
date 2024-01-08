@@ -1,12 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 
 
-
-// import formatCurrency from '../../store/shop/util';
-
-function ProductDetails(props,{variantId}){
+function ProductDetails(props){
 
 
 
@@ -15,7 +13,13 @@ const {product} = props;
 const img = props.product.img;
 return(
    
-    <div className="IteamDetails">  
+    <motion.div 
+    className="IteamDetails"
+    animate={{opacity: 1, scale: 1 }} 
+    initial={{opacity: 0, scale: 0}} 
+    exit={{opacity: 0, scale: 0 }} 
+    transition={{duration: 1 }}
+    Layout>  
         <div className="ProductInfo">
           <p> {t('Basket.Name')}  </p>  <b>{product.name}</b>
           <p className='contDesc'> {t('Basket.Description')}  
@@ -25,14 +29,14 @@ return(
             </p>
             <p class="price">{t('Basket.Price')} : {product.price} zł</p>
        </div>
-        <div className="PhotoProduct"> <img src={img} alt=""/></div>
+        <div className="PhotoProduct"><img src={img} alt=""/></div>
         {/* <p>Cena: {formatCurrency(product.price)}</p> */}
         <div>
-            {/* <Shopify /> */}
+         
 
         </div>
        <button className="btn btn-danger" onClick={() => props.addToCart(product)}>{t('Basket.Add')}</button>
-    </div>
+    </motion.div>
 )
 
 
