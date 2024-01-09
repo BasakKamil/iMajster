@@ -1,8 +1,9 @@
 import React,{ useState} from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
-import {createProduct} from '../../store/actions/productsActions';
-
+import { createProduct } from '../../store/actions/productsActions';
+// import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 function Admin(props){
     // const history = useHistory();
@@ -20,10 +21,9 @@ function Admin(props){
             });
         } 
 
-        const create= () => {
+        const Create= () => {
             props.createProduct(product);
-            props.history.push('/');
-            
+          
         } 
 
         // function back(){
@@ -62,7 +62,7 @@ function Admin(props){
                                     <label >Section</label>
                                     <input id="section" value={product.section} onChange={handleChange}/>
                                 </div>
-                                <button type="submit" class="btn btn-primary" onClick={create}>Submit</button>
+                                <label type='Submit' className="btn btn-primary" onClick={Create}>Submit</label>
                                 {/* <button class="btn btn-danger" onClick={back}>Powrot</button> */}
                                 
                             </form>

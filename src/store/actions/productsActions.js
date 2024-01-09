@@ -13,7 +13,7 @@ export const createProduct = (product) => {
             // section: product.section
             ...product
         }).then(()=>{
-            dispatch({type: 'CREATE_PRODUCT', product});
+            dispatch({type: 'CREATE_PRODUCT'});
         }).catch((err)=>{
             dispatch({type:'CREATE_PRODUCT_ERROR', err});
         })
